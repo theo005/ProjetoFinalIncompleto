@@ -1,0 +1,76 @@
+﻿body {
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+/* O Miolo do site: Um pouco mais claro que o fundo preto absoluto */
+#container {
+    background-color: #121212; /* Cinza escuro elegante */
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 95%;
+    max-width: 1400px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Títulos das seções */
+#maisVendidos h1, #Tagima h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(188, 19, 254, 0.6);
+}
+
+/* Customização dos Cards de Produtos para o Tema Dark/Neon */
+.card {
+    height: 550px;
+    background-color: #1c1c1e !important; /* Fundo interno do card escuro */
+    border: 1px solid #333 !important; /* Borda sutil */
+    color: #fff !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+    /* Efeito de hover nos produtos */
+    .card:hover {
+        transform: translateY(-5px);
+        border-color: #bc13fe !important; /* Borda brilha em roxo ao passar o mouse */
+        box-shadow: 0 0 15px rgba(188, 19, 254, 0.4);
+    }
+
+    .card img {
+        height: 275px;
+        object-fit: cover;
+        background-color: #fff; /* Mantém o fundo da foto branco para destacar o instrumento */
+    }
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1c1c1e;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Estilização do Botão Comprar em formato Neon */
+.card .btn-primary {
+    background-color: transparent !important;
+    border: 2px solid #bc13fe !important;
+    color: #bc13fe !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+    .card .btn-primary:hover {
+        background-color: #bc13fe !important;
+        color: #000 !important;
+        box-shadow: 0 0 10px #bc13fe;
+    }

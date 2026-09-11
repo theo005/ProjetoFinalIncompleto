@@ -1,0 +1,645 @@
+/* ==========================================================================
+   1. BASE DO LAYOUT (FLEXBOX PARA EMPURRAR O FOOTER)
+   ========================================================================== */
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #000; /* Garante o fundo preto em todo o site */
+    color: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Força o container do ASP.NET a esticar e ocupar o espaço restante */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* ==========================================================
+   📱 2. AJUSTES EXCLUSIVOS PARA CELULAR (Telas até 767px)
+   ========================================================== */
+@media (max-width: 767px) {
+
+    /* 🎯 CORREÇÃO 1: Mantém as 3 barras (Menu Hambúrguer) fixas no canto direito */
+    .navbar-toggler {
+        position: relative !important;
+        right: 0 !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        display: block !important;
+    }
+
+    /* Organização interna do menu ao expandir */
+    .navbar-collapse {
+        background-color: #000000 !important;
+        padding: 15px 10px !important;
+        width: 100% !important;
+    }
+
+        .navbar-collapse.show {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 15px !important;
+        }
+
+        /* 🎯 CORREÇÃO 2 & 3: BARRA DE PESQUISA (Largura total dinâmica e expansível) */
+        .navbar-collapse form:not([action*="Logout"]),
+        .navbar-collapse .search-form {
+            display: flex !important;
+            flex-direction: row !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            gap: 10px !important;
+            position: relative !important;
+            left: 0 !important;
+            transform: none !important;
+            margin: 5px 0 !important;
+        }
+
+            /* Força o input de texto a crescer e ocupar todo o espaço disponível da linha */
+            .navbar-collapse form:not([action*="Logout"]) input {
+                flex-grow: 1 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                position: relative !important;
+                transform: none !important;
+            }
+
+            /* Botão de "Search" ao lado do input */
+            .navbar-collapse form:not([action*="Logout"]) button {
+                position: relative !important;
+                left: 0 !important;
+                transform: none !important;
+                width: auto !important;
+                white-space: nowrap !important;
+            }
+
+        /* 👤 TEXTO DE BOAS-VINDAS (Hello Ad@Admin!) */
+        .navbar-text,
+        [class*="Hello"],
+        .navbar-collapse .nav-link[title*="Manage"] {
+            position: relative !important;
+            left: 0 !important;
+            top: 0 !important;
+            transform: none !important;
+            display: block !important;
+            text-align: center !important;
+            width: 100% !important;
+            color: #bc13fe !important;
+            font-weight: bold !important;
+            margin: 5px 0 !important;
+        }
+
+        /* 🎯 CORREÇÃO 4: BOTÃO DE LOGOUT (Forçado para baixo, sem sobreposição) */
+        /* Esse seletor duplo limpa qualquer posicionamento absoluto vindo do desktop */
+        .navbar-collapse form[action*="Logout"],
+        form[action*="Logout"] {
+            position: relative !important;
+            left: 0 !important;
+            top: 0 !important;
+            transform: none !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100% !important;
+            margin: 10px 0 !important;
+            clear: both !important;
+        }
+
+            /* Estilo visual do botão de Logout */
+            form[action*="Logout"] button,
+            form[action*="Logout"] input[type="submit"] {
+                position: relative !important;
+                left: 0 !important;
+                transform: none !important;
+                background-color: #bc13fe !important;
+                color: #000000 !important;
+                border: none !important;
+                padding: 8px 30px !important;
+                border-radius: 20px !important;
+                font-weight: bold !important;
+                width: auto !important;
+                display: inline-block !important;
+            }
+
+    /* links de Login / Registrar quando deslogado */
+    .navbar-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    /* Links de categorias secundárias */
+    header + div a,
+    .category-links a {
+        font-size: 13px !important;
+        display: inline-block !important;
+        margin: 4px 6px !important;
+        white-space: normal !important;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+/* ==========================================================================
+   3. SEUS ESTILOS PERSONALIZADOS DO LAYOUT (VERSÃO ULTRA-BLINDADA)
+   ========================================================================== */
+
+/* 1. O topo principal manda no posicionamento geral */
+header, .navbar {
+    background-color: #000 !important;
+    border-bottom: 1px solid #222;
+    padding: 15px 0;
+    position: relative !important; /* Este se torna o único "pai" de referência */
+}
+
+    /* 2. QUEBRA AS PAREDES INVISÍVEIS: 
+   Desativa o posicionamento relativo de qualquer caixinha intermediária do Bootstrap */
+    .navbar div,
+    .navbar-collapse,
+    .container-fluid,
+    .container,
+    .navbar-nav {
+        position: static !important;
+    }
+
+    /* Links do menu superior (Navegação, Login, Registro) */
+    .navbar-brand, .nav-link, header a {
+        color: #bc13fe !important; /* Roxo Neon */
+        text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe; /* Efeito de Brilho Neon */
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+        /* Efeito ao passar o mouse nos links do topo */
+        .navbar-brand:hover, .nav-link:hover, header a:hover {
+            color: #df73ff !important; /* Roxo mais claro ao focar */
+            text-shadow: 0 0 10px #df73ff, 0 0 20px #df73ff, 0 0 30px #df73ff;
+        }
+
+    /* 3. Nova lógica de centralização baseada nas bordas totais da tela */
+    header form, .navbar form {
+        position: absolute !important;
+        top: 50% !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important; /* O próprio navegador calcula o centro real do site */
+        transform: translateY(-50%) !important; /* Alinhamento vertical perfeito */
+        display: flex !important;
+        align-items: center !important;
+        width: max-content !important; /* Envolve estritamente o input e o botão */
+        z-index: 9999 !important; /* Fica por cima de tudo */
+    }
+
+        /* 4. Campo de entrada (Input) */
+        header form input, .navbar form input {
+            background-color: #111 !important;
+            border: 1px solid #bc13fe !important;
+            color: #fff !important;
+            border-radius: 20px 0 0 20px !important;
+            box-shadow: 0 0 5px rgba(188, 19, 254, 0.5) !important;
+            padding: 6px 15px !important;
+            width: 220px !important; /* Largura inicial visível e confortável */
+            text-align: left !important; /* Garante o texto alinhado desde o início */
+            transition: width 0.4s ease-in-out, box-shadow 0.4s ease-in-out !important;
+            outline: none !important;
+        }
+
+            /* Expansão simétrica ao clicar */
+            header form input:focus, .navbar form input:focus {
+                width: 380px !important; /* Abre espaço de sobra para digitar e expande para os dois lados */
+                border-color: #df73ff !important;
+                box-shadow: 0 0 15px #bc13fe, 0 0 25px rgba(188, 19, 254, 0.7) !important;
+            }
+
+        /* 5. Botão de pesquisa */
+        header form button, .navbar form button {
+            border-radius: 0 20px 20px 0 !important;
+            background-color: #bc13fe !important;
+            border: 1px solid #bc13fe !important;
+            color: #000 !important;
+            font-weight: bold !important;
+            padding: 6px 20px !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+        }
+
+            header form button:hover, .navbar form button:hover {
+                background-color: #df73ff !important;
+                border-color: #df73ff !important;
+                box-shadow: 0 0 10px #df73ff !important;
+            }
+/* ==========================================================
+   🎨 1. REGRAS GERAIS (Para todas as telas - PC e Celular)
+   ========================================================== */
+header {
+    background-color: #000000 !important;
+    border-bottom: 2px solid #bc13fe !important;
+}
+
+/* Remove a borda das tags internas para eliminar a linha roxa duplicada */
+nav, .navbar {
+    background-color: #000000 !important;
+    border-bottom: none !important;
+}
+
+header + div, .category-links {
+    background-color: #000000 !important;
+    text-align: center;
+    padding: 8px 0;
+}
+
+/* ==========================================================================
+   3. SEUS ESTILOS PERSONALIZADOS DO LAYOUT
+   ========================================================================== */
+#pages a {
+    text-decoration: none;
+    color: #bc13fe;
+    text-shadow: 0 0 5px #bc13fe;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+}
+
+#pages a:hover {
+    color: #df73ff;
+    text-shadow: 0 0 10px #df73ff;
+}
+/*Container*/
+/* Container que agrupa o Hello e o Botão */
+.auth-header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Cria o espaçamento perfeito entre o texto e o botão */
+    margin-left: auto; /* ISSO AQUI faz a mágica de empurrar o bloco todo para a extrema direita */
+}
+
+/* Estilização do texto Hello */
+.hello-text {
+    color: #bc13fe;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(188, 19, 254, 0.6);
+    white-space: nowrap; /* Evita que o texto quebre em duas linhas */
+}
+
+/* Ajuste fino do seu botão de Logout estilo cápsula */
+.btn-logout-header {
+    background-color: #bc13fe;
+    color: #000;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(188, 19, 254, 0.4);
+}
+
+    .btn-logout-header:hover {
+        background-color: #df73ff;
+        box-shadow: 0 0 15px #bc13fe;
+        transform: translateY(-1px);
+        color: #000;
+    }   
+
+/* ==========================================================================
+   4. SEU RODAPÉ CORRIGIDO (SEM POSITION ABSOLUTE)
+   ========================================================================== */
+footer.footer {
+    position: static !important; /* Ignora qualquer herança do absolute padrão */
+    height: auto;
+    line-height: normal;
+    background-color: #000 !important; /* Força o fundo preto caso fique transparente */
+    padding: 30px 0 20px 0;
+    width: 100%;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+footer.footer h3 {
+    color: darkgray;
+}
+
+#CorFt {
+    color: #2B2F33BF;
+}
+#formasPagamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.payment-icon {
+    width: 200px; 
+    height: auto;
+}
+
+#meio {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 800px;
+}
+
+#institucional, .categorias {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+#institucional a, .categorias a {
+    color: #aaa; 
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+#institucional a:hover, .categorias a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+/*Logout*/
+/* Garante o ponto de referência para o bloco absoluto */
+header, nav, .navbar {
+    position: relative !important;
+}
+
+/* O container principal na extrema direita */
+#identity-right-block {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    /* Ativa o Flexbox para alinhar lado a lado horizontalmente */
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 15px !important; /* Espaçamento perfeito entre o texto e o botão */
+    z-index: 999;
+}
+
+    /* FORÇA os filhos a não usarem posicionamento absoluto próprio */
+    #identity-right-block .user-welcome-text,
+    #identity-right-block form,
+    #identity-right-block .btn-logout-neon {
+        position: static !important;
+        transform: none !important;
+        float: none !important;
+    }
+
+/* Estilização do Texto */
+.user-welcome-text {
+    color: #bc13fe !important;
+    font-weight: bold !important;
+    text-shadow: 0 0 10px rgba(188, 19, 254, 0.6);
+    white-space: nowrap !important; /* Impede que o "Hello..." quebre linha */
+}
+
+/* Estilização do Botão */
+.btn-logout-neon {
+    background-color: #bc13fe !important;
+    color: #000 !important;
+    border: none !important;
+    padding: 6px 20px !important;
+    border-radius: 20px !important;
+    font-weight: bold !important;
+    box-shadow: 0 0 10px rgba(188, 19, 254, 0.4) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+    white-space: nowrap !important;
+}
+
+    .btn-logout-neon:hover {
+        background-color: #df73ff !important;
+        box-shadow: 0 0 15px #bc13fe !important;
+        transform: scale(1.05) !important; /* Efeito leve de crescimento ao passar o mouse */
+    }
+
+/* =========================================
+         MENU LATERAL - BOTÃO
+   ========================================= */
+
+.menu-button {
+    color: #bc13fe !important;
+    font-size: 24px;
+    border: none !important;
+    background: transparent !important;
+    text-shadow: 0 0 5px #bc13fe;
+    transition: all 0.3s ease;
+}
+
+    .menu-button:hover {
+        color: #df73ff !important;
+        text-shadow: 0 0 10px #df73ff, 0 0 20px #df73ff;
+        transform: scale(1.1);
+    }
+
+
+/* =========================================
+         MENU LATERAL
+   ========================================= */
+
+.menu-lateral {
+    background-color: #050505 !important;
+    color: white !important;
+    width: 350px !important;
+    border-right: 1px solid #bc13fe !important;
+    box-shadow: 5px 0 25px rgba(188, 19, 254, 0.25);
+    transition: transform 0.4s ease-in-out !important;
+}
+
+
+/* =========================================
+         TÍTULO DO MENU
+   ========================================= */
+
+.titulo-menu {
+    color: #bc13fe !important;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe, 0 0 20px rgba(188, 19, 254, 0.7);
+}
+
+
+/* =========================================
+         BOTÃO FECHAR
+   ========================================= */
+
+.menu-lateral .btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+    .menu-lateral .btn-close:hover {
+        opacity: 1;
+        transform: rotate(90deg) scale(1.1);
+        filter: invert(30%) sepia(100%) saturate(5000%) hue-rotate(270deg);
+    }
+
+
+/* =========================================
+         ESPAÇAMENTO DO MENU
+   ========================================= */
+
+.menu-lateral .offcanvas-body {
+    padding-top: 30px;
+}
+
+
+/* =========================================
+         ITENS DO MENU
+   ========================================= */
+
+.menu-lateral .item-menu {
+    display: block;
+    width: 100%;
+    color: white !important;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 14px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-bottom: 3px solid rgba(188, 19, 254, 0.20);
+    transition: all 0.3s ease;
+}
+
+
+    /* Linha fica mais forte no hover */
+
+    .menu-lateral .item-menu:hover {
+        border-bottom: 3px solid rgba(188, 19, 254, 0.35) !important;
+        box-shadow: 0 1px 5px rgba(188, 19, 254, 0.15);
+    }
+
+
+    /* =========================================
+         BOTÕES DAS CATEGORIAS
+   ========================================= */
+
+        .menu-lateral .item-menu-botao {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent !important;
+            border: none !important;
+            border-bottom: 3px solid rgba(188, 19, 254, 0.20) !important;
+            outline: none !important;
+            color: white !important;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 14px 15px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+            /* =========================================
+         HOVER DOS BOTÕES
+   ========================================= */
+
+            .menu-lateral .item-menu-botao:hover {
+                color: #df73ff !important;
+                background-color: rgba(188, 19, 254, 0.12) !important;
+                text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe;
+                transform: translateX(5px);
+                border-bottom-color: rgba(188, 19, 254, 0.60) !important;
+            }
+            /* =========================================
+         SETINHA
+   ========================================= */
+
+            .menu-lateral .item-menu-botao span {
+                font-size: 24px;
+                line-height: 1;
+                display: inline-block;
+                transition: transform 0.3s ease;
+                filter: drop-shadow(0 0 5px #bc13fe);
+            }
+            /* Brilho da seta no hover */
+
+            .menu-lateral .item-menu-botao:hover span {
+                text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe;
+            }
+            /* Gira a seta quando abre */
+
+            .menu-lateral .item-menu-botao.aberto span {
+                transform: rotate(90deg);
+            }
+        /* =========================================
+         SUBMENU
+   ========================================= */
+
+        .submenu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding-left: 15px;
+            margin-left: 15px;
+            margin-bottom: 0;
+            /* LINHA VERTICAL DO SUBMENU */
+            border-left: 2px solid #bc13fe;
+            transition: max-height 0.4s ease, opacity 0.3s ease, margin-bottom 0.4s ease;
+        }
+            /* =========================================
+         SUBMENU ABERTO
+   ========================================= */
+
+            .submenu.aberto {
+                max-height: 300px;
+                opacity: 1;
+                margin-bottom: 10px;
+            }
+            /* =========================================
+         LINKS DO SUBMENU
+   ========================================= */
+
+            .submenu a {
+                display: block;
+                color: #aaa !important;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 6px;
+                transition: all 0.3s ease;
+            }
+                /* =========================================
+         HOVER DOS LINKS DO SUBMENU
+   ========================================= */
+
+                .submenu a:hover {
+                    color: #df73ff !important;
+                    background-color: rgba(188, 19, 254, 0.10);
+                    text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe;
+                    padding-left: 20px;
+                }

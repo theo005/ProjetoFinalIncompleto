@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjetoFinal</title>
+
+    <script type="importmap"></script>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjetoFinal.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container-fluid">
+
+                <!-- BOTÃO DO MENU LATERAL -->
+                <button class="btn menu-button"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#menuLateral"
+                        aria-label="Abrir menu">
+                    ☰
+                </button>
+
+                <!-- LOGO -->
+                <a class="navbar-brand"
+                   href="/"
+                   style="color: #d100ff; font-weight: bold;">
+                    Eagle IM
+                </a>
+
+                <!-- BOTÃO RESPONSIVO -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menuNavegacao">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- ÁREA DA NAVBAR -->
+                <div class="collapse navbar-collapse" id="menuNavegacao">
+
+                    <div class="d-flex flex-column flex-lg-row align-items-center ms-auto gap-3 mt-3 mt-lg-0">
+
+                        <!-- PESQUISA -->
+                        <form class="d-flex w-100">
+
+                            <input class="form-control me-2"
+                                   type="search"
+                                   placeholder="Search"
+                                   style="border-color: #d100ff; background-color: #1a1a1a; color: white;">
+
+                            <button class="btn"
+                                    type="submit"
+                                    style="background-color: #d100ff; color: black; font-weight: bold;">
+                                Search
+                            </button>
+
+                        </form>
+
+                        <!-- LOGIN -->
+                        <div class="w-100 text-center text-lg-start">
+                            <partial name="_LoginPartial" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <!--        MENU LATERAL               -->
+
+        <div class="offcanvas offcanvas-start menu-lateral"
+             tabindex="-1"
+             id="menuLateral">
+
+            <!-- CABEÇALHO DO MENU -->
+            <div class="offcanvas-header">
+
+                <h5 class="offcanvas-title titulo-menu">
+                    Eagle IM
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas">
+                </button>
+
+            </div>
+
+
+            <!-- CORPO DO MENU -->
+            <div class="offcanvas-body">
+
+
+                <!-- ÓRGÃO -->
+
+                <button class="item-menu item-menu-botao"
+                        type="button">
+
+                    Órgão
+
+                    <span>›</span>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a href="#">
+                        Órgão de Tubos
+                    </a>
+
+                    <a href="#">
+                        Órgão Eletrônico
+                    </a>
+
+                    <a href="#">
+                        Órgão Digital
+                    </a>
+
+                </div>
+
+                <!-- MADEIRAS -->
+
+                <button class="item-menu item-menu-botao"
+                        type="button">
+
+                    Madeiras
+
+                    <span>›</span>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a href="#">
+                        Flautas
+                    </a>
+
+                    <a href="#">
+                        Clarinetes
+                    </a>
+
+                    <a href="#">
+                        Saxofones
+                    </a>
+
+                    <a href="#">
+                        Oboés
+                    </a>
+
+                    <a href="#">
+                        Fagotes
+                    </a>
+
+                </div>
+
+                <!-- METAIS -->
+
+                <button class="item-menu item-menu-botao"
+                        type="button">
+
+                    Metais
+
+                    <span>›</span>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a href="#">
+                        Trompetes
+                    </a>
+
+                    <a href="#">
+                        Trombones
+                    </a>
+
+                    <a href="#">
+                        Tubas
+                    </a>
+
+                    <a href="#">
+                        Trompas
+                    </a>
+
+                    <a href="#">
+                        Eufônios
+                    </a>
+
+                </div>
+
+                <!-- CORDAS -->
+
+                <button class="item-menu item-menu-botao"
+                        type="button">
+
+                    Cordas
+
+                    <span>›</span>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a href="#">
+                        Violões
+                    </a>
+
+                    <a href="#">
+                        Guitarras
+                    </a>
+
+                    <a href="#">
+                        Baixos
+                    </a>
+
+                    <a href="#">
+                        Violinos
+                    </a>
+
+                    <a href="#">
+                        Violas
+                    </a>
+
+                    <a href="#">
+                        Cellos
+                    </a>
+
+                </div>
+
+                <!-- TECLAS -->
+
+                <button class="item-menu item-menu-botao"
+                        type="button">
+
+                    Teclas
+
+                    <span>›</span>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a href="#">
+                        Pianos
+                    </a>
+
+                    <a href="#">
+                        Teclados
+                    </a>
+
+                    <a href="#">
+                        Controladores MIDI
+                    </a>
+
+                    <a href="#">
+                        Órgãos Eletrônicos
+                    </a>
+
+                </div>
+
+                <!-- PERCUSSÃO -->
+
+                <button class="item-menu item-menu-botao"
+                        type="button">
+
+                    Percussão
+
+                    <span>›</span>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a href="#">
+                        Baterias
+                    </a>
+
+                    <a href="#">
+                        Cajóns
+                    </a>
+
+                    <a href="#">
+                        Pandeiros
+                    </a>
+
+                    <a href="#">
+                        Tambores
+                    </a>
+
+                    <a href="#">
+                        Pratos
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <div class="container">
+
+        <main role="main" class="pb-4">
+
+            @RenderBody()
+
+        </main>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="border-top footer text-muted">
+
+        <div id="formasPagamento">
+
+            <h3>
+                Formas de Pagamento
+            </h3>
+
+            <img src="~/img/FormasPagamento.png"
+                 alt="Formas de Pagamento"
+                 class="payment-icon" />
+
+        </div>
+
+
+        <div id="meio">
+
+            <!-- INSTITUCIONAL -->
+            <div id="institucional">
+
+                <h3>
+                    Institucional
+                </h3>
+
+                <a href="#">
+                    Quem Somos
+                </a>
+
+                <a href="#">
+                    Assitência Técnica
+                </a>
+
+                <a href="#">
+                    Formas de Pagamento
+                </a>
+
+                <a href="#">
+                    Depoimento dos Clientes
+                </a>
+
+                <a href="#">
+                    Notícias
+                </a>
+
+                <a href="#">
+                    Trocas e Devoluções
+                </a>
+
+                <a href="#">
+                    Entrega
+                </a>
+
+                <a href="#">
+                    Fale Conosco
+                </a>
+
+            </div>
+
+
+            <!-- CATEGORIAS -->
+            <div id="pages" class="categorias">
+
+                <h3>
+                    Categorias
+                </h3>
+
+                <a href="/Instrumentos/Orgao">
+                    Órgão
+                </a>
+
+                <a href="/Instrumentos/Madeiras">
+                    Madeiras
+                </a>
+
+                <a href="/Instrumentos/Metais">
+                    Metais
+                </a>
+
+                <a href="/Instrumentos/Cordas">
+                    Cordas
+                </a>
+
+                <a href="/Instrumentos/Teclas">
+                    Teclas
+                </a>
+
+                <a href="/Instrumentos/Percussao">
+                    Percussão
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div id="CorFt">
+
+            &copy; 2026 - ProjetoFinal -
+
+            <a asp-area=""
+               asp-controller="Home"
+               asp-action="Privacy">
+                Privacy
+            </a>
+
+        </div>
+
+    </footer>
+
+    <!-- SCRIPTS -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js"
+            asp-append-version="true">
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

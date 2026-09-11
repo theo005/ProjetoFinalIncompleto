@@ -1,0 +1,66 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = null; // Remove completamente o Header e o Footer padrão
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Eagle IM</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/Login.css" />
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-side-form">
+            <div class="auth-container">
+                <h1 class="auth-title">Entrar</h1>
+                <form id="account" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3" role="alert"></div>
+                    
+                    <div class="form-floating mb-4">
+                        <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                        <label asp-for="Input.Email">Email</label>
+                        <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                    </div>
+                    
+                    <div class="form-floating mb-4">
+                        <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                        <label asp-for="Input.Password">Senha</label>
+                        <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                    </div>
+                    
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" asp-for="Input.RememberMe" style="background-color: #222; border-color: #444;" />
+                        <label asp-for="Input.RememberMe" class="form-check-label text-secondary small">
+                            Lembrar-me neste dispositivo
+                        </label>
+                    </div>
+                    
+                    <button id="login-submit" type="submit" class="w-100 btn btn-auth mb-4">ENTRAR</button>
+                    
+                    <div class="text-center">
+                        <a id="forgot-password" asp-page="./ForgotPassword" class="auth-link">Esqueceu a senha? Clique Aqui!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="auth-side-info">
+            <h2 class="welcome-text">Olá, bem-vindo!</h2>
+            <p class="welcome-sub">Não possui uma conta?</p>
+            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="btn-outline-neon">CADASTRAR</a>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+</body>
+</html>

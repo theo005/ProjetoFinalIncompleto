@@ -1,0 +1,122 @@
+﻿body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.auth-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+/* Lado Esquerdo - Chamada para Voltar */
+.auth-side-info {
+    flex: 1;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-right: 1px solid #111;
+}
+/* Lado Direito - Form de Registro */
+.auth-side-form {
+    flex: 1;
+    background: linear-gradient(135deg, #120422 0%, #000000 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 360px;
+}
+
+.auth-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.form-floating input {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #444 !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+    padding-left: 0 !important;
+    box-shadow: none !important;
+    transition: border-color 0.3s ease;
+}
+
+    .form-floating input:focus {
+        border-bottom-color: #bc13fe !important;
+    }
+
+.form-floating label {
+    color: #666 !important;
+    padding-left: 0 !important;
+}
+
+.form-floating input:focus ~ label,
+.form-floating input:not(:placeholder-shown) ~ label {
+    color: #bc13fe !important;
+}
+
+.btn-auth {
+    background: linear-gradient(90deg, #7b1fa2, #bc13fe) !important;
+    border: none !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    border-radius: 25px !important;
+    padding: 12px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(188, 19, 254, 0.3);
+}
+
+    .btn-auth:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(188, 19, 254, 0.6);
+        background: linear-gradient(90deg, #bc13fe, #df73ff) !important;
+    }
+
+.welcome-text {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.welcome-sub {
+    color: #aaa;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.btn-outline-neon {
+    border: 1px solid #bc13fe !important;
+    color: #fff !important;
+    background: transparent !important;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    border-radius: 25px !important;
+    padding: 10px 40px !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none;
+}
+
+    .btn-outline-neon:hover {
+        background: #bc13fe !important;
+        color: #000 !important;
+        box-shadow: 0 0 15px #bc13fe;
+    }
