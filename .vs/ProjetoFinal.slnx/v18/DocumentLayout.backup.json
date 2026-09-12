@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\nori_\\onedrive\\\u00E1rea de trabalho\\theo workspace\u0027s\\projetofinalincompleto\\projetofinal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\nori_\\onedrive\\\u00E1rea de trabalho\\theo workspace\u0027s\\projetofinalincompleto\\projetofinal\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\nori_\\onedrive\\\u00E1rea de trabalho\\theo workspace\u0027s\\projetofinalincompleto\\projetofinal\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\nori_\\onedrive\\\u00E1rea de trabalho\\theo workspace\u0027s\\projetofinalincompleto\\projetofinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\nori_\\onedrive\\\u00E1rea de trabalho\\theo workspace\u0027s\\projetofinalincompleto\\projetofinal\\views\\instrumentos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\views\\instrumentos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\nori_\\onedrive\\\u00E1rea de trabalho\\theo workspace\u0027s\\projetofinalincompleto\\projetofinal\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\nori_\\onedrive\\\u00E1rea de trabalho\\theo workspace\u0027s\\projetofinalincompleto\\projetofinal\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\nori_\\onedrive\\\u00E1rea de trabalho\\theo workspace\u0027s\\projetofinalincompleto\\projetofinal\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\nori_\\onedrive\\\u00E1rea de trabalho\\theo workspace\u0027s\\projetofinalincompleto\\projetofinal\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\nori_\\onedrive\\\u00E1rea de trabalho\\theo workspace\u0027s\\projetofinalincompleto\\projetofinal\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +30,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\Views\\Instrumentos\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProjetoFinal\\Views\\Instrumentos\\Index.cshtml",
-              "ToolTip": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\Views\\Instrumentos\\Index.cshtml",
-              "RelativeToolTip": "ProjetoFinal\\Views\\Instrumentos\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-28T10:51:31.92Z",
-              "IsPinned": true
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Home.css",
-              "DocumentMoniker": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\wwwroot\\css\\Home.css",
-              "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\Home.css",
-              "ToolTip": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\wwwroot\\css\\Home.css",
-              "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\Home.css",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-29T13:37:36.949Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "ProjetoFinal\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-09-11T13:45:53.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\Program.cs",
               "RelativeDocumentMoniker": "ProjetoFinal\\Program.cs",
               "ToolTip": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\Program.cs",
               "RelativeToolTip": "ProjetoFinal\\Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-11T11:02:02.176Z"
+              "WhenOpened": "2026-09-12T22:41:54.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.css",
+              "DocumentMoniker": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\wwwroot\\css\\Register.css",
+              "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\Register.css",
+              "ToolTip": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\wwwroot\\css\\Register.css",
+              "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\Register.css",
+              "ViewState": "AgIAACcBAAAAAAAAAAAAACYBAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-12T22:32:33.747Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAANUBAAAAAAAAAAAowO4BAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-09-11T11:01:09.646Z"
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAKAAAAAAAAAAAADwv7gAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-12T22:32:19.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ProjetoFinal\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ProjetoFinal\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAQwGkAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Login.css",
+              "DocumentMoniker": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\wwwroot\\css\\Login.css",
+              "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\Login.css",
+              "ToolTip": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\wwwroot\\css\\Login.css",
+              "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\Login.css",
+              "ViewState": "AgIAADoBAAAAAAAAAAAkwFEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-12T20:55:24.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\nori_\\OneDrive\\\u00C1rea de Trabalho\\Theo Workspace\u0027s\\ProjetoFinalIncompleto\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-28T10:53:04.57Z",
+              "WhenOpened": "2026-09-12T20:57:27.996Z",
               "EditorCaption": ""
             }
           ]

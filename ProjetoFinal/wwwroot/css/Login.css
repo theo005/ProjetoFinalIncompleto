@@ -13,54 +13,108 @@
     width: 100vw;
     height: 100vh;
 }
-/* Lado Esquerdo - Formulário com Degradê Escuro */
+
+
+/* ============================= */
+/* LADO DO FORMULÁRIO */
+/* ============================= */
+
 .auth-side-form {
     flex: 1;
-    background: linear-gradient(135deg, #120422 0%, #000000 100%);
+    background: radial-gradient( circle at 20% 50%, rgba(188, 19, 254, 0.12), transparent 35% ), linear-gradient( 135deg, #120422 0%, #000000 75% );
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px;
+    position: relative;
+    overflow: hidden;
+    animation: aparecer 0.8s ease-out;
 }
-/* Lado Direito - Boas-Vindas */
-.auth-side-info {
-    flex: 1;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    border-left: 1px solid #111;
+
+
+/* Glow atrás do formulário */
+
+.auth-glow {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(188, 19, 254, 0.08);
+    filter: blur(80px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
+
+
+/* Conteúdo fica na frente do glow */
 
 .auth-container {
     width: 100%;
-    max-width: 360px;
+    max-width: 395px;
+    position: relative;
+    z-index: 2;
 }
 
+
+/* ============================= */
+/* MARCA */
+/* ============================= */
+
+.auth-brand {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+    .auth-brand span {
+        color: #bc13fe;
+        text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe;
+    }
+
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+
 .auth-title {
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 700;
     color: #fff;
     margin-bottom: 40px;
     text-align: left;
+    letter-spacing: -1px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
 }
-/* inputs Minimalistas com linha inferior */
+
+
+/* ============================= */
+/* INPUTS */
+/* ============================= */
+
 .form-floating input {
     background-color: transparent !important;
     border: none !important;
     border-bottom: 1px solid #444 !important;
-    border-radius: 0 !important;
+    border-radius: 4px 4px 0 0 !important;
     color: #fff !important;
     padding-left: 0 !important;
     box-shadow: none !important;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
 }
+
+    .form-floating input:hover {
+        border-bottom-color: #777 !important;
+    }
 
     .form-floating input:focus {
         border-bottom-color: #bc13fe !important;
+        background-color: transparent !important;
+        box-shadow: 0 4px 12px rgba(188, 19, 254, 0.08) !important;
     }
 
 .form-floating label {
@@ -72,30 +126,63 @@
 .form-floating input:not(:placeholder-shown) ~ label {
     color: #bc13fe !important;
 }
-/* Botão estilizado em formato de cápsula */
+
+
+/* ============================= */
+/* LEMBRAR-ME */
+/* ============================= */
+
+.remember-label {
+    color: #777 !important;
+    font-size: 0.9rem;
+}
+
+.form-check-input {
+    background-color: #222 !important;
+    border-color: #444 !important;
+    box-shadow: none !important;
+}
+
+    .form-check-input:checked {
+        background-color: #bc13fe !important;
+        border-color: #bc13fe !important;
+    }
+
+
+/* ============================= */
+/* BOTÃO ENTRAR */
+/* ============================= */
+
 .btn-auth {
-    background: linear-gradient(90deg, #7b1fa2, #bc13fe) !important;
+    background: linear-gradient( 90deg, #7b1fa2, #bc13fe ) !important;
     border: none !important;
     color: #fff !important;
     font-weight: bold !important;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     border-radius: 25px !important;
-    padding: 12px !important;
+    padding: 13px !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 4px 15px rgba(188, 19, 254, 0.3);
+    box-shadow: 0 4px 15px rgba(188, 19, 254, 0.30);
+    position: relative;
+    overflow: hidden;
 }
 
     .btn-auth:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(188, 19, 254, 0.6);
-        background: linear-gradient(90deg, #bc13fe, #df73ff) !important;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(188, 19, 254, 0.45), 0 0 20px rgba(188, 19, 254, 0.25);
+        background: linear-gradient( 90deg, #bc13fe, #df73ff ) !important;
     }
+
+
+/* ============================= */
+/* ESQUECEU A SENHA */
+/* ============================= */
 
 .auth-link {
     color: #bc13fe !important;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
     .auth-link:hover {
@@ -103,32 +190,149 @@
         text-shadow: 0 0 5px rgba(223, 115, 255, 0.5);
     }
 
-.welcome-text {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+
+/* ============================= */
+/* LADO DIREITO */
+/* ============================= */
+
+.auth-side-info {
+    flex: 1;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-left: 1px solid #111;
+    position: relative;
+    overflow: hidden;
+    animation: aparecer 0.8s ease-out;
 }
+
+
+/* ============================= */
+/* TÍTULO DE BOAS-VINDAS */
+/* ============================= */
+
+.welcome-text {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 2;
+}
+
+    .welcome-text::after {
+        content: "";
+        display: block;
+        width: 55px;
+        height: 3px;
+        margin-top: 18px;
+        background: #bc13fe;
+        border-radius: 10px;
+        box-shadow: 0 0 8px #bc13fe, 0 0 18px rgba(188, 19, 254, 0.6);
+    }
+
+
+/* ============================= */
+/* TEXTO */
+/* ============================= */
 
 .welcome-sub {
     color: #aaa;
     margin-bottom: 30px;
     font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
 }
-/* Botão vazado Neon */
+
+
+/* ============================= */
+/* BOTÃO CADASTRAR */
+/* ============================= */
+
 .btn-outline-neon {
     border: 1px solid #bc13fe !important;
     color: #fff !important;
     background: transparent !important;
     font-weight: bold !important;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     border-radius: 25px !important;
-    padding: 10px 40px !important;
-    transition: all 0.3s ease !important;
+    padding: 11px 42px !important;
     text-decoration: none;
+    transition: all 0.3s ease !important;
+    position: relative;
+    z-index: 2;
 }
 
     .btn-outline-neon:hover {
         background: #bc13fe !important;
         color: #000 !important;
-        box-shadow: 0 0 15px #bc13fe;
+        box-shadow: 0 0 10px rgba(188, 19, 254, 0.6), 0 0 25px rgba(188, 19, 254, 0.35);
+        transform: translateY(-2px);
     }
+
+
+/* ============================= */
+/* SÍMBOLO DA ÁGUIA */
+/* ============================= */
+
+.eagle-symbol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 260px;
+    height: 160px;
+    transform: translate(-50%, -75%);
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+    .eagle-symbol span {
+        position: absolute;
+        top: 50%;
+        width: 130px;
+        height: 60px;
+        border-top: 3px solid #bc13fe;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 8px #bc13fe);
+    }
+
+        .eagle-symbol span:first-child {
+            left: 0;
+            transform: rotate(15deg);
+        }
+
+        .eagle-symbol span:last-child {
+            right: 0;
+            transform: rotate(-15deg);
+        }
+
+
+/* ============================= */
+/* ANIMAÇÃO */
+/* ============================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.form-floating > label {
+    background-color: transparent !important;
+}
+
+.form-floating > label::after {
+    background-color: transparent !important;
+}
