@@ -116,10 +116,11 @@
         <!-- LADO DIREITO -->
         <div class="auth-side-info">
 
-            <div class="eagle-symbol">
-                <span></span>
-                <span></span>
-            </div>
+            <div class="music-background"></div>
+
+            <div class="mouse-glow"></div>
+
+            <div class="particles"></div>
 
             <h2 class="welcome-text">
                 Olá, bem-vindo!
@@ -143,9 +144,78 @@
 
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <partial name="_ValidationScriptsPartial" />
+
+
+    <!-- PARTÍCULAS -->
+
+    <script>
+
+        const particlesContainer =
+            document.querySelector(".particles");
+
+        for (let i = 0; i < 25; i++) {
+
+            const particle =
+                document.createElement("span");
+
+            particle.classList.add("particle");
+
+            particle.style.left =
+                Math.random() * 100 + "%";
+
+            particle.style.animationDuration =
+                (8 + Math.random() * 6) + "s";
+
+            particle.style.animationDelay =
+                Math.random() * 2 + "s";
+
+            const tamanho =
+                (1 + Math.random() * 3) + "px";
+
+            particle.style.width = tamanho;
+
+            particle.style.height = tamanho;
+
+            particlesContainer.appendChild(particle);
+        }
+
+    </script>
+
+
+    <!-- MOUSE GLOW -->
+
+    <script>
+
+        const mouseGlow =
+            document.querySelector(".mouse-glow");
+
+        const areaLogin =
+            document.querySelector(".auth-side-info");
+
+        areaLogin.addEventListener("mousemove", function (evento) {
+
+            const rect =
+                areaLogin.getBoundingClientRect();
+
+            const x =
+                evento.clientX - rect.left;
+
+            const y =
+                evento.clientY - rect.top;
+
+            mouseGlow.style.left =
+                x + "px";
+
+            mouseGlow.style.top =
+                y + "px";
+
+        });
+
+    </script>
 
 </body>
 </html>

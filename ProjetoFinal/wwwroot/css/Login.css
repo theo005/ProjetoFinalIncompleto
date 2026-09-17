@@ -1,322 +1,513 @@
-﻿body {
-    background-color: #000;
+﻿/* =========================================
+   EAGLE IM — LOGIN V2
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     height: 100vh;
-    display: flex;
     overflow: hidden;
 }
+
+
+/* =========================================
+   ESTRUTURA
+   ========================================= */
 
 .auth-wrapper {
     display: flex;
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 
-/* ============================= */
-/* LADO DO FORMULÁRIO */
-/* ============================= */
+/* =========================================
+   LADO DO FORMULÁRIO
+   ========================================= */
 
 .auth-side-form {
     flex: 1;
-    background: radial-gradient( circle at 20% 50%, rgba(188, 19, 254, 0.12), transparent 35% ), linear-gradient( 135deg, #120422 0%, #000000 75% );
+    min-width: 0;
+    background: radial-gradient(circle at 20% 35%, rgba(188, 19, 254, 0.18), transparent 28%), radial-gradient(circle at 80% 80%, rgba(123, 31, 162, 0.10), transparent 35%), linear-gradient(135deg, #120422 0%, #050008 48%, #000 100%);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 50px;
     position: relative;
     overflow: hidden;
     animation: aparecer 0.8s ease-out;
 }
 
 
-/* Glow atrás do formulário */
+    /* iluminação ambiente */
 
-.auth-glow {
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    background: rgba(188, 19, 254, 0.08);
-    filter: blur(80px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
+    .auth-side-form::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: rgba(188, 19, 254, 0.09);
+        filter: blur(100px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
 
 
-/* Conteúdo fica na frente do glow */
+    /* linhas decorativas */
+
+    .auth-side-form::after {
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        border: 1px solid rgba(188, 19, 254, 0.07);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 80px rgba(188, 19, 254, 0.04), inset 0 0 80px rgba(188, 19, 254, 0.03);
+        pointer-events: none;
+    }
+
+
+/* =========================================
+   CONTAINER
+   ========================================= */
 
 .auth-container {
     width: 100%;
     max-width: 395px;
     position: relative;
-    z-index: 2;
+    z-index: 5;
+    animation: formularioEntrando 0.9s ease-out;
 }
 
 
-/* ============================= */
-/* MARCA */
-/* ============================= */
+/* =========================================
+   MARCA
+   ========================================= */
 
 .auth-brand {
     color: #fff;
     font-size: 18px;
     font-weight: 800;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
 }
 
     .auth-brand span {
         color: #bc13fe;
-        text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe;
+        text-shadow: 0 0 5px #bc13fe, 0 0 15px rgba(188, 19, 254, 0.8), 0 0 30px rgba(188, 19, 254, 0.35);
     }
 
 
-/* ============================= */
-/* TÍTULO */
-/* ============================= */
+/* =========================================
+   TÍTULO
+   ========================================= */
 
 .auth-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     text-align: left;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+    position: relative;
 }
 
 
-/* ============================= */
-/* INPUTS */
-/* ============================= */
+    /* pequena linha abaixo do título */
 
-.form-floating input {
-    background-color: transparent !important;
-    border: none !important;
-    border-bottom: 1px solid #444 !important;
-    border-radius: 4px 4px 0 0 !important;
-    color: #fff !important;
-    padding-left: 0 !important;
+    .auth-title::after {
+        content: "";
+        display: block;
+        width: 48px;
+        height: 3px;
+        margin-top: 15px;
+        background: #bc13fe;
+        border-radius: 10px;
+        box-shadow: 0 0 8px #bc13fe, 0 0 20px rgba(188, 19, 254, 0.7);
+        animation: linhaTitulo 1s ease-out;
+    }
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+.form-floating {
+    position: relative;
+}
+
+    .form-floating input {
+        background: rgba(0, 0, 0, 0.15) !important;
+        border: none !important;
+        border-bottom: 1px solid #3a3a3a !important;
+        border-radius: 3px 3px 0 0 !important;
+        color: #fff !important;
+        padding-left: 0 !important;
+        box-shadow: none !important;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+
+
+        /* hover */
+
+        .form-floating input:hover {
+            border-bottom-color: #777 !important;
+        }
+
+
+        /* foco */
+
+        .form-floating input:focus {
+            border-bottom-color: #bc13fe !important;
+            background: rgba(188, 19, 254, 0.025) !important;
+            box-shadow: 0 5px 15px rgba(188, 19, 254, 0.08) !important;
+        }
+
+
+    /* barra de energia */
+
+    .form-floating::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient( 90deg, #7b1fa2, #bc13fe, #df73ff );
+        box-shadow: 0 0 8px rgba(188, 19, 254, 0.8);
+        transition: width 0.45s ease;
+        z-index: 5;
+    }
+
+    .form-floating:focus-within::after {
+        width: 100%;
+    }
+
+
+    /* labels */
+
+    .form-floating label {
+        color: #666 !important;
+        padding-left: 0 !important;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .form-floating input:focus ~ label,
+    .form-floating input:not(:placeholder-shown) ~ label {
+        color: #bc13fe !important;
+    }
+
+
+    /* remove fundo branco do Bootstrap */
+
+    .form-floating > label {
+        background: transparent !important;
+    }
+
+        .form-floating > label::after {
+            background-color: transparent !important;
+        }
+
+
+/* =========================================
+   LEMBRAR-ME
+   ========================================= */
+
+.form-check {
+    margin-top: 8px;
+}
+
+.form-check-input {
+    background-color: #111 !important;
+    border: 1px solid #444 !important;
     box-shadow: none !important;
-    transition: all 0.3s ease;
+    cursor: pointer;
+    transition: 0.25s ease;
 }
 
-    .form-floating input:hover {
-        border-bottom-color: #777 !important;
+    .form-check-input:hover {
+        border-color: #bc13fe !important;
     }
 
-    .form-floating input:focus {
-        border-bottom-color: #bc13fe !important;
-        background-color: transparent !important;
-        box-shadow: 0 4px 12px rgba(188, 19, 254, 0.08) !important;
+    .form-check-input:checked {
+        background-color: #bc13fe !important;
+        border-color: #bc13fe !important;
+        box-shadow: 0 0 8px rgba(188, 19, 254, 0.5) !important;
     }
-
-.form-floating label {
-    color: #666 !important;
-    padding-left: 0 !important;
-}
-
-.form-floating input:focus ~ label,
-.form-floating input:not(:placeholder-shown) ~ label {
-    color: #bc13fe !important;
-}
-
-
-/* ============================= */
-/* LEMBRAR-ME */
-/* ============================= */
 
 .remember-label {
     color: #777 !important;
     font-size: 0.9rem;
 }
 
-.form-check-input {
-    background-color: #222 !important;
-    border-color: #444 !important;
-    box-shadow: none !important;
-}
 
-    .form-check-input:checked {
-        background-color: #bc13fe !important;
-        border-color: #bc13fe !important;
-    }
-
-
-/* ============================= */
-/* BOTÃO ENTRAR */
-/* ============================= */
+/* =========================================
+   BOTÃO ENTRAR
+   ========================================= */
 
 .btn-auth {
-    background: linear-gradient( 90deg, #7b1fa2, #bc13fe ) !important;
+    background: linear-gradient( 90deg, #65158a, #8b1db5, #bc13fe ) !important;
     border: none !important;
     color: #fff !important;
-    font-weight: bold !important;
-    letter-spacing: 1.5px;
-    border-radius: 25px !important;
-    padding: 13px !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 15px rgba(188, 19, 254, 0.30);
+    font-weight: 700 !important;
+    letter-spacing: 2px;
+    border-radius: 30px !important;
+    padding: 14px !important;
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+    box-shadow: 0 5px 20px rgba(188, 19, 254, 0.25);
 }
+
+
+    /* brilho passando pelo botão */
+
+    .btn-auth::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.25), transparent );
+        transform: skewX(-20deg);
+        transition: left 0.6s ease;
+    }
+
+    .btn-auth:hover::before {
+        left: 130%;
+    }
+
 
     .btn-auth:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(188, 19, 254, 0.45), 0 0 20px rgba(188, 19, 254, 0.25);
-        background: linear-gradient( 90deg, #bc13fe, #df73ff ) !important;
+        background: linear-gradient( 90deg, #8b1db5, #bc13fe, #df73ff ) !important;
+        box-shadow: 0 8px 25px rgba(188, 19, 254, 0.45), 0 0 30px rgba(188, 19, 254, 0.20);
     }
 
 
-/* ============================= */
-/* ESQUECEU A SENHA */
-/* ============================= */
+/* =========================================
+   ESQUECEU SENHA
+   ========================================= */
 
 .auth-link {
     color: #bc13fe !important;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+
+    .auth-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        width: 0;
+        height: 1px;
+        background: #bc13fe;
+        box-shadow: 0 0 8px #bc13fe;
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+    }
 
     .auth-link:hover {
         color: #df73ff !important;
-        text-shadow: 0 0 5px rgba(223, 115, 255, 0.5);
+        text-shadow: 0 0 8px rgba(223, 115, 255, 0.6);
     }
 
+        .auth-link:hover::after {
+            width: 100%;
+        }
 
-/* ============================= */
-/* LADO DIREITO */
-/* ============================= */
+
+/* =========================================
+   LADO DIREITO
+   ========================================= */
 
 .auth-side-info {
     flex: 1;
-    background-color: #000;
+    min-width: 0;
+    background: radial-gradient( circle at 50% 45%, rgba(188, 19, 254, 0.045), transparent 35% ), #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px;
-    border-left: 1px solid #111;
+    border-left: 1px solid #151515;
     position: relative;
     overflow: hidden;
-    animation: aparecer 0.8s ease-out;
+    animation: aparecer 1s ease-out;
 }
 
 
-/* ============================= */
-/* TÍTULO DE BOAS-VINDAS */
-/* ============================= */
+    /* =========================================
+   LINHAS DECORATIVAS DIREITAS
+   ========================================= */
+
+    .auth-side-info::before,
+    .auth-side-info::after {
+        content: "";
+        position: absolute;
+        border: 1px solid rgba(188, 19, 254, 0.10);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    .auth-side-info::before {
+        width: 520px;
+        height: 520px;
+        transform: rotate(-18deg);
+        box-shadow: 0 0 60px rgba(188, 19, 254, 0.04);
+    }
+
+    .auth-side-info::after {
+        width: 700px;
+        height: 700px;
+        transform: rotate(18deg);
+        border-color: rgba(188, 19, 254, 0.045);
+    }
+
+
+/* =========================================
+   TÍTULO DIREITO
+   ========================================= */
 
 .welcome-text {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 700;
     margin-bottom: 10px;
-    letter-spacing: -1px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+    letter-spacing: -1.5px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
+
+
+    /* linha neon */
 
     .welcome-text::after {
         content: "";
         display: block;
         width: 55px;
         height: 3px;
-        margin-top: 18px;
+        margin: 18px auto 0;
         background: #bc13fe;
         border-radius: 10px;
-        box-shadow: 0 0 8px #bc13fe, 0 0 18px rgba(188, 19, 254, 0.6);
+        box-shadow: 0 0 8px #bc13fe, 0 0 20px rgba(188, 19, 254, 0.6);
     }
 
 
-/* ============================= */
-/* TEXTO */
-/* ============================= */
+/* =========================================
+   SUBTÍTULO
+   ========================================= */
 
 .welcome-sub {
-    color: #aaa;
+    color: #999;
     margin-bottom: 30px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     position: relative;
-    z-index: 2;
+    z-index: 5;
+    text-align: center;
 }
 
 
-/* ============================= */
-/* BOTÃO CADASTRAR */
-/* ============================= */
+/* =========================================
+   BOTÃO CADASTRAR
+   ========================================= */
 
 .btn-outline-neon {
     border: 1px solid #bc13fe !important;
     color: #fff !important;
-    background: transparent !important;
-    font-weight: bold !important;
-    letter-spacing: 1.5px;
-    border-radius: 25px !important;
-    padding: 11px 42px !important;
+    background: rgba(188, 19, 254, 0.02) !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.8px;
+    border-radius: 30px !important;
+    padding: 12px 45px !important;
     text-decoration: none;
-    transition: all 0.3s ease !important;
     position: relative;
-    z-index: 2;
+    z-index: 5;
+    overflow: hidden;
+    transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
 }
+
 
     .btn-outline-neon:hover {
         background: #bc13fe !important;
         color: #000 !important;
-        box-shadow: 0 0 10px rgba(188, 19, 254, 0.6), 0 0 25px rgba(188, 19, 254, 0.35);
-        transform: translateY(-2px);
+        transform: translateY(-3px);
+        box-shadow: 0 0 12px rgba(188, 19, 254, 0.7), 0 0 30px rgba(188, 19, 254, 0.3);
     }
 
+/* =========================================
+   FUNDO MUSICAL
+   ========================================= */
 
-/* ============================= */
-/* SÍMBOLO DA ÁGUIA */
-/* ============================= */
-
-.eagle-symbol {
+.music-background {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 260px;
-    height: 160px;
-    transform: translate(-50%, -75%);
-    opacity: 0.08;
+    inset: 0;
+    background-image: url('/img/login-musical.png');
+    background-size: cover;
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    opacity: 0.78;
+    filter: saturate(1.25) brightness(0.65) drop-shadow(0 0 12px rgba(188, 19, 254, 0.45));
     pointer-events: none;
+    z-index: 1;
+    transform: scale(1);
+    animation: musicBackgroundFloat 8s ease-in-out infinite;
 }
 
-    .eagle-symbol span {
-        position: absolute;
-        top: 50%;
-        width: 130px;
-        height: 60px;
-        border-top: 3px solid #bc13fe;
-        border-radius: 50%;
-        filter: drop-shadow(0 0 8px #bc13fe);
+/* Conteúdo sempre acima da imagem */
+
+.auth-side-info > .welcome-text,
+.auth-side-info > .welcome-sub,
+.auth-side-info > .btn-outline-neon {
+    position: relative;
+    z-index: 5;
+}
+
+/* Partículas e brilho do mouse atrás da imagem */
+
+.auth-side-info > .mouse-glow,
+.auth-side-info > .particles {
+    z-index: 0;
+}
+
+/* Leve movimento no fundo */
+
+@keyframes musicBackgroundFloat {
+
+    0%, 100% {
+        transform: scale(1);
     }
 
-        .eagle-symbol span:first-child {
-            left: 0;
-            transform: rotate(15deg);
-        }
-
-        .eagle-symbol span:last-child {
-            right: 0;
-            transform: rotate(-15deg);
-        }
+    50% {
+        transform: scale(1.025);
+    }
+}
 
 
-/* ============================= */
-/* ANIMAÇÃO */
-/* ============================= */
+/* =========================================
+   ANIMAÇÕES
+   ========================================= */
 
 @keyframes aparecer {
-
     from {
         opacity: 0;
         transform: translateY(15px);
@@ -329,10 +520,123 @@
 }
 
 
-.form-floating > label {
-    background-color: transparent !important;
+@keyframes formularioEntrando {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.form-floating > label::after {
-    background-color: transparent !important;
+
+@keyframes linhaTitulo {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 48px;
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .auth-side-info {
+        display: none;
+    }
+
+    .auth-side-form {
+        width: 100%;
+    }
+
+    .auth-container {
+        max-width: 420px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .auth-side-form {
+        padding: 30px;
+    }
+
+    .auth-title,
+    .welcome-text {
+        font-size: 2.5rem;
+    }
+}
+
+/* =========================================
+   PARTÍCULAS
+   ========================================= */
+
+.particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #bc13fe;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #bc13fe, 0 0 12px rgba(188, 19, 254, 0.6);
+    opacity: 0;
+    animation: particleFloat linear infinite, particleAppear ease-in-out infinite;
+}
+
+.mouse-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(188, 19, 254, 0.12);
+    filter: blur(70px);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transition: left 0.15s ease-out, top 0.15s ease-out;
+}
+
+/* =========================================
+   ANIMAÇÃO DAS PARTÍCULAS
+   ========================================= */
+
+@keyframes particleFloat {
+
+    from {
+        transform: translateY(110vh);
+    }
+
+    to {
+        transform: translateY(-10vh);
+    }
+}
+
+
+@keyframes particleAppear {
+
+    0%, 100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
 }
