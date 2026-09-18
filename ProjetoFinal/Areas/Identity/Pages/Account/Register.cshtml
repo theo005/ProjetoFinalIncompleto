@@ -37,12 +37,11 @@
 
         <div class="auth-side-info">
 
-            <div class="eagle-symbol">
+            <div class="music-background"></div>
 
-                <span></span>
-                <span></span>
+            <div class="mouse-glow"></div>
 
-            </div>
+            <div class="particles"></div>
 
             <h2 class="welcome-text">
                 Já possui conta?
@@ -179,6 +178,104 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <partial name="_ValidationScriptsPartial" />
+
+    <script>
+
+            // =============================
+            // PARTÍCULAS
+            // =============================
+
+            const particlesContainer =
+                document.querySelector(".particles");
+
+            for (let i = 0; i < 25; i++) {
+
+                const particle =
+                    document.createElement("span");
+
+                particle.classList.add("particle");
+
+                particle.style.left =
+                    Math.random() * 100 + "%";
+
+                particle.style.animationDuration =
+                    (8 + Math.random() * 6) + "s";
+
+                particle.style.animationDelay =
+                    Math.random() * 2 + "s";
+
+                const tamanho =
+                    (1 + Math.random() * 3) + "px";
+
+                particle.style.width = tamanho;
+                particle.style.height = tamanho;
+
+                particlesContainer.appendChild(particle);
+            }
+
+
+            // =============================
+            // MOUSE GLOW
+            // =============================
+
+            const mouseGlow =
+                document.querySelector(".mouse-glow");
+
+            const areaLogin =
+                document.querySelector(".auth-side-info");
+
+            areaLogin.addEventListener("mousemove", function(evento) {
+
+                const rect =
+                    areaLogin.getBoundingClientRect();
+
+                const x =
+                    evento.clientX - rect.left;
+
+                const y =
+                    evento.clientY - rect.top;
+
+                mouseGlow.style.left =
+                    x + "px";
+
+                mouseGlow.style.top =
+                    y + "px";
+            });
+
+
+            // =============================
+            // TRANSIÇÃO DE PÁGINA
+            // =============================
+
+            document.querySelectorAll("a").forEach(link => {
+
+                link.addEventListener("click", function(evento) {
+
+                    const destino =
+                        this.href;
+
+                    if (!destino ||
+                        destino.startsWith("#") ||
+                        this.target === "_blank") {
+                        return;
+                    }
+
+                    evento.preventDefault();
+
+                    document.body.classList.add("page-exit");
+
+                    setTimeout(() => {
+
+                        window.location.href =
+                            destino;
+
+                    }, 450);
+
+                });
+
+            });
+
+    </script>
 
 </body>
 

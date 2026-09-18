@@ -45,7 +45,7 @@
 
 .auth-side-form {
     flex: 1;
-    background: radial-gradient( circle at 80% 50%, rgba(188, 19, 254, 0.12), transparent 35% ), linear-gradient( 135deg, #120422 0%, #000000 75% );
+    background: radial-gradient( circle at 20% 50%, rgba(188, 19, 254, 0.12), transparent 35% ), linear-gradient( 135deg, #120422 0%, #000000 75% );
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +58,7 @@
 
 
 /* ============================= */
-/* GLOW */
+/* GLOW DO FUNDO */
 /* ============================= */
 
 .auth-glow {
@@ -72,6 +72,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    animation: glowPulse 5s ease-in-out infinite;
 }
 
 
@@ -83,7 +84,7 @@
     width: 100%;
     max-width: 395px;
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 
 
@@ -97,11 +98,12 @@
     font-weight: 800;
     letter-spacing: 4px;
     margin-bottom: 15px;
+    animation: brandAppear 0.8s ease-out;
 }
 
     .auth-brand span {
         color: #bc13fe;
-        text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe;
+        text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe, 0 0 20px rgba(188, 19, 254, 0.6);
     }
 
 
@@ -117,62 +119,129 @@
     text-align: left;
     letter-spacing: -1px;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+    animation: titleAppear 0.9s ease-out;
 }
 
 
 /* ============================= */
-/* INPUTS */
+/* FORMULÁRIOS */
 /* ============================= */
 
-.form-floating input {
-    background-color: transparent !important;
-    border: none !important;
-    border-bottom: 1px solid #444 !important;
-    border-radius: 4px 4px 0 0 !important;
-    color: #fff !important;
-    padding-left: 0 !important;
-    box-shadow: none !important;
-    transition: all 0.3s ease;
+.form-floating {
+    position: relative;
 }
 
-    .form-floating input:hover {
-        border-bottom-color: #777 !important;
-    }
 
-    .form-floating input:focus {
-        border-bottom-color: #bc13fe !important;
+    /* ============================= */
+    /* INPUTS */
+    /* ============================= */
+
+    .form-floating input {
         background-color: transparent !important;
-        box-shadow: 0 4px 12px rgba(188, 19, 254, 0.08) !important;
+        border: none !important;
+        border-bottom: 1px solid #444 !important;
+        border-radius: 4px 4px 0 0 !important;
+        color: #fff !important;
+        padding-left: 0 !important;
+        box-shadow: none !important;
+        transition: border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
     }
 
 
-/* Labels */
+        /* ============================= */
+        /* HOVER */
+        /* ============================= */
 
-.form-floating label {
-    color: #666 !important;
-    padding-left: 0 !important;
-    background-color: transparent !important;
-}
-
-
-/* Remove fundo branco do Bootstrap */
-
-.form-floating > label::after {
-    background-color: transparent !important;
-}
+        .form-floating input:hover {
+            border-bottom-color: #777 !important;
+        }
 
 
-.form-floating input:focus ~ label,
-.form-floating input:not(:placeholder-shown) ~ label {
-    color: #bc13fe !important;
+    /* ============================= */
+    /* FOCO */
+    /* ============================= */
+
+    .form-floating:focus-within input {
+        border-bottom-color: #bc13fe !important;
+        background-color: rgba(188, 19, 254, 0.025) !important;
+        box-shadow: 0 4px 12px rgba(188, 19, 254, 0.08), 0 8px 25px rgba(188, 19, 254, 0.04) !important;
+    }
+
+
+    /* ============================= */
+    /* LINHA NEON DO INPUT */
+    /* ============================= */
+
+    .form-floating::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient( 90deg, #7b1fa2, #bc13fe, #df73ff );
+        border-radius: 10px;
+        box-shadow: 0 0 5px #bc13fe, 0 0 12px rgba(188, 19, 254, 0.7), 0 0 20px rgba(188, 19, 254, 0.35);
+        transition: width 0.45s ease;
+    }
+
+
+    /* Linha cresce quando entra no campo */
+
+    .form-floating:focus-within::after {
+        width: 100%;
+    }
+
+
+    /* ============================= */
+    /* LABELS */
+    /* ============================= */
+
+    .form-floating label {
+        color: #666 !important;
+        padding-left: 0 !important;
+        background-color: transparent !important;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+
+    .form-floating > label::after {
+        background-color: transparent !important;
+    }
+
+
+    /* Label neon no foco */
+
+    .form-floating:focus-within label {
+        color: #bc13fe !important;
+        text-shadow: 0 0 8px rgba(188, 19, 254, 0.45);
+    }
+
+
+    /* Label continua roxa se já houver texto */
+
+    .form-floating input:not(:placeholder-shown) ~ label {
+        color: #bc13fe !important;
+    }
+
+
+/* ============================= */
+/* MENSAGENS DE ERRO */
+/* ============================= */
+
+.text-danger {
+    color: #ff4d6d !important;
+    text-shadow: 0 0 6px rgba(255, 77, 109, 0.25);
 }
 
 
 /* ============================= */
-/* BOTÃO */
+/* BOTÃO CADASTRAR */
 /* ============================= */
 
 .btn-auth {
+    position: relative;
+    overflow: hidden;
     background: linear-gradient( 90deg, #7b1fa2, #bc13fe ) !important;
     border: none !important;
     color: #fff !important;
@@ -180,51 +249,53 @@
     letter-spacing: 1.5px;
     border-radius: 25px !important;
     padding: 13px !important;
-    transition: all 0.3s ease !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
     box-shadow: 0 4px 15px rgba(188, 19, 254, 0.30);
 }
 
+
+    /* ============================= */
+    /* LUZ PASSANDO PELO BOTÃO */
+    /* ============================= */
+
+    .btn-auth::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -120%;
+        width: 70%;
+        height: 100%;
+        background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.28), transparent );
+        transform: skewX(-20deg);
+        transition: left 0.65s ease;
+        pointer-events: none;
+    }
+
+
+    /* ============================= */
+    /* HOVER BOTÃO */
+    /* ============================= */
+
     .btn-auth:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(188, 19, 254, 0.45), 0 0 20px rgba(188, 19, 254, 0.25);
         background: linear-gradient( 90deg, #bc13fe, #df73ff ) !important;
+        box-shadow: 0 8px 25px rgba(188, 19, 254, 0.45), 0 0 20px rgba(188, 19, 254, 0.25), 0 0 40px rgba(188, 19, 254, 0.12);
     }
 
 
-/* ============================= */
-/* LADO DE INFORMAÇÃO */
-/* ============================= */
-
-.welcome-text {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
-    position: relative;
-    z-index: 2;
-}
+        .btn-auth:hover::before {
+            left: 140%;
+        }
 
 
-    .welcome-text::after {
-        content: "";
-        display: block;
-        width: 55px;
-        height: 3px;
-        margin-top: 18px;
-        background: #bc13fe;
-        border-radius: 10px;
-        box-shadow: 0 0 8px #bc13fe, 0 0 18px rgba(188, 19, 254, 0.6);
+    /* ============================= */
+    /* BOTÃO PRESSIONADO */
+    /* ============================= */
+
+    .btn-auth:active {
+        transform: translateY(0) scale(0.98);
+        box-shadow: 0 3px 10px rgba(188, 19, 254, 0.35);
     }
-
-
-.welcome-sub {
-    color: #aaa;
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-    position: relative;
-    z-index: 2;
-}
 
 
 /* ============================= */
@@ -232,24 +303,63 @@
 /* ============================= */
 
 .btn-outline-neon {
+    position: relative;
+    overflow: hidden;
     border: 1px solid #bc13fe !important;
     color: #fff !important;
-    background: transparent !important;
+    background: rgba(0, 0, 0, 0.15) !important;
     font-weight: bold !important;
     letter-spacing: 1.5px;
     border-radius: 25px !important;
     padding: 11px 42px !important;
     text-decoration: none;
-    transition: all 0.3s ease !important;
-    position: relative;
-    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease !important;
+    z-index: 5;
+    box-shadow: 0 0 0 rgba(188, 19, 254, 0);
 }
+
+
+    /* ============================= */
+    /* LUZ PASSANDO NO BOTÃO ENTRAR */
+    /* ============================= */
+
+    .btn-outline-neon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -120%;
+        width: 70%;
+        height: 100%;
+        background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.25), transparent );
+        transform: skewX(-20deg);
+        transition: left 0.65s ease;
+        pointer-events: none;
+    }
+
+
+    /* ============================= */
+    /* HOVER BOTÃO ENTRAR */
+    /* ============================= */
 
     .btn-outline-neon:hover {
         background: #bc13fe !important;
         color: #000 !important;
-        box-shadow: 0 0 10px rgba(188, 19, 254, 0.6), 0 0 25px rgba(188, 19, 254, 0.35);
-        transform: translateY(-2px);
+        transform: translateY(-3px);
+        box-shadow: 0 0 10px rgba(188, 19, 254, 0.6), 0 0 25px rgba(188, 19, 254, 0.35), 0 0 45px rgba(188, 19, 254, 0.15);
+    }
+
+
+        .btn-outline-neon:hover::before {
+            left: 140%;
+        }
+
+
+    /* ============================= */
+    /* BOTÃO ENTRAR PRESSIONADO */
+    /* ============================= */
+
+    .btn-outline-neon:active {
+        transform: translateY(0) scale(0.97);
     }
 
 
@@ -293,7 +403,123 @@
 
 
 /* ============================= */
-/* ANIMAÇÃO */
+/* FUNDO MUSICAL */
+/* ============================= */
+
+.music-background {
+    position: absolute;
+    inset: 0;
+    background-image: url('/img/login-musical.png');
+    background-size: cover;
+    background-position: 20% center;
+    background-repeat: no-repeat;
+    opacity: 0.42;
+    filter: saturate(1.25) brightness(0.65) drop-shadow( 0 0 12px rgba(188, 19, 254, 0.45) );
+    pointer-events: none;
+    z-index: 1;
+    transform: scale(1);
+    animation: musicBackgroundFloat 8s ease-in-out infinite;
+}
+
+
+/* ============================= */
+/* TEXTO DE BOAS-VINDAS */
+/* ============================= */
+
+.welcome-text {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 5;
+    animation: welcomeTextAppear 0.9s ease-out;
+}
+
+
+    .welcome-text::after {
+        content: "";
+        display: block;
+        width: 55px;
+        height: 3px;
+        margin-top: 18px;
+        background: #bc13fe;
+        border-radius: 10px;
+        box-shadow: 0 0 8px #bc13fe, 0 0 18px rgba(188, 19, 254, 0.6);
+        animation: lineAppear 1s ease-out;
+    }
+
+
+.welcome-sub {
+    color: #aaa;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 5;
+    animation: welcomeSubAppear 1s ease-out;
+}
+
+
+/* ============================= */
+/* PARTÍCULAS */
+/* ============================= */
+
+.particles {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+.particle {
+    position: absolute;
+    bottom: -10px;
+    background: #bc13fe;
+    border-radius: 50%;
+    opacity: 0;
+    animation: particleFloat linear infinite, particleAppear 1s ease forwards;
+    box-shadow: 0 0 6px #bc13fe, 0 0 12px rgba(188, 19, 254, 0.5);
+}
+
+
+/* ============================= */
+/* MOUSE GLOW */
+/* ============================= */
+
+.mouse-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(188, 19, 254, 0.15);
+    filter: blur(70px);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+
+/* ============================= */
+/* TRANSIÇÃO ENTRE PÁGINAS */
+/* ============================= */
+
+body {
+    opacity: 1;
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+
+    body.page-exit {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+
+/* ============================= */
+/* ANIMAÇÕES */
 /* ============================= */
 
 @keyframes aparecer {
@@ -306,5 +532,153 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+@keyframes brandAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes titleAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes welcomeTextAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes welcomeSubAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes lineAppear {
+
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 55px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes glowPulse {
+
+    0%, 100% {
+        opacity: 0.65;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.08);
+    }
+}
+
+
+@keyframes musicBackgroundFloat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.025);
+    }
+}
+
+
+@keyframes particleFloat {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-110vh);
+    }
+}
+
+
+@keyframes particleAppear {
+
+    to {
+        opacity: 0.7;
+    }
+}
+
+
+/* ============================= */
+/* RESPONSIVO */
+/* ============================= */
+
+@media (max-width: 850px) {
+
+    .auth-side-info {
+        display: none;
+    }
+
+    .auth-side-form {
+        flex: 1;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .auth-side-form {
+        padding: 25px;
+    }
+
+    .auth-title {
+        font-size: 2.5rem;
+    }
+
+    .auth-container {
+        max-width: 100%;
     }
 }

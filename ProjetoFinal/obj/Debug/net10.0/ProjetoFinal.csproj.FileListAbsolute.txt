@@ -1301,8 +1301,8 @@ C:\Users\nori_\OneDrive\Área de Trabalho\Theo Workspace's\ProjetoFinalIncomplet
 C:\Users\nori_\OneDrive\Área de Trabalho\Theo Workspace's\ProjetoFinalIncompleto\ProjetoFinal\obj\Debug\net10.0\ProjetoFinal.genruntimeconfig.cache
 C:\Users\nori_\OneDrive\Área de Trabalho\Theo Workspace's\ProjetoFinalIncompleto\ProjetoFinal\obj\Debug\net10.0\ref\ProjetoFinal.dll
 C:\Users\nori_\OneDrive\Área de Trabalho\Theo Workspace's\ProjetoFinalIncompleto\ProjetoFinal\obj\Debug\net10.0\compressed\9tl81vhfi0-{0}-tg840jod8u-tg840jod8u.gz
-C:\Users\nori_\OneDrive\Área de Trabalho\Theo Workspace's\ProjetoFinalIncompleto\ProjetoFinal\obj\Debug\net10.0\compressed\j9eh3dkt4u-{0}-4zg8mnw82y-4zg8mnw82y.gz
-C:\Users\nori_\OneDrive\Área de Trabalho\Theo Workspace's\ProjetoFinalIncompleto\ProjetoFinal\obj\Debug\net10.0\compressed\5rkene90iw-{0}-uubk26u7cu-uubk26u7cu.gz
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\obj\Debug\net10.0\compressed\5rkene90iw-{0}-uubk26u7cu-uubk26u7cu.gz
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\obj\Debug\net10.0\compressed\9tl81vhfi0-{0}-tg840jod8u-tg840jod8u.gz
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\obj\Debug\net10.0\compressed\j9eh3dkt4u-{0}-5cwy3g0cek-5cwy3g0cek.gz
+C:\Users\nori_\OneDrive\Área de Trabalho\Theo Workspace's\ProjetoFinalIncompleto\ProjetoFinal\obj\Debug\net10.0\compressed\j9eh3dkt4u-{0}-4199xosgnh-4199xosgnh.gz
+C:\Users\nori_\OneDrive\Área de Trabalho\Theo Workspace's\ProjetoFinalIncompleto\ProjetoFinal\obj\Debug\net10.0\compressed\5rkene90iw-{0}-j2jxmufquh-j2jxmufquh.gz
