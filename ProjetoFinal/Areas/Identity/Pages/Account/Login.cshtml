@@ -57,15 +57,38 @@
 
                     </div>
 
-                    <div class="form-floating mb-4">
+                    <div class="form-floating mb-4 password-container">
 
                         <input asp-for="Input.Password"
                                class="form-control"
+                               id="passwordInput"
                                autocomplete="current-password"
                                aria-required="true"
                                placeholder="password" />
 
                         <label asp-for="Input.Password">Senha</label>
+
+                        <button type="button"
+                                class="btn-show-password"
+                                id="togglePassword"
+                                aria-label="Mostrar senha">
+
+                            <svg id="eyeIcon"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+
+                                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path>
+
+                                <circle cx="12" cy="12" r="3"></circle>
+
+                            </svg>
+
+                        </button>
 
                         <span asp-validation-for="Input.Password"
                               class="text-danger small"></span>
@@ -215,6 +238,33 @@
 
         });
 
+    </script>
+
+    <script>
+            const passwordInput = document.getElementById("passwordInput");
+            const togglePassword = document.getElementById("togglePassword");
+
+            togglePassword.addEventListener("click", function() {
+
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    togglePassword.textContent = "🙈";
+                } else {
+                    passwordInput.type = "password";
+                    togglePassword.textContent = "👁";
+                }
+
+            });
+
+            passwordInput.addEventListener("input", function() {
+
+                if (passwordInput.value.length > 0) {
+                    passwordInput.parentElement.classList.add("has-text");
+                } else {
+                    passwordInput.parentElement.classList.remove("has-text");
+                }
+
+            });
     </script>
 
 </body>

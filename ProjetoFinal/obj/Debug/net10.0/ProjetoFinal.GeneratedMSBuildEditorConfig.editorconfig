@@ -20,121 +20,121 @@ build_property.TargetFrameworkVersion = v10.0
 build_property.EntryPointFilePath = 
 build_property.RootNamespace = ProjetoFinal
 build_property.RootNamespace = ProjetoFinal
-build_property.ProjectDir = C:\Users\nori_\OneDrive\Área de Trabalho\Theo Workspace's\ProjetoFinalIncompleto\ProjetoFinal\
+build_property.ProjectDir = C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 10.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\nori_\OneDrive\Área de Trabalho\Theo Workspace's\ProjetoFinalIncompleto\ProjetoFinal
+build_property.MSBuildProjectDirectory = C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Home/Index.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Home/Privacy.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Instrumentos/AdicionarInstrumentos.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Instrumentos/AdicionarInstrumentos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudG9zXEFkaWNpb25hckluc3RydW1lbnRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Instrumentos/Cordas.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Instrumentos/Cordas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudG9zXENvcmRhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Instrumentos/Index.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Instrumentos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Instrumentos/Madeiras.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Instrumentos/Madeiras.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudG9zXE1hZGVpcmFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Instrumentos/Metais.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Instrumentos/Metais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudG9zXE1ldGFpcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Instrumentos/Orgao.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Instrumentos/Orgao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudG9zXE9yZ2FvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Instrumentos/Percussao.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Instrumentos/Percussao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudG9zXFBlcmN1c3Nhby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Instrumentos/Teclas.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Instrumentos/Teclas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1bWVudG9zXFRlY2xhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Shared/Error.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/_ViewImports.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/_ViewStart.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nori_/OneDrive/Área de Trabalho/Theo Workspace's/ProjetoFinalIncompleto/ProjetoFinal/Views/Shared/_Layout.cshtml]
+[C:/Users/43100827856/Desktop/Projetofinal/ProjetoFinal/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gz6lnk1pec

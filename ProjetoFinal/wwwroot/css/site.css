@@ -1,11 +1,18 @@
 /* ==========================================================================
-   1. BASE DO LAYOUT (FLEXBOX PARA EMPURRAR O FOOTER)
+   EAGLE IM - SITE.CSS
+   PALETA NOVA
    ========================================================================== */
-html, body {
+
+/* ==========================================================================
+   1. BASE DO LAYOUT
+   ========================================================================== */
+
+html,
+body {
     min-height: 100vh;
     margin: 0;
-    background-color: #000; /* Garante o fundo preto em todo o site */
-    color: #fff;
+    background-color: #080808;
+    color: #FFFFFF;
 }
 
 body {
@@ -24,12 +31,14 @@ main {
     flex: 1;
 }
 
-/* ==========================================================
-   📱 2. AJUSTES EXCLUSIVOS PARA CELULAR (Telas até 767px)
-   ========================================================== */
+
+/* ==========================================================================
+   2. AJUSTES EXCLUSIVOS PARA CELULAR
+   ========================================================================== */
+
 @media (max-width: 767px) {
 
-    /* 🎯 CORREÇÃO 1: Mantém as 3 barras (Menu Hambúrguer) fixas no canto direito */
+    /* Botão do menu hambúrguer */
     .navbar-toggler {
         position: relative !important;
         right: 0 !important;
@@ -38,101 +47,104 @@ main {
         display: block !important;
     }
 
-    /* Organização interna do menu ao expandir */
+    /* Organização interna do menu */
     .navbar-collapse {
-        background-color: #000000 !important;
+        background-color: #050505 !important;
         padding: 15px 10px !important;
         width: 100% !important;
     }
 
-        .navbar-collapse.show {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 15px !important;
-        }
+    .navbar-collapse.show {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
 
-        /* 🎯 CORREÇÃO 2 & 3: BARRA DE PESQUISA (Largura total dinâmica e expansível) */
-        .navbar-collapse form:not([action*="Logout"]),
-        .navbar-collapse .search-form {
-            display: flex !important;
-            flex-direction: row !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            gap: 10px !important;
-            position: relative !important;
-            left: 0 !important;
-            transform: none !important;
-            margin: 5px 0 !important;
-        }
+    /* Barra de pesquisa */
+    .navbar-collapse form:not([action*="Logout"]),
+    .navbar-collapse .search-form {
+        display: flex !important;
+        flex-direction: row !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 10px !important;
+        position: relative !important;
+        left: 0 !important;
+        transform: none !important;
+        margin: 5px 0 !important;
+    }
 
-            /* Força o input de texto a crescer e ocupar todo o espaço disponível da linha */
-            .navbar-collapse form:not([action*="Logout"]) input {
-                flex-grow: 1 !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                position: relative !important;
-                transform: none !important;
-            }
+    /* Input da pesquisa */
+    .navbar-collapse form:not([action*="Logout"]) input {
+        flex-grow: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        position: relative !important;
+        transform: none !important;
+    }
 
-            /* Botão de "Search" ao lado do input */
-            .navbar-collapse form:not([action*="Logout"]) button {
-                position: relative !important;
-                left: 0 !important;
-                transform: none !important;
-                width: auto !important;
-                white-space: nowrap !important;
-            }
+    /* Botão Search */
+    .navbar-collapse form:not([action*="Logout"]) button {
+        position: relative !important;
+        left: 0 !important;
+        transform: none !important;
+        width: auto !important;
+        white-space: nowrap !important;
+    }
 
-        /* 👤 TEXTO DE BOAS-VINDAS (Hello Ad@Admin!) */
-        .navbar-text,
-        [class*="Hello"],
-        .navbar-collapse .nav-link[title*="Manage"] {
-            position: relative !important;
-            left: 0 !important;
-            top: 0 !important;
-            transform: none !important;
-            display: block !important;
-            text-align: center !important;
-            width: 100% !important;
-            color: #bc13fe !important;
-            font-weight: bold !important;
-            margin: 5px 0 !important;
-        }
+    /* Texto de boas-vindas */
+    .navbar-text,
+    [class*="Hello"],
+    .navbar-collapse .nav-link[title*="Manage"] {
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        transform: none !important;
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
 
-        /* 🎯 CORREÇÃO 4: BOTÃO DE LOGOUT (Forçado para baixo, sem sobreposição) */
-        /* Esse seletor duplo limpa qualquer posicionamento absoluto vindo do desktop */
-        .navbar-collapse form[action*="Logout"],
-        form[action*="Logout"] {
-            position: relative !important;
-            left: 0 !important;
-            top: 0 !important;
-            transform: none !important;
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            width: 100% !important;
-            margin: 10px 0 !important;
-            clear: both !important;
-        }
+        color: #A855F7 !important;
+        font-weight: bold !important;
 
-            /* Estilo visual do botão de Logout */
-            form[action*="Logout"] button,
-            form[action*="Logout"] input[type="submit"] {
-                position: relative !important;
-                left: 0 !important;
-                transform: none !important;
-                background-color: #bc13fe !important;
-                color: #000000 !important;
-                border: none !important;
-                padding: 8px 30px !important;
-                border-radius: 20px !important;
-                font-weight: bold !important;
-                width: auto !important;
-                display: inline-block !important;
-            }
+        margin: 5px 0 !important;
+    }
 
-    /* links de Login / Registrar quando deslogado */
+    /* Logout */
+    .navbar-collapse form[action*="Logout"],
+    form[action*="Logout"] {
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        transform: none !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 10px 0 !important;
+        clear: both !important;
+    }
+
+    /* Botão logout no mobile */
+    form[action*="Logout"] button,
+    form[action*="Logout"] input[type="submit"] {
+        position: relative !important;
+        left: 0 !important;
+        transform: none !important;
+
+        background-color: #A855F7 !important;
+        color: #FFFFFF !important;
+
+        border: none !important;
+        padding: 8px 30px !important;
+        border-radius: 20px !important;
+        font-weight: bold !important;
+        width: auto !important;
+        display: inline-block !important;
+    }
+
+    /* Links Login / Registrar */
     .navbar-nav {
         display: flex !important;
         flex-direction: column !important;
@@ -141,7 +153,7 @@ main {
         width: 100% !important;
     }
 
-    /* Links de categorias secundárias */
+    /* Links de categorias */
     header + div a,
     .category-links a {
         font-size: 13px !important;
@@ -151,530 +163,854 @@ main {
     }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+
+/* ==========================================================================
+   3. FOCUS DO BOOTSTRAP
+   ========================================================================== */
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow:
+        0 0 0 0.1rem white,
+        0 0 0 0.25rem #A855F7;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
     color: var(--bs-secondary-color);
     text-align: end;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+
 /* ==========================================================================
-   3. SEUS ESTILOS PERSONALIZADOS DO LAYOUT (VERSÃO ULTRA-BLINDADA)
+   4. HEADER / NAVBAR
    ========================================================================== */
 
-/* 1. O topo principal manda no posicionamento geral */
-header, .navbar {
-    background-color: #000 !important;
-    border-bottom: 1px solid #222;
+header,
+.navbar {
+    background-color: #050505 !important;
+
+    border-bottom: 1px solid rgba(139, 43, 226, 0.45);
+
     padding: 15px 0;
-    position: relative !important; /* Este se torna o único "pai" de referência */
+
+    position: relative !important;
 }
 
-    /* 2. QUEBRA AS PAREDES INVISÍVEIS: 
-   Desativa o posicionamento relativo de qualquer caixinha intermediária do Bootstrap */
-    .navbar div,
-    .navbar-collapse,
-    .container-fluid,
-    .container,
-    .navbar-nav {
-        position: static !important;
-    }
-
-    /* Links do menu superior (Navegação, Login, Registro) */
-    .navbar-brand, .nav-link, header a {
-        color: #bc13fe !important; /* Roxo Neon */
-        text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe; /* Efeito de Brilho Neon */
-        font-weight: bold;
-        transition: all 0.3s ease;
-    }
-
-        /* Efeito ao passar o mouse nos links do topo */
-        .navbar-brand:hover, .nav-link:hover, header a:hover {
-            color: #df73ff !important; /* Roxo mais claro ao focar */
-            text-shadow: 0 0 10px #df73ff, 0 0 20px #df73ff, 0 0 30px #df73ff;
-        }
-
-    /* 3. Nova lógica de centralização baseada nas bordas totais da tela */
-    header form, .navbar form {
-        position: absolute !important;
-        top: 50% !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto !important; /* O próprio navegador calcula o centro real do site */
-        transform: translateY(-50%) !important; /* Alinhamento vertical perfeito */
-        display: flex !important;
-        align-items: center !important;
-        width: max-content !important; /* Envolve estritamente o input e o botão */
-        z-index: 9999 !important; /* Fica por cima de tudo */
-    }
-
-        /* 4. Campo de entrada (Input) */
-        header form input, .navbar form input {
-            background-color: #111 !important;
-            border: 1px solid #bc13fe !important;
-            color: #fff !important;
-            border-radius: 20px 0 0 20px !important;
-            box-shadow: 0 0 5px rgba(188, 19, 254, 0.5) !important;
-            padding: 6px 15px !important;
-            width: 220px !important; /* Largura inicial visível e confortável */
-            text-align: left !important; /* Garante o texto alinhado desde o início */
-            transition: width 0.4s ease-in-out, box-shadow 0.4s ease-in-out !important;
-            outline: none !important;
-        }
-
-            /* Expansão simétrica ao clicar */
-            header form input:focus, .navbar form input:focus {
-                width: 380px !important; /* Abre espaço de sobra para digitar e expande para os dois lados */
-                border-color: #df73ff !important;
-                box-shadow: 0 0 15px #bc13fe, 0 0 25px rgba(188, 19, 254, 0.7) !important;
-            }
-
-        /* 5. Botão de pesquisa */
-        header form button, .navbar form button {
-            border-radius: 0 20px 20px 0 !important;
-            background-color: #bc13fe !important;
-            border: 1px solid #bc13fe !important;
-            color: #000 !important;
-            font-weight: bold !important;
-            padding: 6px 20px !important;
-            cursor: pointer !important;
-            transition: all 0.3s ease !important;
-        }
-
-            header form button:hover, .navbar form button:hover {
-                background-color: #df73ff !important;
-                border-color: #df73ff !important;
-                box-shadow: 0 0 10px #df73ff !important;
-            }
-/* ==========================================================
-   🎨 1. REGRAS GERAIS (Para todas as telas - PC e Celular)
-   ========================================================== */
-header {
-    background-color: #000000 !important;
-    border-bottom: 2px solid #bc13fe !important;
+/* Remove posicionamentos intermediários */
+.navbar div,
+.navbar-collapse,
+.container-fluid,
+.container,
+.navbar-nav {
+    position: static !important;
 }
 
-/* Remove a borda das tags internas para eliminar a linha roxa duplicada */
-nav, .navbar {
-    background-color: #000000 !important;
-    border-bottom: none !important;
+
+/* ==========================================================================
+   5. LINKS DO HEADER
+   ========================================================================== */
+
+.navbar-brand,
+.nav-link,
+header a {
+    color: #A855F7 !important;
+
+    text-shadow:
+        0 0 5px rgba(168, 85, 247, 0.45);
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
 }
 
-header + div, .category-links {
-    background-color: #000000 !important;
+.navbar-brand:hover,
+.nav-link:hover,
+header a:hover {
+    color: #C026FF !important;
+
+    text-shadow:
+        0 0 8px rgba(192, 38, 255, 0.8),
+        0 0 18px rgba(192, 38, 255, 0.45);
+}
+
+
+/* ==========================================================================
+   6. PESQUISA DO HEADER
+   ========================================================================== */
+
+header form,
+.navbar form {
+    position: absolute !important;
+
+    top: 50% !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    margin: 0 auto !important;
+
+    transform: translateY(-50%) !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    width: max-content !important;
+
+    z-index: 9999 !important;
+}
+
+
+/* Input */
+
+header form input,
+.navbar form input {
+    background-color: #151515 !important;
+
+    border: 1px solid #8B2BE2 !important;
+
+    color: #FFFFFF !important;
+
+    border-radius: 20px 0 0 20px !important;
+
+    box-shadow:
+        0 0 5px rgba(139, 43, 226, 0.35) !important;
+
+    padding: 6px 15px !important;
+
+    width: 220px !important;
+
+    text-align: left !important;
+
+    transition:
+        width 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out,
+        border-color 0.3s ease !important;
+
+    outline: none !important;
+}
+
+
+/* Input ao clicar */
+
+header form input:focus,
+.navbar form input:focus {
+    width: 380px !important;
+
+    border-color: #C026FF !important;
+
+    box-shadow:
+        0 0 12px rgba(168, 85, 247, 0.65),
+        0 0 25px rgba(192, 38, 255, 0.25) !important;
+}
+
+
+/* Botão da pesquisa */
+
+header form button,
+.navbar form button {
+    border-radius: 0 20px 20px 0 !important;
+
+    background-color: #A855F7 !important;
+
+    border: 1px solid #A855F7 !important;
+
+    color: #FFFFFF !important;
+
+    font-weight: bold !important;
+
+    padding: 6px 20px !important;
+
+    cursor: pointer !important;
+
+    transition: all 0.3s ease !important;
+}
+
+
+/* Hover Search */
+
+header form button:hover,
+.navbar form button:hover {
+    background-color: #C026FF !important;
+
+    border-color: #C026FF !important;
+
+    box-shadow:
+        0 0 12px rgba(192, 38, 255, 0.6) !important;
+}
+
+
+/* ==========================================================================
+   7. ÁREA DE CATEGORIAS
+   ========================================================================== */
+
+header + div,
+.category-links {
+    background-color: #080808 !important;
+
     text-align: center;
+
     padding: 8px 0;
 }
 
+
 /* ==========================================================================
-   3. SEUS ESTILOS PERSONALIZADOS DO LAYOUT
+   8. LINKS DE PÁGINAS
    ========================================================================== */
+
 #pages a {
     text-decoration: none;
-    color: #bc13fe;
-    text-shadow: 0 0 5px #bc13fe;
+
+    color: #A855F7;
+
+    text-shadow:
+        0 0 5px rgba(168, 85, 247, 0.45);
+
     margin-bottom: 15px;
+
     padding: 5px 10px;
-}
 
-    #pages a:hover {
-        color: #df73ff;
-        text-shadow: 0 0 10px #df73ff;
-    }
-/*Container*/
-/* Container que agrupa o Hello e o Botão */
-.auth-header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Cria o espaçamento perfeito entre o texto e o botão */
-    margin-left: auto; /* ISSO AQUI faz a mágica de empurrar o bloco todo para a extrema direita */
-}
-
-/* Estilização do texto Hello */
-.hello-text {
-    color: #bc13fe;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(188, 19, 254, 0.6);
-    white-space: nowrap; /* Evita que o texto quebre em duas linhas */
-}
-
-/* Ajuste fino do seu botão de Logout estilo cápsula */
-.btn-logout-header {
-    background-color: #bc13fe;
-    color: #000;
-    border: none;
-    padding: 6px 20px;
-    border-radius: 20px;
-    font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(188, 19, 254, 0.4);
 }
 
-    .btn-logout-header:hover {
-        background-color: #df73ff;
-        box-shadow: 0 0 15px #bc13fe;
-        transform: translateY(-1px);
-        color: #000;
-    }
+#pages a:hover {
+    color: #C026FF;
+
+    text-shadow:
+        0 0 10px rgba(192, 38, 255, 0.8),
+        0 0 20px rgba(192, 38, 255, 0.35);
+}
+
 
 /* ==========================================================================
-   4. SEU RODAPÉ CORRIGIDO (SEM POSITION ABSOLUTE)
+   9. USUÁRIO / LOGOUT DO HEADER
    ========================================================================== */
-footer.footer {
-    position: static !important; /* Ignora qualquer herança do absolute padrão */
-    height: auto;
-    line-height: normal;
-    background-color: #000 !important; /* Força o fundo preto caso fique transparente */
-    padding: 30px 0 20px 0;
-    width: 100%;
-    border-top: 1px solid #333;
+
+.auth-header-right {
     display: flex;
-    flex-direction: column;
+
     align-items: center;
+
+    gap: 20px;
+
+    margin-left: auto;
+}
+
+
+/* Texto Hello */
+
+.hello-text {
+    color: #A855F7;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.5);
+
+    white-space: nowrap;
+}
+
+
+/* Botão logout */
+
+.btn-logout-header {
+    background-color: #A855F7;
+
+    color: #FFFFFF;
+
+    border: none;
+
+    padding: 6px 20px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.35);
+}
+
+.btn-logout-header:hover {
+    background-color: #C026FF;
+
+    box-shadow:
+        0 0 15px rgba(192, 38, 255, 0.65);
+
+    transform: translateY(-1px);
+
+    color: #FFFFFF;
+}
+
+
+/* ==========================================================================
+   10. FOOTER
+   ========================================================================== */
+
+footer.footer {
+    position: static !important;
+
+    height: auto;
+
+    line-height: normal;
+
+    background-color: #050505 !important;
+
+    padding: 30px 0 20px 0;
+
+    width: 100%;
+
+    border-top: 1px solid rgba(139, 43, 226, 0.35);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
     gap: 30px;
 }
 
-    footer.footer h3 {
-        color: darkgray;
-    }
+footer.footer h3 {
+    color: #B8B8B8;
+}
 
 #CorFt {
-    color: #2B2F33BF;
+    color: #B8B8B8;
 }
+
+
+/* ==========================================================================
+   11. FORMAS DE PAGAMENTO
+   ========================================================================== */
 
 #formasPagamento {
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 20px;
 }
 
 .payment-icon {
     width: 200px;
+
     height: auto;
 }
 
+
+/* ==========================================================================
+   12. ÁREA INSTITUCIONAL / CATEGORIAS DO FOOTER
+   ========================================================================== */
+
 #meio {
     display: flex;
+
     justify-content: space-around;
+
     width: 100%;
+
     max-width: 800px;
 }
 
-#institucional, .categorias {
+#institucional,
+.categorias {
     width: 45%;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
+
     text-align: center;
 }
 
-    #institucional a, .categorias a {
-        color: #aaa;
-        text-decoration: none;
-        font-size: 14px;
-        transition: color 0.3s ease;
-    }
+#institucional a,
+.categorias a {
+    color: #B8B8B8;
 
-        #institucional a:hover, .categorias a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-/*Logout*/
-/* Garante o ponto de referência para o bloco absoluto */
-header, nav, .navbar {
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color 0.3s ease;
+}
+
+#institucional a:hover,
+.categorias a:hover {
+    color: #FFFFFF;
+
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   13. BLOCO DE IDENTIDADE / USUÁRIO
+   ========================================================================== */
+
+header,
+nav,
+.navbar {
     position: relative !important;
 }
 
-/* O container principal na extrema direita */
+
+/* Bloco na extrema direita */
+
 #identity-right-block {
     position: absolute !important;
+
     right: 20px !important;
+
     top: 50% !important;
+
     transform: translateY(-50%) !important;
-    /* Ativa o Flexbox para alinhar lado a lado horizontalmente */
+
     display: flex !important;
+
     flex-direction: row !important;
+
     align-items: center !important;
+
     justify-content: flex-end !important;
-    gap: 15px !important; /* Espaçamento perfeito entre o texto e o botão */
+
+    gap: 15px !important;
+
     z-index: 999;
 }
 
-    /* FORÇA os filhos a não usarem posicionamento absoluto próprio */
-    #identity-right-block .user-welcome-text,
-    #identity-right-block form,
-    #identity-right-block .btn-logout-neon {
-        position: static !important;
-        transform: none !important;
-        float: none !important;
-    }
 
-/* Estilização do Texto */
-.user-welcome-text {
-    color: #bc13fe !important;
-    font-weight: bold !important;
-    text-shadow: 0 0 10px rgba(188, 19, 254, 0.6);
-    white-space: nowrap !important; /* Impede que o "Hello..." quebre linha */
+/* Filhos */
+
+#identity-right-block .user-welcome-text,
+#identity-right-block form,
+#identity-right-block .btn-logout-neon {
+    position: static !important;
+
+    transform: none !important;
+
+    float: none !important;
 }
 
-/* Estilização do Botão */
-.btn-logout-neon {
-    background-color: #bc13fe !important;
-    color: #000 !important;
-    border: none !important;
-    padding: 6px 20px !important;
-    border-radius: 20px !important;
+
+/* Texto */
+
+.user-welcome-text {
+    color: #A855F7 !important;
+
     font-weight: bold !important;
-    box-shadow: 0 0 10px rgba(188, 19, 254, 0.4) !important;
-    transition: all 0.3s ease !important;
-    cursor: pointer;
+
+    text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.5);
+
     white-space: nowrap !important;
 }
 
-    .btn-logout-neon:hover {
-        background-color: #df73ff !important;
-        box-shadow: 0 0 15px #bc13fe !important;
-        transform: scale(1.05) !important; /* Efeito leve de crescimento ao passar o mouse */
-    }
 
-/* =========================================
-         MENU LATERAL - BOTÃO
-   ========================================= */
+/* Botão */
+
+.btn-logout-neon {
+    background-color: #A855F7 !important;
+
+    color: #FFFFFF !important;
+
+    border: none !important;
+
+    padding: 6px 20px !important;
+
+    border-radius: 20px !important;
+
+    font-weight: bold !important;
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.35) !important;
+
+    transition: all 0.3s ease !important;
+
+    cursor: pointer;
+
+    white-space: nowrap !important;
+}
+
+
+/* Hover */
+
+.btn-logout-neon:hover {
+    background-color: #C026FF !important;
+
+    box-shadow:
+        0 0 15px rgba(192, 38, 255, 0.65) !important;
+
+    transform: scale(1.05) !important;
+}
+
+
+/* ==========================================================================
+   14. BOTÃO DO MENU LATERAL
+   ========================================================================== */
 
 .menu-button {
-    color: #bc13fe !important;
+    color: #A855F7 !important;
+
     font-size: 24px;
+
     border: none !important;
+
     background: transparent !important;
-    text-shadow: 0 0 5px #bc13fe;
+
+    text-shadow:
+        0 0 5px rgba(168, 85, 247, 0.5);
+
     transition: all 0.3s ease;
 }
 
-    .menu-button:hover {
-        color: #df73ff !important;
-        text-shadow: 0 0 10px #df73ff, 0 0 20px #df73ff;
-        transform: scale(1.1);
-    }
+.menu-button:hover {
+    color: #C026FF !important;
+
+    text-shadow:
+        0 0 10px rgba(192, 38, 255, 0.8),
+        0 0 20px rgba(192, 38, 255, 0.45);
+
+    transform: scale(1.1);
+}
 
 
-/* =========================================
-         MENU LATERAL
-   ========================================= */
+/* ==========================================================================
+   15. MENU LATERAL
+   ========================================================================== */
 
 .menu-lateral {
-    background-color: #050505 !important;
-    color: white !important;
+    background-color: #080808 !important;
+
+    color: #FFFFFF !important;
+
     width: 350px !important;
-    border-right: 1px solid #bc13fe !important;
-    box-shadow: 5px 0 25px rgba(188, 19, 254, 0.25);
-    transition: transform 0.4s ease-in-out !important;
+
+    border-right: 1px solid #8B2BE2 !important;
+
+    box-shadow:
+        5px 0 25px rgba(139, 43, 226, 0.25);
+
+    transition:
+        transform 0.4s ease-in-out !important;
 }
 
 
-/* =========================================
-         TÍTULO DO MENU
-   ========================================= */
+/* ==========================================================================
+   16. TÍTULO DO MENU
+   ========================================================================== */
 
 .titulo-menu {
-    color: #bc13fe !important;
+    color: #A855F7 !important;
+
     font-weight: bold;
+
     font-size: 24px;
-    text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe, 0 0 20px rgba(188, 19, 254, 0.7);
+
+    text-shadow:
+        0 0 5px #A855F7,
+        0 0 10px rgba(168, 85, 247, 0.7),
+        0 0 20px rgba(192, 38, 255, 0.4);
 }
 
 
-/* =========================================
-         BOTÃO FECHAR
-   ========================================= */
+/* ==========================================================================
+   17. BOTÃO FECHAR
+   ========================================================================== */
 
 .menu-lateral .btn-close {
     filter: invert(1);
+
     opacity: 0.8;
+
     transition: all 0.3s ease;
 }
 
-    .menu-lateral .btn-close:hover {
-        opacity: 1;
-        transform: rotate(90deg) scale(1.1);
-        filter: invert(30%) sepia(100%) saturate(5000%) hue-rotate(270deg);
-    }
+.menu-lateral .btn-close:hover {
+    opacity: 1;
+
+    transform: rotate(90deg) scale(1.1);
+
+    filter:
+        invert(30%)
+        sepia(100%)
+        saturate(5000%)
+        hue-rotate(270deg);
+}
 
 
-/* =========================================
-         ESPAÇAMENTO DO MENU
-   ========================================= */
+/* ==========================================================================
+   18. ESPAÇAMENTO DO MENU
+   ========================================================================== */
 
 .menu-lateral .offcanvas-body {
     padding-top: 30px;
 }
 
 
-/* =========================================
-         ITENS DO MENU
-   ========================================= */
+/* ==========================================================================
+   19. ITENS DO MENU
+   ========================================================================== */
 
 .menu-lateral .item-menu {
     display: block;
+
     width: 100%;
-    color: white !important;
+
+    color: #FFFFFF !important;
+
     text-decoration: none;
+
     font-size: 18px;
+
     font-weight: bold;
+
     padding: 14px 15px;
+
     margin-bottom: 8px;
+
     border-radius: 8px;
-    border-bottom: 3px solid rgba(188, 19, 254, 0.20);
+
+    border-bottom:
+        3px solid rgba(139, 43, 226, 0.25);
+
     transition: all 0.3s ease;
 }
 
 
-    /* Linha fica mais forte no hover */
+/* Hover */
 
-    .menu-lateral .item-menu:hover {
-        border-bottom: 3px solid rgba(188, 19, 254, 0.35) !important;
-        box-shadow: 0 1px 5px rgba(188, 19, 254, 0.15);
-    }
+.menu-lateral .item-menu:hover {
+    border-bottom:
+        3px solid rgba(192, 38, 255, 0.65) !important;
+
+    box-shadow:
+        0 1px 8px rgba(168, 85, 247, 0.18);
+
+    color: #C026FF !important;
+}
 
 
-/* =========================================
-         BOTÕES DAS CATEGORIAS
-   ========================================= */
+/* ==========================================================================
+   20. BOTÕES DAS CATEGORIAS
+   ========================================================================== */
 
 .menu-lateral .item-menu-botao {
     width: 100%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     background: transparent !important;
+
     border: none !important;
-    border-bottom: 3px solid rgba(188, 19, 254, 0.20) !important;
+
+    border-bottom:
+        3px solid rgba(139, 43, 226, 0.25) !important;
+
     outline: none !important;
-    color: white !important;
+
+    color: #FFFFFF !important;
+
     font-size: 18px;
+
     font-weight: bold;
+
     padding: 14px 15px;
+
     margin-bottom: 8px;
+
     border-radius: 8px;
+
     text-align: left;
+
     cursor: pointer;
+
     transition: all 0.3s ease;
 }
-    /* =========================================
-         HOVER DOS BOTÕES
-   ========================================= */
 
-    .menu-lateral .item-menu-botao:hover {
-        color: #df73ff !important;
-        background-color: rgba(188, 19, 254, 0.12) !important;
-        text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe;
-        transform: translateX(5px);
-        border-bottom-color: rgba(188, 19, 254, 0.60) !important;
-    }
-    /* =========================================
-         SETINHA
-   ========================================= */
 
-    .menu-lateral .item-menu-botao span {
-        font-size: 24px;
-        line-height: 1;
-        display: inline-block;
-        transition: transform 0.3s ease;
-        filter: drop-shadow(0 0 5px #bc13fe);
-    }
-    /* Brilho da seta no hover */
+/* Hover */
 
-    .menu-lateral .item-menu-botao:hover span {
-        text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe;
-    }
-    /* Gira a seta quando abre */
+.menu-lateral .item-menu-botao:hover {
+    color: #C026FF !important;
 
-    .menu-lateral .item-menu-botao.aberto span {
-        transform: rotate(90deg);
-    }
-/* =========================================
-         SUBMENU
-   ========================================= */
+    background-color:
+        rgba(168, 85, 247, 0.10) !important;
+
+    text-shadow:
+        0 0 5px #A855F7,
+        0 0 10px rgba(192, 38, 255, 0.5);
+
+    transform: translateX(5px);
+
+    border-bottom-color:
+        rgba(192, 38, 255, 0.65) !important;
+}
+
+
+/* ==========================================================================
+   21. SETA DO MENU
+   ========================================================================== */
+
+.menu-lateral .item-menu-botao span {
+    font-size: 24px;
+
+    line-height: 1;
+
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+
+    filter:
+        drop-shadow(0 0 5px #A855F7);
+}
+
+
+/* Brilho */
+
+.menu-lateral .item-menu-botao:hover span {
+    text-shadow:
+        0 0 5px #A855F7,
+        0 0 10px #C026FF;
+}
+
+
+/* Rotação */
+
+.menu-lateral .item-menu-botao.aberto span {
+    transform: rotate(90deg);
+}
+
+
+/* ==========================================================================
+   22. SUBMENU
+   ========================================================================== */
 
 .submenu {
     max-height: 0;
+
     opacity: 0;
+
     overflow: hidden;
+
     padding-left: 15px;
+
     margin-left: 15px;
+
     margin-bottom: 0;
-    /* LINHA VERTICAL DO SUBMENU */
-    border-left: 2px solid #bc13fe;
-    transition: max-height 0.4s ease, opacity 0.3s ease, margin-bottom 0.4s ease;
+
+    border-left:
+        2px solid #8B2BE2;
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        margin-bottom 0.4s ease;
 }
-    /* =========================================
-         SUBMENU ABERTO
-   ========================================= */
-
-    .submenu.aberto {
-        max-height: 300px;
-        opacity: 1;
-        margin-bottom: 10px;
-    }
 
 
-        .submenu.aberto a {
-            opacity: 1;
-            transform: translateX(0);
-        }
+/* Submenu aberto */
 
-        /* Identifica o link q é, ex: 1, 2, 3 e faz uma transição*/
-            .submenu.aberto a:nth-child(1) {
-                transition-delay: 0.05s;
-            }
+.submenu.aberto {
+    max-height: 300px;
 
-            .submenu.aberto a:nth-child(2) {
-                transition-delay: 0.10s;
-            }
+    opacity: 1;
 
-            .submenu.aberto a:nth-child(3) {
-                transition-delay: 0.15s;
-            }
+    margin-bottom: 10px;
+}
 
-            .submenu.aberto a:nth-child(4) {
-                transition-delay: 0.20s;
-            }
 
-            .submenu.aberto a:nth-child(5) {
-                transition-delay: 0.25s;
-            }
+/* Links aparecem */
 
-            .submenu.aberto a:nth-child(6) {
-                transition-delay: 0.30s;
-            }
-    /* =========================================
-         LINKS DO SUBMENU
-   ========================================= */
+.submenu.aberto a {
+    opacity: 1;
 
-    .submenu a {
-        display: block;
-        color: #aaa !important;
-        text-decoration: none;
-        font-size: 16px;
-        padding: 10px 15px;
-        border-radius: 6px;
-        transition: all 0.3s ease;
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-        /* =========================================
-         HOVER DOS LINKS DO SUBMENU
-   ========================================= */
+    transform: translateX(0);
+}
 
-        .submenu a:hover {
-            color: #df73ff !important;
-            background-color: rgba(188, 19, 254, 0.10);
-            text-shadow: 0 0 5px #bc13fe, 0 0 10px #bc13fe;
-            padding-left: 20px;
-        }
+
+/* ==========================================================================
+   23. ANIMAÇÃO DOS LINKS DO SUBMENU
+   ========================================================================== */
+
+.submenu.aberto a:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.submenu.aberto a:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.submenu.aberto a:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.submenu.aberto a:nth-child(4) {
+    transition-delay: 0.20s;
+}
+
+.submenu.aberto a:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.submenu.aberto a:nth-child(6) {
+    transition-delay: 0.30s;
+}
+
+
+/* ==========================================================================
+   24. LINKS DO SUBMENU
+   ========================================================================== */
+
+.submenu a {
+    display: block;
+
+    color: #B8B8B8 !important;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    padding: 10px 15px;
+
+    border-radius: 6px;
+
+    transition: all 0.3s ease;
+
+    opacity: 0;
+
+    transform: translateX(-10px);
+}
+
+
+/* Hover */
+
+.submenu a:hover {
+    color: #C026FF !important;
+
+    background-color:
+        rgba(168, 85, 247, 0.10);
+
+    text-shadow:
+        0 0 5px #A855F7,
+        0 0 10px rgba(192, 38, 255, 0.5);
+
+    padding-left: 20px;
+}
