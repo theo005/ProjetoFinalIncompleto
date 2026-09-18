@@ -40,8 +40,10 @@
 
                     <div asp-validation-summary="ModelOnly"
                          class="text-danger mb-3"
-                         role="alert"></div>
+                         role="alert">
+                    </div>
 
+                    <!-- EMAIL -->
                     <div class="form-floating mb-4">
 
                         <input asp-for="Input.Email"
@@ -50,13 +52,18 @@
                                aria-required="true"
                                placeholder="name@example.com" />
 
-                        <label asp-for="Input.Email">Email</label>
+                        <label asp-for="Input.Email">
+                            Email
+                        </label>
 
                         <span asp-validation-for="Input.Email"
-                              class="text-danger small"></span>
+                              class="text-danger small">
+                        </span>
 
                     </div>
 
+
+                    <!-- SENHA -->
                     <div class="form-floating mb-4 password-container">
 
                         <input asp-for="Input.Password"
@@ -66,8 +73,12 @@
                                aria-required="true"
                                placeholder="password" />
 
-                        <label asp-for="Input.Password">Senha</label>
+                        <label asp-for="Input.Password">
+                            Senha
+                        </label>
 
+
+                        <!-- BOTÃO MOSTRAR SENHA -->
                         <button type="button"
                                 class="btn-show-password"
                                 id="togglePassword"
@@ -82,19 +93,36 @@
                                  stroke-linecap="round"
                                  stroke-linejoin="round">
 
-                                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path>
+                                <!-- OLHO -->
+                                <path id="eyePath"
+                                      d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z">
+                                </path>
 
-                                <circle cx="12" cy="12" r="3"></circle>
+                                <!-- PUPILA -->
+                                <circle id="eyeCircle"
+                                        cx="12"
+                                        cy="12"
+                                        r="3">
+                                </circle>
+
+                                <!-- RISCO -->
+                                <path id="eyeSlash"
+                                      d="M3 3l18 18">
+                                </path>
 
                             </svg>
 
                         </button>
 
+
                         <span asp-validation-for="Input.Password"
-                              class="text-danger small"></span>
+                              class="text-danger small">
+                        </span>
 
                     </div>
 
+
+                    <!-- LEMBRAR-ME -->
                     <div class="form-check mb-4">
 
                         <input class="form-check-input"
@@ -109,6 +137,8 @@
 
                     </div>
 
+
+                    <!-- BOTÃO ENTRAR -->
                     <button id="login-submit"
                             type="submit"
                             class="w-100 btn btn-auth mb-4">
@@ -117,6 +147,8 @@
 
                     </button>
 
+
+                    <!-- ESQUECEU A SENHA -->
                     <div class="text-center">
 
                         <a id="forgot-password"
@@ -166,6 +198,7 @@
     </div>
 
 
+    <!-- SCRIPTS -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -174,97 +207,140 @@
 
 
     <!-- PARTÍCULAS -->
-
     <script>
 
-        const particlesContainer =
-            document.querySelector(".particles");
+            const particlesContainer =
+                document.querySelector(".particles");
 
-        for (let i = 0; i < 25; i++) {
+            for (let i = 0; i < 25; i++) {
 
-            const particle =
-                document.createElement("span");
+                const particle =
+                    document.createElement("span");
 
-            particle.classList.add("particle");
+                particle.classList.add("particle");
 
-            particle.style.left =
-                Math.random() * 100 + "%";
+                particle.style.left =
+                    Math.random() * 100 + "%";
 
-            particle.style.animationDuration =
-                (8 + Math.random() * 6) + "s";
+                particle.style.animationDuration =
+                    (8 + Math.random() * 6) + "s";
 
-            particle.style.animationDelay =
-                Math.random() * 2 + "s";
+                particle.style.animationDelay =
+                    Math.random() * 2 + "s";
 
-            const tamanho =
-                (1 + Math.random() * 3) + "px";
+                const tamanho =
+                    (1 + Math.random() * 3) + "px";
 
-            particle.style.width = tamanho;
+                particle.style.width = tamanho;
 
-            particle.style.height = tamanho;
+                particle.style.height = tamanho;
 
-            particlesContainer.appendChild(particle);
-        }
+                particlesContainer.appendChild(particle);
+
+            }
 
     </script>
 
 
     <!-- MOUSE GLOW -->
-
     <script>
 
-        const mouseGlow =
-            document.querySelector(".mouse-glow");
+            const mouseGlow =
+                document.querySelector(".mouse-glow");
 
-        const areaLogin =
-            document.querySelector(".auth-side-info");
+            const areaLogin =
+                document.querySelector(".auth-side-info");
 
-        areaLogin.addEventListener("mousemove", function (evento) {
+            areaLogin.addEventListener("mousemove", function(evento) {
 
-            const rect =
-                areaLogin.getBoundingClientRect();
+                const rect =
+                    areaLogin.getBoundingClientRect();
 
-            const x =
-                evento.clientX - rect.left;
+                const x =
+                    evento.clientX - rect.left;
 
-            const y =
-                evento.clientY - rect.top;
+                const y =
+                    evento.clientY - rect.top;
 
-            mouseGlow.style.left =
-                x + "px";
+                mouseGlow.style.left =
+                    x + "px";
 
-            mouseGlow.style.top =
-                y + "px";
+                mouseGlow.style.top =
+                    y + "px";
 
-        });
+            });
 
     </script>
 
-    <script>
-            const passwordInput = document.getElementById("passwordInput");
-            const togglePassword = document.getElementById("togglePassword");
 
+    <!-- MOSTRAR / OCULTAR SENHA -->
+    <script>
+
+            const passwordInput =
+                document.getElementById("passwordInput");
+
+            const togglePassword =
+                document.getElementById("togglePassword");
+
+            const eyeSlash =
+                document.getElementById("eyeSlash");
+
+
+            // Começa com o olho fechado
+            eyeSlash.style.display = "block";
+
+
+            // CLICOU NO OLHO
             togglePassword.addEventListener("click", function() {
 
                 if (passwordInput.type === "password") {
+
+                    // Mostra a senha
                     passwordInput.type = "text";
-                    togglePassword.textContent = "🙈";
+
+                    // Remove o risco
+                    eyeSlash.style.display = "none";
+
+                    // Atualiza o texto para acessibilidade
+                    togglePassword.setAttribute(
+                        "aria-label",
+                        "Ocultar senha"
+                    );
+
                 } else {
+
+                    // Esconde a senha
                     passwordInput.type = "password";
-                    togglePassword.textContent = "👁";
+
+                    // Coloca o risco
+                    eyeSlash.style.display = "block";
+
+                    // Atualiza o texto para acessibilidade
+                    togglePassword.setAttribute(
+                        "aria-label",
+                        "Mostrar senha"
+                    );
+
                 }
 
             });
 
+
+            // DETECTA DIGITAÇÃO
             passwordInput.addEventListener("input", function() {
 
                 if (passwordInput.value.length > 0) {
+
                     passwordInput.parentElement.classList.add("has-text");
+
                 } else {
+
                     passwordInput.parentElement.classList.remove("has-text");
+
                 }
 
             });
+
     </script>
 
 </body>

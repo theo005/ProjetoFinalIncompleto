@@ -641,43 +641,52 @@ body {
     }
 }
 
-
 /* =========================================
-   BOTÃODE OCULTAR OU APARECER SENHA
+   BOTÃO MOSTRAR / OCULTAR SENHA
    ========================================= */
-
-
 
 .password-container {
     position: relative;
 }
 
+
 .btn-show-password {
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
     border: none;
     color: #666;
-    font-size: 18px;
     cursor: pointer;
     z-index: 10;
-    transition: color 0.3s ease, transform 0.2s ease;
     opacity: 0;
     pointer-events: none;
+    padding: 4px;
     transition: opacity 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    width: 20px;
-    height: 20px;
-    display: block;
 }
+
+
+    /* ÍCONE */
+
+    .btn-show-password svg {
+        width: 24px;
+        height: 24px;
+        display: block;
+    }
+
+
+/* APARECE QUANDO DIGITA */
 
 .password-container.has-text .btn-show-password {
     opacity: 1;
     pointer-events: auto;
 }
 
-    .btn-show-password:hover {
-        color: #bc13fe;
-        transform: translateY(-50%) scale(1.1);
-    }
+
+/* HOVER */
+
+.btn-show-password:hover {
+    color: #bc13fe;
+    transform: translateY(-50%) scale(1.1);
+}

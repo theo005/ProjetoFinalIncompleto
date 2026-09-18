@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\site.css",
@@ -46,12 +46,11 @@
               "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\site.css",
               "ViewState": "AgIAAFoDAAAAAAAAAADwv3EDAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-09-18T10:58:06.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-18T10:58:06.516Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Home.css",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\wwwroot\\css\\Home.css",
               "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\Home.css",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\Home.css",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAAFQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-09-18T10:35:08.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-18T10:35:08.949Z"
             },
             {
               "$type": "Document",
@@ -72,21 +70,19 @@
               "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\Register.css",
               "ViewState": "AgIAAPsAAAAAAAAAAAAkwCoBAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-09-12T22:32:33.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T22:32:33.747Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ToolTip": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeToolTip": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAALoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAAALoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-12T22:32:19.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T22:32:19.354Z"
             },
             {
               "$type": "Document",
@@ -94,9 +90,9 @@
               "Title": "Login.css",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\wwwroot\\css\\Login.css",
               "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\Login.css",
-              "ToolTip": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\wwwroot\\css\\Login.css*",
-              "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\Login.css*",
-              "ViewState": "AgIAAH0CAAAAAAAAAAAmwJ4CAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\wwwroot\\css\\Login.css",
+              "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\Login.css",
+              "ViewState": "AgIAAH4CAAAAAAAAAAAwwJkCAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-09-12T20:55:24.676Z",
               "EditorCaption": ""
@@ -107,12 +103,11 @@
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml*",
-              "RelativeToolTip": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml*",
-              "ViewState": "AgIAANQAAAAAAAAAAAAmwOIAAAAEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAACsBAAAAAAAAAAAwwFoBAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-12T20:57:27.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T20:57:27.996Z"
             }
           ]
         }
