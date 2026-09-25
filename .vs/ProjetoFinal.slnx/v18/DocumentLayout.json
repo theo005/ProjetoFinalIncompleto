@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,34 +19,26 @@
       "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|c:\\users\\43100827856\\desktop\\projetofinal\\projetofinal\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{1F736F92-CD19-7D14-666D-D6BA632ED92D}|ProjetoFinal\\ProjetoFinal.csproj|solutionrelative:projetofinal\\wwwroot\\css\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 157,
+      "VerticalTabListWidth": 155,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\site.css",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Home.css",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\wwwroot\\css\\Home.css",
               "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\Home.css",
@@ -62,31 +62,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Register.css",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\wwwroot\\css\\Register.css",
               "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\Register.css",
               "ToolTip": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\wwwroot\\css\\Register.css",
               "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\Register.css",
-              "ViewState": "AgIAAPsAAAAAAAAAAAAkwCoBAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAM8CAAAAAAAAAAAAwOACAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-09-12T22:32:33.747Z"
+              "WhenOpened": "2026-09-12T22:32:33.747Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ToolTip": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeToolTip": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAOoAAAAAAAAAAAAAALoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFgBAAAAAAAAAAAkwJ4BAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-12T22:32:19.354Z"
+              "WhenOpened": "2026-09-12T22:32:19.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Login.css",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\wwwroot\\css\\Login.css",
               "RelativeDocumentMoniker": "ProjetoFinal\\wwwroot\\css\\Login.css",
@@ -94,18 +96,17 @@
               "RelativeToolTip": "ProjetoFinal\\wwwroot\\css\\Login.css",
               "ViewState": "AgIAAHsCAAAAAAAAAAAwwJkCAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-09-12T20:55:24.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T20:55:24.676Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "ToolTip": "C:\\Users\\43100827856\\Desktop\\Projetofinal\\ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeToolTip": "ProjetoFinal\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAwwNEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwK0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-12T20:57:27.996Z",
               "EditorCaption": ""

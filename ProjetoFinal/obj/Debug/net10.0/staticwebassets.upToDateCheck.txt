@@ -1,5 +1,5 @@
 wwwroot\css\Home.css
-wwwroot\css\Register.css
+wwwroot\css\Login.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\img\FormasPagamento.png
@@ -68,9 +68,9 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\Login.css
+wwwroot\css\Register.css
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Home.css
-C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Register.css
+C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Login.css
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\site.css
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\favicon.ico
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\js\site.js
@@ -133,4 +133,4 @@ C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\j
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\LICENSE.txt
-C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Login.css
+C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Register.css

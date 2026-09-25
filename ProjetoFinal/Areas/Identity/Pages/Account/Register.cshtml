@@ -114,10 +114,11 @@
 
                     <!-- SENHA -->
 
-                    <div class="form-floating mb-4">
+                    <div class="form-floating mb-4 password-container">
 
                         <input asp-for="Input.Password"
                                class="form-control"
+                               id="registerPassword"
                                autocomplete="new-password"
                                aria-required="true"
                                placeholder="password" />
@@ -125,6 +126,31 @@
                         <label asp-for="Input.Password">
                             Senha
                         </label>
+
+                        <button type="button"
+                                class="btn-show-password"
+                                id="toggleRegisterPassword"
+                                aria-label="Mostrar senha">
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+
+                                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path>
+
+                                <circle cx="12" cy="12" r="3"></circle>
+
+                                <path class="eye-slash"
+                                      d="M3 3l18 18">
+                                </path>
+
+                            </svg>
+
+                        </button>
 
                         <span asp-validation-for="Input.Password"
                               class="text-danger small">
@@ -135,10 +161,11 @@
 
                     <!-- CONFIRMAR SENHA -->
 
-                    <div class="form-floating mb-4">
+                    <div class="form-floating mb-4 password-container">
 
                         <input asp-for="Input.ConfirmPassword"
                                class="form-control"
+                               id="registerConfirmPassword"
                                autocomplete="new-password"
                                aria-required="true"
                                placeholder="password" />
@@ -146,6 +173,31 @@
                         <label asp-for="Input.ConfirmPassword">
                             Confirmar Senha
                         </label>
+
+                        <button type="button"
+                                class="btn-show-password"
+                                id="toggleRegisterConfirmPassword"
+                                aria-label="Mostrar senha">
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+
+                                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path>
+
+                                <circle cx="12" cy="12" r="3"></circle>
+
+                                <path class="eye-slash"
+                                      d="M3 3l18 18">
+                                </path>
+
+                            </svg>
+
+                        </button>
 
                         <span asp-validation-for="Input.ConfirmPassword"
                               class="text-danger small">
@@ -274,6 +326,91 @@
                 });
 
             });
+
+    </script>
+
+    <script>
+
+            function configurarSenha(inputId, buttonId) {
+
+                const passwordInput =
+                    document.getElementById(inputId);
+
+                const togglePassword =
+                    document.getElementById(buttonId);
+
+                const eyeSlash =
+                    togglePassword.querySelector(".eye-slash");
+
+
+                // Começa com o olho fechado
+                eyeSlash.style.display = "block";
+
+
+                // MOSTRAR / OCULTAR
+                togglePassword.addEventListener("click", function() {
+
+                    if (passwordInput.type === "password") {
+
+                        // Mostra a senha
+                        passwordInput.type = "text";
+
+                        // Remove o risco
+                        eyeSlash.style.display = "none";
+
+                        togglePassword.setAttribute(
+                            "aria-label",
+                            "Ocultar senha"
+                        );
+
+                    } else {
+
+                        // Esconde a senha
+                        passwordInput.type = "password";
+
+                        // Coloca o risco
+                        eyeSlash.style.display = "block";
+
+                        togglePassword.setAttribute(
+                            "aria-label",
+                            "Mostrar senha"
+                        );
+
+                    }
+
+                });
+
+
+                // APARECER O OLHO QUANDO DIGITAR
+                passwordInput.addEventListener("input", function() {
+
+                    if (passwordInput.value.length > 0) {
+
+                        passwordInput.parentElement.classList.add("has-text");
+
+                    } else {
+
+                        passwordInput.parentElement.classList.remove("has-text");
+
+                    }
+
+                });
+
+            }
+
+
+            // SENHA
+            configurarSenha(
+                "registerPassword",
+                "toggleRegisterPassword"
+            );
+
+
+            // CONFIRMAR SENHA
+            configurarSenha(
+                "registerConfirmPassword",
+                "toggleRegisterConfirmPassword"
+            );
 
     </script>
 

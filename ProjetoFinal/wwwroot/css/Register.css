@@ -682,3 +682,56 @@ body {
         max-width: 100%;
     }
 }
+
+
+/* =========================================
+   MOSTRAR / OCULTAR SENHA
+   ========================================= */
+
+.password-container {
+    position: relative;
+}
+
+
+/* BOTÃO DO OLHO */
+
+.btn-show-password {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    padding: 4px;
+    transition: opacity 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+
+    /* ÍCONE */
+
+    .btn-show-password svg {
+        width: 24px;
+        height: 24px;
+        display: block;
+    }
+
+
+/* APARECE QUANDO COMEÇA A DIGITAR */
+
+.password-container.has-text .btn-show-password {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* HOVER */
+
+.btn-show-password:hover {
+    color: #bc13fe;
+    transform: translateY(-50%) scale(1.1);
+}
