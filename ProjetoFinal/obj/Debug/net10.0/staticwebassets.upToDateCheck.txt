@@ -1,6 +1,7 @@
-wwwroot\css\Home.css
+wwwroot\css\Register.css
 wwwroot\css\Login.css
 wwwroot\css\site.css
+wwwroot\css\Home.css
 wwwroot\favicon.ico
 wwwroot\img\FormasPagamento.png
 wwwroot\img\imgCarrousel.jpeg
@@ -68,10 +69,13 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\Register.css
-C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Home.css
+wwwroot\css\Admin.css
+C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Register.css
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Login.css
+C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Home.css
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\site.css
+C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\favicon.ico
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\js\site.js
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -129,8 +133,6 @@ C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery-valida
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\jquery.js
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\jquery.min.map
-C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\jquery.slim.js
 C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\jquery.slim.min.js
-C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\jquery.slim.min.map
-C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\LICENSE.txt
-C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Register.css
+C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\lib\jquery\dist\jquery.slim.js
+C:\Users\43100827856\Desktop\Projetofinal\ProjetoFinal\wwwroot\css\Admin.css

@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Categorias";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eagle IM | Categorias</title>
+    <link rel="stylesheet" href="~/css/Admin.css" asp-append-version="true" />
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>EAGLE <span>IM</span></h2>
+            <p>PAINEL ADMINISTRATIVO</p>
+        </div>
+        <nav>
+            <a asp-action="Index">Dashboard</a>
+            <a asp-action="Produtos">Produtos</a>
+            <a class="active" asp-action="Categorias">Categorias</a>
+            <a asp-action="Clientes">Clientes</a>
+            <a asp-action="Pedidos">Pedidos</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a asp-controller="Instrumentos" asp-action="Index">Voltar para a loja</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Categorias</h1>
+                <p>Organize os departamentos da Eagle IM.</p>
+            </div>
+            <div class="admin-profile">Administrador</div>
+        </header>
+
+        <section class="page-heading">
+            <div>
+                <h2>Departamentos musicais</h2>
+                <p>Gerencie as categorias disponíveis na loja.</p>
+            </div>
+            <button class="primary-button" type="button">+ Nova categoria</button>
+        </section>
+
+        <section class="category-grid">
+            <article class="category-card"><h3>Órgãos</h3><p>Instrumentos da categoria de órgãos.</p></article>
+            <article class="category-card"><h3>Madeiras</h3><p>Instrumentos de sopro de madeira.</p></article>
+            <article class="category-card"><h3>Metais</h3><p>Instrumentos de sopro de metal.</p></article>
+            <article class="category-card"><h3>Cordas</h3><p>Instrumentos de cordas.</p></article>
+            <article class="category-card"><h3>Teclas</h3><p>Instrumentos de teclado.</p></article>
+            <article class="category-card"><h3>Percussão</h3><p>Instrumentos de percussão.</p></article>
+        </section>
+    </main>
+</body>
+</html>

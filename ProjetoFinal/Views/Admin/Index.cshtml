@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Painel Administrativo";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eagle IM | Administração</title>
+    <link rel="stylesheet" href="~/css/Admin.css" asp-append-version="true" />
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>EAGLE <span>IM</span></h2>
+            <p>PAINEL ADMINISTRATIVO</p>
+        </div>
+
+        <nav>
+            <a class="active" asp-controller="Admin" asp-action="Index">Dashboard</a>
+            <a asp-controller="Admin" asp-action="Produtos">Produtos</a>
+            <a asp-controller="Admin" asp-action="Categorias">Categorias</a>
+            <a asp-controller="Admin" asp-action="Clientes">Clientes</a>
+            <a asp-controller="Admin" asp-action="Pedidos">Pedidos</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a asp-controller="Instrumentos" asp-action="Index">Voltar para a loja</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Bem-vindo ao gerenciamento da Eagle IM.</p>
+            </div>
+            <div class="admin-profile">
+                <span>Administrador</span>
+            </div>
+        </header>
+
+        <section class="welcome">
+            <h2>Olá, administrador! 👋</h2>
+            <p>Gerencie sua loja de instrumentos musicais em um só lugar.</p>
+        </section>
+
+        <section class="stats">
+            <article class="stat-card">
+                <span>Produtos cadastrados</span>
+                <h2>--</h2>
+                <p>Estoque da loja</p>
+            </article>
+
+            <article class="stat-card">
+                <span>Categorias</span>
+                <h2>6</h2>
+                <p>Departamentos musicais</p>
+            </article>
+
+            <article class="stat-card">
+                <span>Clientes</span>
+                <h2>--</h2>
+                <p>Usuários cadastrados</p>
+            </article>
+
+            <article class="stat-card">
+                <span>Pedidos</span>
+                <h2>--</h2>
+                <p>Pedidos realizados</p>
+            </article>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Acesso rápido</h2>
+
+            <div class="quick-actions">
+                <a asp-controller="Admin" asp-action="Produtos">Gerenciar produtos</a>
+                <a asp-controller="Admin" asp-action="Categorias">Gerenciar categorias</a>
+                <a asp-controller="Admin" asp-action="Clientes">Visualizar clientes</a>
+                <a asp-controller="Admin" asp-action="Pedidos">Visualizar pedidos</a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

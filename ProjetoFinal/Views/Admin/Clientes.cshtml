@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Clientes";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eagle IM | Clientes</title>
+    <link rel="stylesheet" href="~/css/Admin.css" asp-append-version="true" />
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>EAGLE <span>IM</span></h2>
+            <p>PAINEL ADMINISTRATIVO</p>
+        </div>
+        <nav>
+            <a asp-action="Index">Dashboard</a>
+            <a asp-action="Produtos">Produtos</a>
+            <a asp-action="Categorias">Categorias</a>
+            <a class="active" asp-action="Clientes">Clientes</a>
+            <a asp-action="Pedidos">Pedidos</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a asp-controller="Instrumentos" asp-action="Index">Voltar para a loja</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Clientes</h1>
+                <p>Consulte os usuários cadastrados na loja.</p>
+            </div>
+            <div class="admin-profile">Administrador</div>
+        </header>
+
+        <section class="page-heading">
+            <div>
+                <h2>Base de clientes</h2>
+                <p>Visualize as informações dos clientes.</p>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <div class="table-header">
+                <h3>Clientes cadastrados</h3>
+                <input type="search" placeholder="Pesquisar cliente..." />
+            </div>
+
+            <div class="empty-state">
+                <h3>Nenhum cliente exibido</h3>
+                <p>Os usuários cadastrados aparecerão aqui quando conectarmos a página ao Identity.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

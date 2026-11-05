@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Pedidos";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eagle IM | Pedidos</title>
+    <link rel="stylesheet" href="~/css/Admin.css" asp-append-version="true" />
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>EAGLE <span>IM</span></h2>
+            <p>PAINEL ADMINISTRATIVO</p>
+        </div>
+        <nav>
+            <a asp-action="Index">Dashboard</a>
+            <a asp-action="Produtos">Produtos</a>
+            <a asp-action="Categorias">Categorias</a>
+            <a asp-action="Clientes">Clientes</a>
+            <a class="active" asp-action="Pedidos">Pedidos</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a asp-controller="Instrumentos" asp-action="Index">Voltar para a loja</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Pedidos</h1>
+                <p>Acompanhe as compras realizadas na Eagle IM.</p>
+            </div>
+            <div class="admin-profile">Administrador</div>
+        </header>
+
+        <section class="page-heading">
+            <div>
+                <h2>Gerenciamento de pedidos</h2>
+                <p>Consulte e acompanhe os pedidos dos clientes.</p>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <div class="table-header">
+                <h3>Todos os pedidos</h3>
+                <input type="search" placeholder="Pesquisar pedido..." />
+            </div>
+
+            <div class="empty-state">
+                <h3>Nenhum pedido exibido</h3>
+                <p>Os pedidos aparecerão aqui quando implementarmos o sistema de compras.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
