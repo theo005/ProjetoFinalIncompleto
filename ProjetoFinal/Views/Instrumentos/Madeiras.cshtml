@@ -1,5 +1,325 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
+    ViewData["Title"] = "Instrumentos de Madeiras";
 }
+
+<div class="madeiras-page">
+
+    <section class="madeiras-hero">
+        <div class="madeiras-hero-content">
+            <span class="madeiras-tag">EAGLE IM • CATEGORIA</span>
+
+            <h1>Instrumentos de Madeiras</h1>
+
+            <p>
+                Descubra a delicadeza, a expressividade e a riqueza sonora
+                dos instrumentos da família das madeiras.
+            </p>
+
+            <a href="#instrumentos-madeiras" class="madeiras-btn">
+                Explorar instrumentos
+                <span>→</span>
+            </a>
+        </div>
+
+        <div class="madeiras-hero-decoration">♫</div>
+    </section>
+
+    <section class="madeiras-intro" id="instrumentos-madeiras">
+        <span class="madeiras-subtitle">NOSSA COLEÇÃO</span>
+        <h2>Explore o universo das madeiras</h2>
+        <p>
+            Dos sons suaves às melodias marcantes, encontre o instrumento
+            ideal para expressar sua musicalidade.
+        </p>
+    </section>
+
+    <section class="madeiras-grid">
+
+        <a asp-controller="Instrumentos" asp-action="Flautas" class="madeiras-card">
+            <div class="madeiras-icon">🎶</div>
+            <span class="madeiras-type">SOPRO</span>
+            <h3>Flautas</h3>
+            <p>Leveza e sonoridade delicada para diferentes estilos musicais.</p>
+            <span class="madeiras-link">Explorar categoria →</span>
+        </a>
+
+        <a asp-controller="Instrumentos" asp-action="Clarinete" class="madeiras-card">
+            <div class="madeiras-icon">🎼</div>
+            <span class="madeiras-type">SOPRO</span>
+            <h3>Clarinete</h3>
+            <p>Versatilidade e timbre marcante para composições e apresentações.</p>
+            <span class="madeiras-link">Explorar categoria →</span>
+        </a>
+
+        <a asp-controller="Instrumentos" asp-action="Saxofones" class="madeiras-card">
+            <div class="madeiras-icon">🎷</div>
+            <span class="madeiras-type">SOPRO</span>
+            <h3>Saxofones</h3>
+            <p>Personalidade sonora presente no jazz, blues e muito mais.</p>
+            <span class="madeiras-link">Explorar categoria →</span>
+        </a>
+
+        <a asp-controller="Instrumentos" asp-action="Oboes" class="madeiras-card">
+            <div class="madeiras-icon">🎵</div>
+            <span class="madeiras-type">SOPRO</span>
+            <h3>Oboés</h3>
+            <p>Um som expressivo e característico da música clássica.</p>
+            <span class="madeiras-link">Explorar categoria →</span>
+        </a>
+
+        <a asp-controller="Instrumentos" asp-action="Fagotes" class="madeiras-card">
+            <div class="madeiras-icon">🎵</div>
+            <span class="madeiras-type">SOPRO</span>
+            <h3>Fagotes</h3>
+            <p>Graves profundos e personalidade para conjuntos musicais.</p>
+            <span class="madeiras-link">Explorar categoria →</span>
+        </a>
+
+        <a asp-controller="Instrumentos" asp-action="FlautasDoces" class="madeiras-card">
+            <div class="madeiras-icon">🎶</div>
+            <span class="madeiras-type">SOPRO</span>
+            <h3>Flautas Doces</h3>
+            <p>Uma ótima escolha para iniciação musical e aprendizado.</p>
+            <span class="madeiras-link">Explorar categoria →</span>
+        </a>
+
+    </section>
+
+    <section class="madeiras-highlight">
+        <div>
+            <span class="madeiras-subtitle">EAGLE IM</span>
+            <h2>O som certo para sua próxima descoberta.</h2>
+            <p>
+                Explore nossa seleção e encontre instrumentos que acompanham
+                sua evolução musical.
+            </p>
+        </div>
+
+        <span class="madeiras-highlight-icon">♫</span>
+    </section>
+
+</div>
+
+<style>
+    .madeiras-page {
+        width: 100%;
+        color: #fff;
+        padding: 25px 0 55px;
+    }
+
+    .madeiras-hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 330px;
+        display: flex;
+        align-items: center;
+        padding: 55px 7%;
+        border-radius: 20px;
+        background: linear-gradient(115deg, #10091a, #29113e 60%, #542080);
+        border: 1px solid rgba(168, 85, 247, .25);
+    }
+
+    .madeiras-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+    }
+
+    .madeiras-tag,
+    .madeiras-subtitle {
+        color: #c084fc;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .madeiras-hero h1 {
+        margin: 18px 0;
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    .madeiras-hero p {
+        max-width: 550px;
+        color: #d2c7dc;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    .madeiras-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        padding: 13px 22px;
+        color: #fff !important;
+        text-decoration: none !important;
+        font-weight: 700;
+        border-radius: 9px;
+        background: linear-gradient(90deg, #8b2be2, #a855f7);
+        transition: .3s;
+    }
+
+    .madeiras-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(168, 85, 247, .35);
+    }
+
+    .madeiras-hero-decoration {
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 210px;
+        color: rgba(255, 255, 255, .07);
+        pointer-events: none;
+    }
+
+    .madeiras-intro {
+        text-align: center;
+        margin: 65px 0 35px;
+    }
+
+    .madeiras-intro h2 {
+        font-size: 30px;
+        font-weight: 800;
+        margin: 12px 0;
+    }
+
+    .madeiras-intro p {
+        color: #aaa1b5;
+        font-size: 15px;
+    }
+
+    .madeiras-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .madeiras-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 245px;
+        padding: 27px;
+        color: #fff !important;
+        text-decoration: none !important;
+        background: #111;
+        border: 1px solid #29202f;
+        border-radius: 15px;
+        transition: .3s ease;
+    }
+
+    .madeiras-card:hover {
+        transform: translateY(-7px);
+        border-color: #963be0;
+        box-shadow: 0 10px 30px rgba(139, 43, 226, .16);
+        background: #17101f;
+    }
+
+    .madeiras-icon {
+        font-size: 35px;
+        margin-bottom: 17px;
+    }
+
+    .madeiras-type {
+        color: #b46af0;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+    }
+
+    .madeiras-card h3 {
+        margin: 8px 0;
+        font-size: 21px;
+        font-weight: 750;
+    }
+
+    .madeiras-card p {
+        color: #aaa1b5;
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .madeiras-link {
+        margin-top: auto;
+        color: #c084fc;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .madeiras-highlight {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        margin-top: 65px;
+        padding: 35px 40px;
+        border-radius: 16px;
+        background: linear-gradient(100deg, #1a1025, #29133c);
+        border: 1px solid rgba(168, 85, 247, .2);
+    }
+
+    .madeiras-highlight h2 {
+        font-size: 25px;
+        font-weight: 800;
+        margin: 10px 0;
+    }
+
+    .madeiras-highlight p {
+        color: #aaa1b5;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .madeiras-highlight-icon {
+        color: rgba(192, 132, 252, .5);
+        font-size: 75px;
+    }
+
+    @@media (max-width: 900px) {
+        .madeiras-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .madeiras-hero-decoration {
+            right: 3%;
+            font-size: 150px;
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .madeiras-page {
+            padding-top: 15px;
+        }
+
+        .madeiras-hero {
+            min-height: 300px;
+            padding: 35px 25px;
+        }
+
+        .madeiras-hero-decoration {
+            right: -15px;
+            font-size: 110px;
+        }
+
+        .madeiras-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .madeiras-intro h2 {
+            font-size: 25px;
+        }
+
+        .madeiras-highlight {
+            padding: 25px;
+        }
+
+        .madeiras-highlight-icon {
+            display: none;
+        }
+    }
+</style>

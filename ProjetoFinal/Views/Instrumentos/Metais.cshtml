@@ -1,5 +1,328 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Instrumentos de Metais";
 }
+
+<div class="metais-page">
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="metais-hero">
+        <div class="metais-hero-content">
+            <span class="metais-tag">EAGLE IM • CATEGORIA</span>
+
+            <h1>Instrumentos de Metais</h1>
+
+            <p>
+                Potência, brilho e personalidade sonora.
+                Explore instrumentos que fazem a diferença em qualquer apresentação.
+            </p>
+
+            <a href="#instrumentos-metais" class="metais-btn">
+                Explorar instrumentos
+                <span>→</span>
+            </a>
+        </div>
+
+        <div class="metais-hero-decoration">♫</div>
+    </section>
+
+    <!-- INTRODUÇÃO -->
+    <section class="metais-intro" id="instrumentos-metais">
+        <span class="metais-subtitle">NOSSA COLEÇÃO</span>
+        <h2>Descubra a força dos metais</h2>
+        <p>
+            Dos sons vibrantes aos graves profundos, encontre o instrumento
+            perfeito para sua expressão musical.
+        </p>
+    </section>
+
+    <!-- CARDS -->
+    <section class="metais-grid">
+
+    <a asp-controller="Instrumentos" asp-action="Trompetes" class="metais-card">
+        <div class="metais-icon">🎺</div>
+        <span class="metais-type">SOPRO</span>
+        <h3>Trompetes</h3>
+        <p>Sonoridade brilhante e marcante, presente em diversos estilos musicais.</p>
+        <span class="metais-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Trombones" class="metais-card">
+        <div class="metais-icon">🎺</div>
+        <span class="metais-type">SOPRO</span>
+        <h3>Trombones</h3>
+        <p>Versatilidade sonora e presença marcante em conjuntos e orquestras.</p>
+        <span class="metais-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Tubas" class="metais-card">
+        <div class="metais-icon">🎵</div>
+        <span class="metais-type">SOPRO</span>
+        <h3>Tubas</h3>
+        <p>Graves encorpados que dão profundidade e sustentação musical.</p>
+        <span class="metais-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Trompas" class="metais-card">
+        <div class="metais-icon">🎶</div>
+        <span class="metais-type">SOPRO</span>
+        <h3>Trompas</h3>
+        <p>Um timbre expressivo que combina suavidade e intensidade.</p>
+        <span class="metais-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Eufonios" class="metais-card">
+        <div class="metais-icon">🎼</div>
+        <span class="metais-type">SOPRO</span>
+        <h3>Eufônios</h3>
+        <p>Som aveludado e envolvente, ideal para harmonias e melodias.</p>
+        <span class="metais-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Cornets" class="metais-card">
+        <div class="metais-icon">🎺</div>
+        <span class="metais-type">SOPRO</span>
+        <h3>Cornetas</h3>
+        <p>Instrumentos versáteis com sonoridade característica e definida.</p>
+        <span class="metais-link">Explorar categoria →</span>
+    </a>
+
+</section>
+
+    <!-- DESTAQUE -->
+    <section class="metais-highlight">
+        <div>
+            <span class="metais-subtitle">EAGLE IM</span>
+            <h2>Faça sua música ganhar força.</h2>
+            <p>
+                Encontre instrumentos que transformam cada nota
+                em uma experiência sonora.
+            </p>
+        </div>
+
+        <span class="metais-highlight-icon">♫</span>
+    </section>
+
+</div>
+
+<style>
+    .metais-page {
+        width: 100%;
+        color: #fff;
+        padding: 25px 0 55px;
+    }
+
+    .metais-hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 330px;
+        display: flex;
+        align-items: center;
+        padding: 55px 7%;
+        border-radius: 20px;
+        background: linear-gradient(115deg, #10091a, #29113e 60%, #542080);
+        border: 1px solid rgba(168, 85, 247, .25);
+    }
+
+    .metais-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+    }
+
+    .metais-tag,
+    .metais-subtitle {
+        color: #c084fc;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .metais-hero h1 {
+        margin: 18px 0;
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    .metais-hero p {
+        max-width: 550px;
+        color: #d2c7dc;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    .metais-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        padding: 13px 22px;
+        color: #fff !important;
+        text-decoration: none !important;
+        font-weight: 700;
+        border-radius: 9px;
+        background: linear-gradient(90deg, #8b2be2, #a855f7);
+        transition: .3s;
+    }
+
+        .metais-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, .35);
+        }
+
+    .metais-hero-decoration {
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 210px;
+        color: rgba(255, 255, 255, .07);
+        pointer-events: none;
+    }
+
+    .metais-intro {
+        text-align: center;
+        margin: 65px 0 35px;
+    }
+
+        .metais-intro h2 {
+            font-size: 30px;
+            font-weight: 800;
+            margin: 12px 0;
+        }
+
+        .metais-intro p {
+            color: #aaa1b5;
+            font-size: 15px;
+        }
+
+    .metais-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .metais-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 245px;
+        padding: 27px;
+        color: #fff !important;
+        text-decoration: none !important;
+        background: #111;
+        border: 1px solid #29202f;
+        border-radius: 15px;
+        transition: .3s ease;
+    }
+
+        .metais-card:hover {
+            transform: translateY(-7px);
+            border-color: #963be0;
+            box-shadow: 0 10px 30px rgba(139, 43, 226, .16);
+            background: #17101f;
+        }
+
+    .metais-icon {
+        font-size: 35px;
+        margin-bottom: 17px;
+    }
+
+    .metais-type {
+        color: #b46af0;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+    }
+
+    .metais-card h3 {
+        margin: 8px 0;
+        font-size: 21px;
+        font-weight: 750;
+    }
+
+    .metais-card p {
+        color: #aaa1b5;
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .metais-link {
+        margin-top: auto;
+        color: #c084fc;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .metais-highlight {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        margin-top: 65px;
+        padding: 35px 40px;
+        border-radius: 16px;
+        background: linear-gradient(100deg, #1a1025, #29133c);
+        border: 1px solid rgba(168, 85, 247, .2);
+    }
+
+        .metais-highlight h2 {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        .metais-highlight p {
+            color: #aaa1b5;
+            font-size: 14px;
+            margin: 0;
+        }
+
+    .metais-highlight-icon {
+        color: rgba(192, 132, 252, .5);
+        font-size: 75px;
+    }
+
+    @@media (max-width: 900px) {
+        .metais-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .metais-hero-decoration {
+            right: 3%;
+            font-size: 150px;
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .metais-page {
+            padding-top: 15px;
+        }
+
+        .metais-hero {
+            min-height: 300px;
+            padding: 35px 25px;
+        }
+
+        .metais-hero-decoration {
+            right: -15px;
+            font-size: 110px;
+        }
+
+        .metais-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .metais-intro h2 {
+            font-size: 25px;
+        }
+
+        .metais-highlight {
+            padding: 25px;
+        }
+
+        .metais-highlight-icon {
+            display: none;
+        }
+    }
+</style>

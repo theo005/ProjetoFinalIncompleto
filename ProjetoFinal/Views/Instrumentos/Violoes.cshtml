@@ -1,0 +1,443 @@
+﻿
+@{
+    ViewData["Title"] = "Violões";
+}
+
+<div class="violoes-page">
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="violoes-hero">
+        <div class="violoes-hero-content">
+            <span class="violoes-tag">EAGLE IM • CORDAS</span>
+
+            <h1>Encontre seu <span>Violão</span></h1>
+
+            <p>
+                Do primeiro acorde às grandes apresentações.
+                Descubra violões com diferentes sonoridades,
+                estilos e possibilidades musicais.
+            </p>
+
+            <a href="#colecao-violoes" class="violoes-button">
+                Explorar coleção
+                <span>→</span>
+            </a>
+        </div>
+
+        <div class="violoes-hero-decoration">♫</div>
+    </section>
+
+    <!-- INTRODUÇÃO -->
+    <section class="violoes-intro" id="colecao-violoes">
+
+        <span class="violoes-subtitle">NOSSA COLEÇÃO</span>
+
+        <h2>O violão ideal para sua <span>jornada musical</span></h2>
+
+        <p>
+            Explore diferentes modelos e encontre a sonoridade
+            que combina com seu estilo.
+        </p>
+
+    </section>
+
+    <!-- TIPOS DE VIOLÃO -->
+    <section class="violoes-grid">
+
+        <article class="violoes-card">
+            <div class="violoes-card-icon">🎸</div>
+
+            <div class="violoes-card-info">
+                <span>01 / TRADICIONAL</span>
+                <h3>Violão Clássico</h3>
+
+                <p>
+                    Conhecido pelas cordas de nylon e sonoridade
+                    suave, ideal para diversos estilos musicais.
+                </p>
+
+                <strong>Em breve na coleção →</strong>
+            </div>
+        </article>
+
+        <article class="violoes-card">
+            <div class="violoes-card-icon">🎸</div>
+
+            <div class="violoes-card-info">
+                <span>02 / AÇO</span>
+                <h3>Violão Folk</h3>
+
+                <p>
+                    Sonoridade marcante e brilhante,
+                    muito utilizado no pop, rock e sertanejo.
+                </p>
+
+                <strong>Em breve na coleção →</strong>
+            </div>
+        </article>
+
+        <article class="violoes-card">
+            <div class="violoes-card-icon">🎸</div>
+
+            <div class="violoes-card-info">
+                <span>03 / ELÉTRICO</span>
+                <h3>Violão Eletroacústico</h3>
+
+                <p>
+                    Versatilidade para tocar acusticamente
+                    ou conectado a equipamentos de áudio.
+                </p>
+
+                <strong>Em breve na coleção →</strong>
+            </div>
+        </article>
+
+        <article class="violoes-card">
+            <div class="violoes-card-icon">🎸</div>
+
+            <div class="violoes-card-info">
+                <span>04 / COMPACTO</span>
+                <h3>Violão Baby</h3>
+
+                <p>
+                    Um modelo compacto, com tamanho reduzido
+                    e praticidade para transportar.
+                </p>
+
+                <strong>Em breve na coleção →</strong>
+            </div>
+        </article>
+
+        <article class="violoes-card">
+            <div class="violoes-card-icon">🎸</div>
+
+            <div class="violoes-card-info">
+                <span>05 / ACÚSTICO</span>
+                <h3>Violão Flat</h3>
+
+                <p>
+                    Corpo mais fino e confortável,
+                    com opções acústicas e elétricas.
+                </p>
+
+                <strong>Em breve na coleção →</strong>
+            </div>
+        </article>
+
+        <article class="violoes-card">
+            <div class="violoes-card-icon">🎸</div>
+
+            <div class="violoes-card-info">
+                <span>06 / ESPECIAL</span>
+                <h3>Violão de 12 Cordas</h3>
+
+                <p>
+                    Sonoridade encorpada e efeito natural
+                    de duplicação das notas.
+                </p>
+
+                <strong>Em breve na coleção →</strong>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- DESTAQUE FINAL -->
+    <section class="violoes-highlight">
+
+        <div>
+            <span class="violoes-subtitle">EAGLE IM</span>
+
+            <h2>Todo grande som começa com um acorde.</h2>
+
+            <p>
+                Encontre seu estilo, descubra novas sonoridades
+                e dê vida às suas ideias musicais.
+            </p>
+        </div>
+
+        <span class="violoes-highlight-icon">♫</span>
+
+    </section>
+
+    <!-- VOLTAR -->
+    <div class="violoes-back">
+        <a asp-controller="Instrumentos" asp-action="Cordas">
+            ← Voltar para instrumentos de cordas
+        </a>
+    </div>
+
+</div>
+
+<style>
+
+    .violoes-page {
+        width: 100%;
+        max-width: 1250px;
+        margin: 30px auto 60px;
+        padding: 0 15px;
+        color: #FFFFFF;
+    }
+
+    /* BANNER */
+
+    .violoes-hero {
+        position: relative;
+        min-height: 330px;
+        padding: 55px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 18px;
+        background:
+            radial-gradient(circle at 85% 45%, rgba(168, 85, 247, 0.25), transparent 35%),
+            linear-gradient(115deg, #100819, #080808 75%);
+        border: 1px solid rgba(168, 85, 247, 0.35);
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .violoes-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+    }
+
+    .violoes-tag,
+    .violoes-subtitle {
+        color: #C084FC;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+
+    .violoes-hero h1 {
+        margin: 18px 0;
+        font-size: clamp(32px, 5vw, 55px);
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    .violoes-hero h1 span,
+    .violoes-intro h2 span {
+        color: #B45AFF;
+    }
+
+    .violoes-hero p {
+        max-width: 550px;
+        color: #C3BBCB;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .violoes-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        margin-top: 20px;
+        padding: 13px 23px;
+        border-radius: 8px;
+        background: #9333EA;
+        color: #FFFFFF !important;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none !important;
+        transition: 0.3s;
+    }
+
+    .violoes-button:hover {
+        background: #A855F7;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 20px rgba(168, 85, 247, 0.35);
+    }
+
+    .violoes-button span {
+        font-size: 20px;
+    }
+
+    .violoes-hero-decoration {
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(192, 132, 252, 0.12);
+        font-size: 260px;
+        pointer-events: none;
+    }
+
+    /* INTRODUÇÃO */
+
+    .violoes-intro {
+        margin: 65px 0 35px;
+        text-align: center;
+    }
+
+    .violoes-intro h2 {
+        margin: 12px 0;
+        font-size: clamp(24px, 4vw, 34px);
+        font-weight: 800;
+    }
+
+    .violoes-intro p {
+        max-width: 650px;
+        margin: 0 auto;
+        color: #A8A8B2;
+        line-height: 1.7;
+        font-size: 14px;
+    }
+
+    /* CARDS */
+
+    .violoes-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .violoes-card {
+        min-height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 25px;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid rgba(168, 85, 247, 0.22);
+        background: linear-gradient(145deg, #17121D, #0D0D0D);
+        transition: 0.3s ease;
+    }
+
+    .violoes-card:hover {
+        transform: translateY(-6px);
+        border-color: #A855F7;
+        box-shadow: 0 10px 30px rgba(139, 43, 226, 0.18);
+        background: linear-gradient(145deg, #21152F, #101010);
+    }
+
+    .violoes-card-icon {
+        font-size: 38px;
+        margin-bottom: 18px;
+    }
+
+    .violoes-card-info > span {
+        color: #A855F7;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .violoes-card h3 {
+        margin: 9px 0;
+        color: #FFFFFF;
+        font-size: 23px;
+        font-weight: 800;
+    }
+
+    .violoes-card p {
+        min-height: 48px;
+        color: #AAA5B1;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .violoes-card strong {
+        display: inline-block;
+        margin-top: 10px;
+        color: #C084FC;
+        font-size: 13px;
+    }
+
+    /* DESTAQUE FINAL */
+
+    .violoes-highlight {
+        margin-top: 65px;
+        padding: 35px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        border-radius: 15px;
+        border: 1px solid rgba(168, 85, 247, 0.3);
+        background: linear-gradient(100deg, #1B1027, #0D0D0D);
+    }
+
+    .violoes-highlight h2 {
+        max-width: 600px;
+        margin: 12px 0;
+        font-size: 26px;
+        font-weight: 800;
+    }
+
+    .violoes-highlight p {
+        margin: 0;
+        color: #AAA5B1;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .violoes-highlight-icon {
+        color: rgba(192, 132, 252, 0.35);
+        font-size: 90px;
+    }
+
+    /* VOLTAR */
+
+    .violoes-back {
+        margin-top: 30px;
+    }
+
+    .violoes-back a {
+        color: #C084FC;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .violoes-back a:hover {
+        color: #FFFFFF;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @@media (max-width: 900px) {
+        .violoes-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .violoes-hero-decoration {
+            right: 2%;
+            font-size: 190px;
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .violoes-page {
+            margin-top: 18px;
+            padding: 0 10px;
+        }
+
+        .violoes-hero {
+            min-height: 320px;
+            padding: 30px 22px;
+        }
+
+        .violoes-hero-decoration {
+            right: -15px;
+            top: 75%;
+            font-size: 130px;
+        }
+
+        .violoes-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .violoes-highlight {
+            padding: 25px;
+        }
+
+        .violoes-highlight-icon {
+            display: none;
+        }
+    }
+
+</style>

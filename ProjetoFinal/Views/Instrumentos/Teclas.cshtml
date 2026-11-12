@@ -1,5 +1,328 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Instrumentos de Teclas";
 }
+
+<div class="teclas-page">
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="teclas-hero">
+        <div class="teclas-hero-content">
+            <span class="teclas-tag">EAGLE IM • CATEGORIA</span>
+
+            <h1>Instrumentos de Teclas</h1>
+
+            <p>
+                Explore a harmonia e a versatilidade dos instrumentos
+                de teclas. Do piano clássico à tecnologia musical.
+            </p>
+
+            <a href="#instrumentos-teclas" class="teclas-btn">
+                Explorar instrumentos
+                <span>→</span>
+            </a>
+        </div>
+
+        <div class="teclas-hero-decoration">♫</div>
+    </section>
+
+    <!-- INTRODUÇÃO -->
+    <section class="teclas-intro" id="instrumentos-teclas">
+        <span class="teclas-subtitle">NOSSA COLEÇÃO</span>
+        <h2>Encontre sua próxima melodia</h2>
+        <p>
+            Seja para aprender, compor ou se apresentar,
+            descubra instrumentos que combinam com seu estilo.
+        </p>
+    </section>
+
+    <!-- CARDS -->
+    <section class="teclas-grid">
+
+    <a asp-controller="Instrumentos" asp-action="Pianos" class="teclas-card">
+        <div class="teclas-icon">🎹</div>
+        <span class="teclas-type">TECLAS</span>
+        <h3>Pianos</h3>
+        <p>Sonoridade clássica e expressiva para músicos de todos os níveis.</p>
+        <span class="teclas-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Teclados" class="teclas-card">
+        <div class="teclas-icon">🎹</div>
+        <span class="teclas-type">TECLAS</span>
+        <h3>Teclados</h3>
+        <p>Versatilidade de timbres e recursos para diferentes estilos musicais.</p>
+        <span class="teclas-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="PianosDigitais" class="teclas-card">
+        <div class="teclas-icon">🎼</div>
+        <span class="teclas-type">TECLAS</span>
+        <h3>Pianos Digitais</h3>
+        <p>Experiência inspirada nos pianos tradicionais com recursos modernos.</p>
+        <span class="teclas-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="ControladoresMidi" class="teclas-card">
+        <div class="teclas-icon">🎛️</div>
+        <span class="teclas-type">TECNOLOGIA MUSICAL</span>
+        <h3>Controladores MIDI</h3>
+        <p>Mais possibilidades para produção musical e criação digital.</p>
+        <span class="teclas-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Sintetizadores" class="teclas-card">
+        <div class="teclas-icon">🎚️</div>
+        <span class="teclas-type">TECNOLOGIA MUSICAL</span>
+        <h3>Sintetizadores</h3>
+        <p>Crie timbres únicos e explore novas possibilidades sonoras.</p>
+        <span class="teclas-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="OrgaosEletronicos" class="teclas-card">
+        <div class="teclas-icon">🎹</div>
+        <span class="teclas-type">TECLAS</span>
+        <h3>Órgãos Eletrônicos</h3>
+        <p>Sonoridades versáteis para apresentações, igrejas e diferentes estilos musicais.</p>
+        <span class="teclas-link">Explorar categoria →</span>
+    </a>
+
+</section>
+
+    <!-- DESTAQUE -->
+    <section class="teclas-highlight">
+        <div>
+            <span class="teclas-subtitle">EAGLE IM</span>
+            <h2>Cada tecla pode iniciar uma nova história.</h2>
+            <p>
+                Descubra novos sons, desenvolva suas habilidades
+                e encontre seu próximo instrumento.
+            </p>
+        </div>
+
+        <span class="teclas-highlight-icon">♫</span>
+    </section>
+
+</div>
+
+<style>
+    .teclas-page {
+        width: 100%;
+        color: #fff;
+        padding: 25px 0 55px;
+    }
+
+    .teclas-hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 330px;
+        display: flex;
+        align-items: center;
+        padding: 55px 7%;
+        border-radius: 20px;
+        background: linear-gradient(115deg, #10091a, #29113e 60%, #542080);
+        border: 1px solid rgba(168, 85, 247, .25);
+    }
+
+    .teclas-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+    }
+
+    .teclas-tag,
+    .teclas-subtitle {
+        color: #c084fc;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .teclas-hero h1 {
+        margin: 18px 0;
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    .teclas-hero p {
+        max-width: 550px;
+        color: #d2c7dc;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    .teclas-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        padding: 13px 22px;
+        color: #fff !important;
+        text-decoration: none !important;
+        font-weight: 700;
+        border-radius: 9px;
+        background: linear-gradient(90deg, #8b2be2, #a855f7);
+        transition: .3s;
+    }
+
+        .teclas-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, .35);
+        }
+
+    .teclas-hero-decoration {
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 210px;
+        color: rgba(255, 255, 255, .07);
+        pointer-events: none;
+    }
+
+    .teclas-intro {
+        text-align: center;
+        margin: 65px 0 35px;
+    }
+
+        .teclas-intro h2 {
+            font-size: 30px;
+            font-weight: 800;
+            margin: 12px 0;
+        }
+
+        .teclas-intro p {
+            color: #aaa1b5;
+            font-size: 15px;
+        }
+
+    .teclas-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .teclas-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 245px;
+        padding: 27px;
+        color: #fff !important;
+        text-decoration: none !important;
+        background: #111;
+        border: 1px solid #29202f;
+        border-radius: 15px;
+        transition: .3s ease;
+    }
+
+        .teclas-card:hover {
+            transform: translateY(-7px);
+            border-color: #963be0;
+            box-shadow: 0 10px 30px rgba(139, 43, 226, .16);
+            background: #17101f;
+        }
+
+    .teclas-icon {
+        font-size: 35px;
+        margin-bottom: 17px;
+    }
+
+    .teclas-type {
+        color: #b46af0;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+    }
+
+    .teclas-card h3 {
+        margin: 8px 0;
+        font-size: 21px;
+        font-weight: 750;
+    }
+
+    .teclas-card p {
+        color: #aaa1b5;
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .teclas-link {
+        margin-top: auto;
+        color: #c084fc;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .teclas-highlight {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        margin-top: 65px;
+        padding: 35px 40px;
+        border-radius: 16px;
+        background: linear-gradient(100deg, #1a1025, #29133c);
+        border: 1px solid rgba(168, 85, 247, .2);
+    }
+
+        .teclas-highlight h2 {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        .teclas-highlight p {
+            color: #aaa1b5;
+            font-size: 14px;
+            margin: 0;
+        }
+
+    .teclas-highlight-icon {
+        color: rgba(192, 132, 252, .5);
+        font-size: 75px;
+    }
+
+    @@media (max-width: 900px) {
+        .teclas-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .teclas-hero-decoration {
+            right: 3%;
+            font-size: 150px;
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .teclas-page {
+            padding-top: 15px;
+        }
+
+        .teclas-hero {
+            min-height: 300px;
+            padding: 35px 25px;
+        }
+
+        .teclas-hero-decoration {
+            right: -15px;
+            font-size: 110px;
+        }
+
+        .teclas-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .teclas-intro h2 {
+            font-size: 25px;
+        }
+
+        .teclas-highlight {
+            padding: 25px;
+        }
+
+        .teclas-highlight-icon {
+            display: none;
+        }
+    }
+</style>

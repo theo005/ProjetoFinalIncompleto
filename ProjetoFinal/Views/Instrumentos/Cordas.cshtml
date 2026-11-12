@@ -1,5 +1,450 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
+    ViewData["Title"] = "Instrumentos de Cordas";
 }
+
+<div class="cordas-page">
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="cordas-hero">
+
+        <div class="cordas-hero-content">
+            <span class="cordas-tag">EAGLE IM • CATEGORIA</span>
+
+            <h1>Instrumentos de <span>Cordas</span></h1>
+
+            <p>
+                Da delicadeza dos instrumentos acústicos à potência
+                dos elétricos. Encontre o instrumento ideal para sua música.
+            </p>
+
+            <a href="#instrumentos-cordas" class="cordas-button">
+                Explorar instrumentos
+                <span>→</span>
+            </a>
+        </div>
+
+        <div class="cordas-hero-decoration">
+            <span>♪</span>
+        </div>
+
+    </section>
+
+    <!-- INTRODUÇÃO -->
+    <section class="cordas-intro" id="instrumentos-cordas">
+
+        <span class="cordas-subtitle">NOSSA COLEÇÃO</span>
+
+        <h2>Explore o universo das <span>cordas</span></h2>
+
+        <p>
+            Conheça diferentes instrumentos, estilos e possibilidades
+            para expressar sua criatividade através da música.
+        </p>
+
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section class="cordas-grid">
+
+        <!-- VIOLÕES -->
+        <a asp-controller="Instrumentos"
+           asp-action="Violoes"
+           class="cordas-card">
+
+            <div class="cordas-card-icon">🎸</div>
+
+            <div class="cordas-card-info">
+                <span>01 / ACÚSTICO</span>
+                <h3>Violões</h3>
+
+                <p>
+                    Versatilidade e sonoridade para acompanhar
+                    diferentes estilos musicais.
+                </p>
+
+                <strong>Explorar categoria →</strong>
+            </div>
+        </a>
+
+        <!-- GUITARRAS -->
+        <a asp-controller="Instrumentos"
+           asp-action="Guitarras"
+           class="cordas-card">
+
+            <div class="cordas-card-icon">🎸</div>
+
+            <div class="cordas-card-info">
+                <span>02 / ELÉTRICO</span>
+                <h3>Guitarras</h3>
+
+                <p>
+                    Potência, personalidade e infinitas
+                    possibilidades de timbres.
+                </p>
+
+                <strong>Explorar categoria →</strong>
+            </div>
+        </a>
+
+        <!-- BAIXOS -->
+        <a asp-controller="Instrumentos"
+           asp-action="Baixos"
+           class="cordas-card">
+
+            <div class="cordas-card-icon">🎸</div>
+
+            <div class="cordas-card-info">
+                <span>03 / GRAVES</span>
+                <h3>Baixos</h3>
+
+                <p>
+                    A base rítmica e harmônica que dá
+                    profundidade à música.
+                </p>
+
+                <strong>Explorar categoria →</strong>
+            </div>
+        </a>
+
+        <!-- VIOLINOS -->
+        <a asp-controller="Instrumentos"
+           asp-action="Violinos"
+           class="cordas-card">
+
+            <div class="cordas-card-icon">🎻</div>
+
+            <div class="cordas-card-info">
+                <span>04 / CLÁSSICO</span>
+                <h3>Violinos</h3>
+
+                <p>
+                    Elegância e expressividade em cada
+                    nota e interpretação.
+                </p>
+
+                <strong>Explorar categoria →</strong>
+            </div>
+        </a>
+
+        <!-- VIOLAS -->
+        <a asp-controller="Instrumentos"
+           asp-action="Violas"
+           class="cordas-card">
+
+            <div class="cordas-card-icon">🎻</div>
+
+            <div class="cordas-card-info">
+                <span>05 / CLÁSSICO</span>
+                <h3>Violas</h3>
+
+                <p>
+                    Uma sonoridade encorpada que enriquece
+                    os conjuntos musicais.
+                </p>
+
+                <strong>Explorar categoria →</strong>
+            </div>
+        </a>
+
+        <!-- CELLOS -->
+        <a asp-controller="Instrumentos"
+           asp-action="Cellos"
+           class="cordas-card">
+
+            <div class="cordas-card-icon">🎻</div>
+
+            <div class="cordas-card-info">
+                <span>06 / CLÁSSICO</span>
+                <h3>Cellos</h3>
+
+                <p>
+                    Timbres profundos e expressivos
+                    para diferentes composições.
+                </p>
+
+                <strong>Explorar categoria →</strong>
+            </div>
+        </a>
+
+    </section>
+
+    <!-- DESTAQUE INFERIOR -->
+    <section class="cordas-highlight">
+
+        <div>
+            <span class="cordas-subtitle">EAGLE IM</span>
+
+            <h2>Sua música começa com a escolha certa.</h2>
+
+            <p>
+                Explore nossa coleção e descubra novas possibilidades
+                para sua jornada musical.
+            </p>
+        </div>
+
+        <span class="cordas-highlight-icon">♫</span>
+
+    </section>
+
+</div>
+
+<style>
+
+    /* ==========================================
+       PÁGINA DE CORDAS - EAGLE IM
+       ========================================== */
+
+    .cordas-page {
+        width: 100%;
+        max-width: 1250px;
+        margin: 30px auto 60px;
+        padding: 0 15px;
+        color: #FFFFFF;
+    }
+
+    /* BANNER */
+
+    .cordas-hero {
+        position: relative;
+        min-height: 330px;
+        padding: 55px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 18px;
+        background: radial-gradient(circle at 85% 45%, rgba(168, 85, 247, 0.25), transparent 35%), linear-gradient(115deg, #100819, #080808 75%);
+        border: 1px solid rgba(168, 85, 247, 0.35);
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .cordas-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+    }
+
+    .cordas-tag,
+    .cordas-subtitle {
+        color: #C084FC;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+
+    .cordas-hero h1 {
+        margin: 18px 0;
+        font-size: clamp(32px, 5vw, 55px);
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    .cordas-hero h1 span,
+    .cordas-intro h2 span {
+        color: #B45AFF;
+    }
+
+    .cordas-hero p {
+        max-width: 550px;
+        color: #C3BBCB;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .cordas-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        margin-top: 20px;
+        padding: 13px 23px;
+        border-radius: 8px;
+        background: #9333EA;
+        color: #FFFFFF !important;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none !important;
+        transition: 0.3s;
+    }
+
+    .cordas-button:hover {
+        background: #A855F7;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 20px rgba(168, 85, 247, 0.35);
+    }
+
+    .cordas-button span {
+        font-size: 20px;
+    }
+
+    .cordas-hero-decoration {
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(192, 132, 252, 0.12);
+        font-size: 260px;
+        font-weight: 300;
+        pointer-events: none;
+    }
+
+    /* INTRODUÇÃO */
+
+    .cordas-intro {
+        margin: 65px 0 35px;
+        text-align: center;
+    }
+
+    .cordas-intro h2 {
+        margin: 12px 0;
+        font-size: clamp(24px, 4vw, 34px);
+        font-weight: 800;
+    }
+
+    .cordas-intro p {
+        max-width: 650px;
+        margin: 0 auto;
+        color: #A8A8B2;
+        line-height: 1.7;
+        font-size: 14px;
+    }
+
+    /* CARDS */
+
+    .cordas-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .cordas-card {
+        min-height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 25px;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid rgba(168, 85, 247, 0.22);
+        background: linear-gradient(145deg, #17121D, #0D0D0D);
+        color: #FFFFFF !important;
+        text-decoration: none !important;
+        transition: 0.3s ease;
+    }
+
+    .cordas-card:hover {
+        transform: translateY(-6px);
+        border-color: #A855F7;
+        box-shadow: 0 10px 30px rgba(139, 43, 226, 0.18);
+        background: linear-gradient(145deg, #21152F, #101010);
+    }
+
+    .cordas-card-icon {
+        font-size: 38px;
+        margin-bottom: 18px;
+    }
+
+    .cordas-card-info > span {
+        color: #A855F7;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .cordas-card h3 {
+        margin: 9px 0;
+        color: #FFFFFF;
+        font-size: 23px;
+        font-weight: 800;
+    }
+
+    .cordas-card p {
+        min-height: 48px;
+        color: #AAA5B1;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .cordas-card strong {
+        display: inline-block;
+        margin-top: 10px;
+        color: #C084FC;
+        font-size: 13px;
+    }
+
+    /* DESTAQUE FINAL */
+
+    .cordas-highlight {
+        margin-top: 65px;
+        padding: 35px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        border-radius: 15px;
+        border: 1px solid rgba(168, 85, 247, 0.3);
+        background: linear-gradient(100deg, #1B1027, #0D0D0D);
+    }
+
+    .cordas-highlight h2 {
+        max-width: 600px;
+        margin: 12px 0;
+        font-size: 26px;
+        font-weight: 800;
+    }
+
+    .cordas-highlight p {
+        margin: 0;
+        color: #AAA5B1;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .cordas-highlight-icon {
+        color: rgba(192, 132, 252, 0.35);
+        font-size: 90px;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @@media (max-width: 900px) {
+        .cordas-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .cordas-hero-decoration {
+            right: 2%;
+            font-size: 190px;
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .cordas-page {
+            margin-top: 18px;
+            padding: 0 10px;
+        }
+
+        .cordas-hero {
+            min-height: 320px;
+            padding: 30px 22px;
+        }
+
+        .cordas-hero-decoration {
+            right: -15px;
+            top: 75%;
+            font-size: 130px;
+        }
+
+        .cordas-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cordas-highlight {
+            padding: 25px;
+        }
+
+        .cordas-highlight-icon {
+            display: none;
+        }
+    }
+
+</style>

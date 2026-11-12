@@ -1,0 +1,395 @@
+﻿
+@{
+    ViewData["Title"] = ViewData["NomeInstrumento"]?.ToString() ?? "Instrumento de Metais";
+
+    var nome = ViewData["NomeInstrumento"]?.ToString();
+    var descricao = ViewData["DescricaoInstrumento"]?.ToString();
+    var detalhe1 = ViewData["Detalhe1"]?.ToString();
+    var detalhe2 = ViewData["Detalhe2"]?.ToString();
+    var detalhe3 = ViewData["Detalhe3"]?.ToString();
+}
+
+<div class="metais-instrumento-page">
+
+    <a asp-controller="Instrumentos"
+       asp-action="Metais"
+       class="metais-voltar">
+        ← Voltar para Metais
+    </a>
+
+    <!-- HERO -->
+    <section class="metais-hero">
+
+        <div class="metais-hero-conteudo">
+
+            <span class="metais-tag">
+                EAGLE IM • METAIS
+            </span>
+
+            <h1>
+                Conheça seu <span>@nome</span>
+            </h1>
+
+            <p>@descricao</p>
+
+            <a href="#conheca-instrumento" class="metais-botao">
+                Conhecer instrumento
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="metais-hero-visual">
+            <span>♫</span>
+        </div>
+
+    </section>
+
+    <!-- CONTEÚDO -->
+    <section class="metais-conteudo" id="conheca-instrumento">
+
+        <span class="metais-subtitle">
+            CONHEÇA MAIS
+        </span>
+
+        <h2>
+            Descubra o universo dos <span>metais</span>
+        </h2>
+
+        <p class="metais-introducao">
+            Os instrumentos de metais são conhecidos por sua sonoridade
+            marcante, potência e versatilidade. Explore suas características
+            e descubra novas possibilidades musicais.
+        </p>
+
+        <div class="metais-grid">
+
+            <div class="metais-card">
+                <span class="metais-card-icone">♫</span>
+                <h3>Características</h3>
+                <p>@detalhe1</p>
+            </div>
+
+            <div class="metais-card">
+                <span class="metais-card-icone">♪</span>
+                <h3>Sonoridade</h3>
+                <p>@detalhe2</p>
+            </div>
+
+            <div class="metais-card">
+                <span class="metais-card-icone">♬</span>
+                <h3>Utilização</h3>
+                <p>@detalhe3</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DESTAQUE FINAL -->
+    <section class="metais-destaque">
+
+        <span>EAGLE IM</span>
+
+        <h2>A música começa com uma descoberta.</h2>
+
+        <p>
+            Explore, descubra e encontre o instrumento ideal para você.
+        </p>
+
+        <a asp-controller="Instrumentos"
+           asp-action="Metais">
+            Explorar instrumentos de metais →
+        </a>
+
+    </section>
+
+</div>
+
+<style>
+
+    .metais-instrumento-page {
+        width: 100%;
+        padding: 25px 0 65px;
+        color: #fff;
+    }
+
+    /* VOLTAR */
+
+    .metais-voltar {
+        display: inline-block;
+        margin-bottom: 28px;
+        color: #bd65ff !important;
+        text-decoration: none !important;
+        font-weight: 700;
+        transition: .3s;
+    }
+
+    .metais-voltar:hover {
+        color: #fff !important;
+        transform: translateX(-5px);
+    }
+
+    /* HERO */
+
+    .metais-hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.2fr .8fr;
+        align-items: center;
+        min-height: 445px;
+        padding: 65px 5%;
+        overflow: hidden;
+        border: 1px solid rgba(168, 85, 247, .3);
+        border-radius: 22px;
+        background:
+            radial-gradient(circle at 85% 50%, rgba(147, 51, 234, .17), transparent 35%),
+            linear-gradient(115deg, #0c0812 0%, #130b1c 55%, #1b1028 100%);
+        box-shadow: 0 15px 45px rgba(0, 0, 0, .25);
+    }
+
+    .metais-hero-conteudo {
+        position: relative;
+        z-index: 2;
+        max-width: 680px;
+    }
+
+    .metais-tag,
+    .metais-subtitle {
+        color: #bd65ff;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+
+    .metais-hero-conteudo h1 {
+        margin: 22px 0 18px;
+        font-size: clamp(36px, 5vw, 64px);
+        line-height: 1.12;
+        font-weight: 850;
+        letter-spacing: -2px;
+    }
+
+    .metais-hero-conteudo h1 span {
+        color: #ae4dff;
+    }
+
+    .metais-hero-conteudo p {
+        max-width: 600px;
+        color: #d0c5dc;
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .metais-botao {
+        display: inline-flex;
+        align-items: center;
+        gap: 25px;
+        margin-top: 28px;
+        padding: 17px 25px;
+        color: #fff !important;
+        font-size: 15px;
+        font-weight: 800;
+        text-decoration: none !important;
+        border-radius: 11px;
+        background: linear-gradient(100deg, #8b2be2, #a83df5);
+        transition: .3s;
+    }
+
+    .metais-botao:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(168, 85, 247, .3);
+        background: #b34dff;
+    }
+
+    .metais-botao span {
+        font-size: 22px;
+    }
+
+    /* ELEMENTO DECORATIVO */
+
+    .metais-hero-visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 260px;
+    }
+
+    .metais-hero-visual span {
+        color: rgba(178, 91, 255, .17);
+        font-size: clamp(150px, 20vw, 260px);
+        line-height: 1;
+        font-weight: 800;
+        text-shadow: 0 0 50px rgba(168, 85, 247, .08);
+        transform: rotate(-8deg);
+        user-select: none;
+    }
+
+    /* CONTEÚDO */
+
+    .metais-conteudo {
+        margin-top: 85px;
+        text-align: center;
+        scroll-margin-top: 35px;
+    }
+
+    .metais-conteudo h2 {
+        margin: 15px 0;
+        font-size: clamp(25px, 3vw, 36px);
+        font-weight: 850;
+    }
+
+    .metais-conteudo h2 span {
+        color: #ae4dff;
+    }
+
+    .metais-introducao {
+        max-width: 720px;
+        margin: 0 auto;
+        color: #aaa1b5;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* CARDS */
+
+    .metais-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 23px;
+        margin-top: 42px;
+        text-align: left;
+    }
+
+    .metais-card {
+        position: relative;
+        padding: 30px;
+        min-height: 205px;
+        overflow: hidden;
+        border: 1px solid #30203e;
+        border-radius: 17px;
+        background: linear-gradient(145deg, #111, #17101f);
+        transition: .3s;
+    }
+
+    .metais-card:hover {
+        transform: translateY(-7px);
+        border-color: #963be0;
+        box-shadow: 0 12px 30px rgba(139, 43, 226, .12);
+    }
+
+    .metais-card-icone {
+        color: #b65cff;
+        font-size: 34px;
+    }
+
+    .metais-card h3 {
+        margin: 19px 0 10px;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .metais-card p {
+        color: #aaa1b5;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    /* DESTAQUE FINAL */
+
+    .metais-destaque {
+        margin-top: 80px;
+        padding: 45px 25px;
+        text-align: center;
+        border: 1px solid rgba(168, 85, 247, .25);
+        border-radius: 19px;
+        background:
+            radial-gradient(circle at 50% 100%, rgba(147, 51, 234, .17), transparent 65%),
+            linear-gradient(110deg, #100a18, #1d102b);
+    }
+
+    .metais-destaque > span {
+        color: #bd65ff;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+
+    .metais-destaque h2 {
+        margin: 17px 0 12px;
+        font-size: clamp(23px, 3vw, 32px);
+        font-weight: 850;
+    }
+
+    .metais-destaque p {
+        color: #aaa1b5;
+        font-size: 14px;
+    }
+
+    .metais-destaque a {
+        display: inline-block;
+        margin-top: 22px;
+        color: #bd65ff !important;
+        font-weight: 800;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    .metais-destaque a:hover {
+        color: #fff !important;
+        transform: translateX(4px);
+    }
+
+    /* RESPONSIVIDADE */
+
+    @@media (max-width: 800px) {
+
+        .metais-hero {
+            grid-template-columns: 1fr;
+            padding: 50px 35px;
+        }
+
+        .metais-hero-visual {
+            display: none;
+        }
+
+        .metais-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @@media (max-width: 600px) {
+
+        .metais-instrumento-page {
+            padding-top: 18px;
+        }
+
+        .metais-hero {
+            padding: 40px 24px;
+        }
+
+        .metais-hero-conteudo h1 {
+            letter-spacing: -1px;
+        }
+
+        .metais-hero-conteudo p {
+            font-size: 15px;
+        }
+
+        .metais-conteudo {
+            margin-top: 60px;
+        }
+
+        .metais-card {
+            padding: 25px;
+        }
+
+        .metais-destaque {
+            margin-top: 55px;
+            padding: 32px 20px;
+        }
+
+    }
+
+</style>

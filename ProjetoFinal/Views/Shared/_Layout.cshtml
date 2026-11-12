@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
@@ -80,8 +81,7 @@
 
         </nav>
 
-
-        <!--        MENU LATERAL               -->
+        <!-- MENU LATERAL -->
 
         <div class="offcanvas offcanvas-start menu-lateral"
              tabindex="-1"
@@ -101,10 +101,8 @@
 
             </div>
 
-
             <!-- CORPO DO MENU -->
             <div class="offcanvas-body">
-
 
                 <!-- ÓRGÃO -->
 
@@ -119,16 +117,16 @@
 
                 <div class="submenu">
 
-                    <a asp-controller="Instrumentos" asp-action="Orgao">
-                        Órgão de Tubos
+                    <a asp-controller="Instrumentos" asp-action="OrgaosDeIgreja">
+                        Órgãos de Igreja
                     </a>
 
-                    <a href="#">
-                        Órgão Eletrônico
+                    <a asp-controller="Instrumentos" asp-action="OrgaosEletricos">
+                        Órgãos Elétricos
                     </a>
 
-                    <a href="#">
-                        Órgão Digital
+                    <a asp-controller="Instrumentos" asp-action="OrgaosDigitais">
+                        Órgãos Digitais
                     </a>
 
                 </div>
@@ -146,24 +144,28 @@
 
                 <div class="submenu">
 
-                    <a asp-controller="Instrumentos" asp-action="Madeiras">
+                    <a asp-controller="Instrumentos" asp-action="Flautas">
                         Flautas
                     </a>
 
-                    <a href="#">
-                        Clarinetes
+                    <a asp-controller="Instrumentos" asp-action="Clarinete">
+                        Clarinete
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Saxofones">
                         Saxofones
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Oboes">
                         Oboés
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Fagotes">
                         Fagotes
+                    </a>
+
+                    <a asp-controller="Instrumentos" asp-action="FlautasDoces">
+                        Flautas Doces
                     </a>
 
                 </div>
@@ -181,24 +183,28 @@
 
                 <div class="submenu">
 
-                    <a asp-controller="Instrumentos" asp-action="Metais">
+                    <a asp-controller="Instrumentos" asp-action="Trompetes">
                         Trompetes
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Trombones">
                         Trombones
                     </a>
 
-                    <a href="#">
-                        Tubas
-                    </a>
-
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Trompas">
                         Trompas
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Tubas">
+                        Tubas
+                    </a>
+
+                    <a asp-controller="Instrumentos" asp-action="Eufonios">
                         Eufônios
+                    </a>
+
+                    <a asp-controller="Instrumentos" asp-action="Cornets">
+                        Cornets
                     </a>
 
                 </div>
@@ -216,27 +222,27 @@
 
                 <div class="submenu">
 
-                    <a asp-controller="Instrumentos" asp-action="Cordas">
+                    <a asp-controller="Instrumentos" asp-action="Violoes">
                         Violões
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Guitarras">
                         Guitarras
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Baixos">
                         Baixos
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Violinos">
                         Violinos
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Violas">
                         Violas
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Cellos">
                         Cellos
                     </a>
 
@@ -255,20 +261,28 @@
 
                 <div class="submenu">
 
-                    <a asp-controller="Instrumentos" asp-action="Teclas">
+                    <a asp-controller="Instrumentos" asp-action="Pianos">
                         Pianos
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Teclados">
                         Teclados
                     </a>
 
-                    <a href="#">
-                        Controladores MIDI
+                    <a asp-controller="Instrumentos" asp-action="PianosDigitais">
+                        Pianos Digitais
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="OrgaosEletronicos">
                         Órgãos Eletrônicos
+                    </a>
+
+                    <a asp-controller="Instrumentos" asp-action="Sintetizadores">
+                        Sintetizadores
+                    </a>
+
+                    <a asp-controller="Instrumentos" asp-action="ControladoresMidi">
+                        Controladores MIDI
                     </a>
 
                 </div>
@@ -286,28 +300,31 @@
 
                 <div class="submenu">
 
-                    <a asp-controller="Instrumentos" asp-action="Percussao">
+                    <a asp-controller="Instrumentos" asp-action="Baterias">
                         Baterias
                     </a>
 
-                    <a href="#">
-                        Cajóns
+                    <a asp-controller="Instrumentos" asp-action="Cajons">
+                        Cajons
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Pandeiros">
                         Pandeiros
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Tambores">
                         Tambores
                     </a>
 
-                    <a href="#">
+                    <a asp-controller="Instrumentos" asp-action="Xilofones">
+                        Xilofones
+                    </a>
+
+                    <a asp-controller="Instrumentos" asp-action="Pratos">
                         Pratos
                     </a>
 
                 </div>
-
 
             </div>
 
@@ -327,112 +344,117 @@
 
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER EAGLE IM -->
 
-    <footer class="border-top footer text-muted">
+    <footer class="eagle-footer">
 
-        <div id="formasPagamento">
+        <div class="eagle-footer-main">
 
-            <h3>
-                Formas de Pagamento
-            </h3>
+            <!-- IDENTIDADE DA LOJA -->
+            <section class="eagle-footer-brand">
 
-            <img src="~/img/FormasPagamento.png"
-                 alt="Formas de Pagamento"
-                 class="payment-icon" />
-
-        </div>
-
-
-        <div id="meio">
-
-            <!-- INSTITUCIONAL -->
-            <div id="institucional">
-
-                <h3>
-                    Institucional
-                </h3>
-
-                <a href="#">
-                    Quem Somos
+                <a asp-controller="Instrumentos"
+                   asp-action="Index"
+                   class="eagle-footer-logo">
+                    EAGLE <span>IM</span>
                 </a>
 
-                <a href="#">
-                    Assitência Técnica
-                </a>
+                <p>
+                    Encontre os instrumentos ideais para transformar
+                    sua paixão pela música em realidade.
+                </p>
 
-                <a href="#">
-                    Formas de Pagamento
-                </a>
+                <div class="eagle-payment" id="formasPagamento">
 
-                <a href="#">
-                    Depoimento dos Clientes
-                </a>
+                    <h3>Formas de pagamento</h3>
 
-                <a href="#">
-                    Notícias
-                </a>
+                    <img src="~/img/FormasPagamento.png"
+                         alt="Formas de pagamento aceitas" />
 
-                <a href="#">
-                    Trocas e Devoluções
-                </a>
+                </div>
 
-                <a href="#">
-                    Entrega
-                </a>
-
-                <a href="#">
-                    Fale Conosco
-                </a>
-
-            </div>
-
+            </section>
 
             <!-- CATEGORIAS -->
-            <div id="pages" class="categorias">
+            <section class="eagle-footer-column">
 
-                <h3>
-                    Categorias
-                </h3>
+                <h3>Explore nossa loja</h3>
 
-                <a href="/Instrumentos/Orgao">
-                    Órgão
+                <a asp-controller="Instrumentos" asp-action="Orgao">
+                    Órgãos
                 </a>
 
-                <a href="/Instrumentos/Madeiras">
+                <a asp-controller="Instrumentos" asp-action="Madeiras">
                     Madeiras
                 </a>
 
-                <a href="/Instrumentos/Metais">
+                <a asp-controller="Instrumentos" asp-action="Metais">
                     Metais
                 </a>
 
-                <a href="/Instrumentos/Cordas">
+                <a asp-controller="Instrumentos" asp-action="Cordas">
                     Cordas
                 </a>
 
-                <a href="/Instrumentos/Teclas">
+                <a asp-controller="Instrumentos" asp-action="Teclas">
                     Teclas
                 </a>
 
-                <a href="/Instrumentos/Percussao">
+                <a asp-controller="Instrumentos" asp-action="Percussao">
                     Percussão
                 </a>
 
-            </div>
+            </section>
+
+            <!-- INSTITUCIONAL -->
+            <section class="eagle-footer-column">
+
+                <h3>Institucional</h3>
+
+                <a asp-controller="Home" asp-action="Privacy">
+                    Política de privacidade
+                </a>
+
+                <a href="#">
+                    Quem somos
+                </a>
+
+                <a href="#formasPagamento">
+                    Formas de pagamento
+                </a>
+
+            </section>
+
+            <!-- SUPORTE E CONTATO -->
+            <section class="eagle-footer-column">
+
+                <h3>Suporte</h3>
+
+                <a href="#">
+                    Fale conosco
+                </a>
+
+                <a href="#">
+                    Dúvidas frequentes
+                </a>
+
+                <a href="#">
+                    Trocas e devoluções
+                </a>
+
+            </section>
 
         </div>
 
-        <!-- COPYRIGHT -->
-        <div id="CorFt">
+        <!-- RODAPÉ INFERIOR -->
+        <div class="eagle-footer-bottom">
 
-            &copy; 2026 - ProjetoFinal -
+            <p>
+                &copy; @DateTime.Now.Year Eagle IM.
+                Todos os direitos reservados.
+            </p>
 
-            <a asp-area=""
-               asp-controller="Home"
-               asp-action="Privacy">
-                Privacy
-            </a>
+            <a href="#">Voltar ao início ↑</a>
 
         </div>
 

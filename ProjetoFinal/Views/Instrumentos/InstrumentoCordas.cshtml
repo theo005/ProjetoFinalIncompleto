@@ -1,0 +1,400 @@
+﻿
+@{
+    var nome = ViewData["NomeInstrumento"] as string ?? "Instrumento";
+    var descricao = ViewData["DescricaoInstrumento"] as string ?? "";
+    var categoria = ViewData["CategoriaInstrumento"] as string ?? "";
+    var detalhe1 = ViewData["Detalhe1"] as string ?? "";
+    var detalhe2 = ViewData["Detalhe2"] as string ?? "";
+    var detalhe3 = ViewData["Detalhe3"] as string ?? "";
+
+    ViewData["Title"] = nome;
+}
+
+<div class="instrumento-page">
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="instrumento-hero">
+
+        <div class="instrumento-hero-content">
+
+            <span class="instrumento-tag">
+                EAGLE IM • CORDAS
+            </span>
+
+            <h1>
+                Encontre seu <span>@nome</span>
+            </h1>
+
+            <p>@descricao</p>
+
+            <a href="#detalhes-instrumento" class="instrumento-button">
+                Conhecer instrumento
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="instrumento-hero-decoration">
+            ♫
+        </div>
+
+    </section>
+
+    <!-- INTRODUÇÃO -->
+    <section class="instrumento-intro" id="detalhes-instrumento">
+
+        <span class="instrumento-subtitle">
+            CONHEÇA MAIS
+        </span>
+
+        <h2>
+            Descubra o universo dos <span>@nome</span>
+        </h2>
+
+        <p>
+            Conheça algumas características e possibilidades
+            desse instrumento.
+        </p>
+
+    </section>
+
+    <!-- INFORMAÇÕES -->
+    <section class="instrumento-grid">
+
+        <article class="instrumento-card">
+
+            <div class="instrumento-card-icon">♫</div>
+
+            <div>
+                <span>01 / CARACTERÍSTICA</span>
+                <h3>Construção</h3>
+                <p>@detalhe1</p>
+            </div>
+
+        </article>
+
+        <article class="instrumento-card">
+
+            <div class="instrumento-card-icon">♪</div>
+
+            <div>
+                <span>02 / MODELOS</span>
+                <h3>Variedade</h3>
+                <p>@detalhe2</p>
+            </div>
+
+        </article>
+
+        <article class="instrumento-card">
+
+            <div class="instrumento-card-icon">♫</div>
+
+            <div>
+                <span>03 / SONORIDADE</span>
+                <h3>Estilo musical</h3>
+                <p>@detalhe3</p>
+            </div>
+
+        </article>
+
+    </section>
+
+    <!-- DESTAQUE -->
+    <section class="instrumento-highlight">
+
+        <div>
+            <span class="instrumento-subtitle">
+                @categoria
+            </span>
+
+            <h2>
+                Sua próxima experiência musical começa aqui.
+            </h2>
+
+            <p>
+                Continue explorando a Eagle IM e descubra
+                novas possibilidades para sua música.
+            </p>
+        </div>
+
+        <span class="instrumento-highlight-icon">♫</span>
+
+    </section>
+
+    <!-- VOLTAR -->
+    <div class="instrumento-back">
+
+        <a asp-controller="Instrumentos" asp-action="Cordas">
+            ← Voltar para instrumentos de cordas
+        </a>
+
+    </div>
+
+</div>
+
+<style>
+
+    .instrumento-page {
+        width: 100%;
+        max-width: 1250px;
+        margin: 30px auto 60px;
+        padding: 0 15px;
+        color: #FFFFFF;
+    }
+
+    /* BANNER */
+
+    .instrumento-hero {
+        position: relative;
+        min-height: 330px;
+        padding: 55px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 18px;
+        background:
+            radial-gradient(circle at 85% 45%, rgba(168, 85, 247, 0.25), transparent 35%),
+            linear-gradient(115deg, #100819, #080808 75%);
+        border: 1px solid rgba(168, 85, 247, 0.35);
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .instrumento-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+    }
+
+    .instrumento-tag,
+    .instrumento-subtitle {
+        color: #C084FC;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+
+    .instrumento-hero h1 {
+        margin: 18px 0;
+        font-size: clamp(32px, 5vw, 55px);
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    .instrumento-hero h1 span,
+    .instrumento-intro h2 span {
+        color: #B45AFF;
+    }
+
+    .instrumento-hero p {
+        max-width: 550px;
+        color: #C3BBCB;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .instrumento-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        margin-top: 20px;
+        padding: 13px 23px;
+        border-radius: 8px;
+        background: #9333EA;
+        color: #FFFFFF !important;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none !important;
+        transition: 0.3s;
+    }
+
+    .instrumento-button:hover {
+        background: #A855F7;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 20px rgba(168, 85, 247, 0.35);
+    }
+
+    .instrumento-button span {
+        font-size: 20px;
+    }
+
+    .instrumento-hero-decoration {
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(192, 132, 252, 0.12);
+        font-size: 260px;
+        pointer-events: none;
+    }
+
+    /* INTRODUÇÃO */
+
+    .instrumento-intro {
+        margin: 65px 0 35px;
+        text-align: center;
+    }
+
+    .instrumento-intro h2 {
+        margin: 12px 0;
+        font-size: clamp(24px, 4vw, 34px);
+        font-weight: 800;
+    }
+
+    .instrumento-intro p {
+        max-width: 650px;
+        margin: 0 auto;
+        color: #A8A8B2;
+        line-height: 1.7;
+        font-size: 14px;
+    }
+
+    /* CARDS */
+
+    .instrumento-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .instrumento-card {
+        min-height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 25px;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid rgba(168, 85, 247, 0.22);
+        background: linear-gradient(145deg, #17121D, #0D0D0D);
+        transition: 0.3s ease;
+    }
+
+    .instrumento-card:hover {
+        transform: translateY(-6px);
+        border-color: #A855F7;
+        box-shadow: 0 10px 30px rgba(139, 43, 226, 0.18);
+        background: linear-gradient(145deg, #21152F, #101010);
+    }
+
+    .instrumento-card-icon {
+        font-size: 38px;
+        margin-bottom: 18px;
+        color: #C084FC;
+    }
+
+    .instrumento-card span {
+        color: #A855F7;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .instrumento-card h3 {
+        margin: 9px 0;
+        color: #FFFFFF;
+        font-size: 23px;
+        font-weight: 800;
+    }
+
+    .instrumento-card p {
+        min-height: 48px;
+        color: #AAA5B1;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    /* DESTAQUE FINAL */
+
+    .instrumento-highlight {
+        margin-top: 65px;
+        padding: 35px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        border-radius: 15px;
+        border: 1px solid rgba(168, 85, 247, 0.3);
+        background: linear-gradient(100deg, #1B1027, #0D0D0D);
+    }
+
+    .instrumento-highlight h2 {
+        max-width: 600px;
+        margin: 12px 0;
+        font-size: 26px;
+        font-weight: 800;
+    }
+
+    .instrumento-highlight p {
+        margin: 0;
+        color: #AAA5B1;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .instrumento-highlight-icon {
+        color: rgba(192, 132, 252, 0.35);
+        font-size: 90px;
+    }
+
+    /* VOLTAR */
+
+    .instrumento-back {
+        margin-top: 30px;
+    }
+
+    .instrumento-back a {
+        color: #C084FC;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .instrumento-back a:hover {
+        color: #FFFFFF;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @@media (max-width: 900px) {
+        .instrumento-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .instrumento-hero-decoration {
+            right: 2%;
+            font-size: 190px;
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .instrumento-page {
+            margin-top: 18px;
+            padding: 0 10px;
+        }
+
+        .instrumento-hero {
+            min-height: 320px;
+            padding: 30px 22px;
+        }
+
+        .instrumento-hero-decoration {
+            right: -15px;
+            top: 75%;
+            font-size: 130px;
+        }
+
+        .instrumento-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .instrumento-highlight {
+            padding: 25px;
+        }
+
+        .instrumento-highlight-icon {
+            display: none;
+        }
+    }
+
+</style>

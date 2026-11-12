@@ -1,0 +1,226 @@
+﻿
+@{
+    ViewData["Title"] = ViewData["NomeInstrumento"] ?? "Instrumento de Teclas";
+}
+
+<div class="instrumento-page teclas-page">
+
+    <a asp-controller="Instrumentos" asp-action="Teclas" class="voltar-categoria">
+        ← Voltar para Teclas
+    </a>
+
+    <section class="instrumento-hero">
+        <div class="instrumento-hero-content">
+            <span class="instrumento-tag">EAGLE IM • TECLAS</span>
+            <h1>@ViewData["NomeInstrumento"]</h1>
+            <p>@ViewData["DescricaoInstrumento"]</p>
+
+            <a href="#detalhes" class="instrumento-btn">
+                Conheça os instrumentos
+            </a>
+        </div>
+    </section>
+
+    <section class="instrumento-intro" id="detalhes">
+        <span class="instrumento-subtitle">CRIATIVIDADE E HARMONIA</span>
+        <h2>Explore o mundo das teclas</h2>
+        <p>
+            Os instrumentos de teclas permitem explorar diferentes estilos,
+            timbres e possibilidades musicais, sendo utilizados em apresentações,
+            composições e produções musicais.
+        </p>
+    </section>
+
+    <section class="instrumento-detalhes">
+        <div class="detalhe-card">
+            <span>01</span>
+            <h3>Características</h3>
+            <p>@ViewData["Detalhe1"]</p>
+        </div>
+
+        <div class="detalhe-card">
+            <span>02</span>
+            <h3>Sonoridade</h3>
+            <p>@ViewData["Detalhe2"]</p>
+        </div>
+
+        <div class="detalhe-card">
+            <span>03</span>
+            <h3>Utilização</h3>
+            <p>@ViewData["Detalhe3"]</p>
+        </div>
+    </section>
+
+    <section class="instrumento-highlight">
+        <span>EAGLE IM</span>
+        <h2>Transforme ideias em música.</h2>
+        <p>Encontre novas possibilidades para expressar sua criatividade.</p>
+    </section>
+
+</div>
+
+<style>
+    .teclas-page {
+        color: #fff;
+        padding: 25px 35px 60px;
+    }
+
+    .teclas-page .voltar-categoria {
+        display: inline-block;
+        color: #c026ff;
+        text-decoration: none;
+        font-weight: 600;
+        margin-bottom: 25px;
+        transition: .3s;
+    }
+
+    .teclas-page .voltar-categoria:hover {
+        color: #fff;
+        transform: translateX(-4px);
+    }
+
+    .teclas-page .instrumento-hero {
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        padding: 55px;
+        border-radius: 22px;
+        background: linear-gradient(120deg, #100d25, #35216b, #17102c);
+        border: 1px solid #6544a5;
+        box-shadow: 0 0 30px #8b2be225;
+    }
+
+    .teclas-page .instrumento-hero-content {
+        max-width: 650px;
+    }
+
+    .teclas-page .instrumento-tag,
+    .teclas-page .instrumento-highlight span {
+        color: #d58aff;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+
+    .teclas-page .instrumento-hero h1 {
+        font-size: clamp(38px, 6vw, 65px);
+        font-weight: 900;
+        margin: 15px 0;
+    }
+
+    .teclas-page .instrumento-hero p {
+        color: #d2c5dc;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .teclas-page .instrumento-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 13px 25px;
+        border-radius: 9px;
+        background: #a855f7;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        transition: .3s;
+    }
+
+    .teclas-page .instrumento-btn:hover {
+        background: #c026ff;
+        transform: translateY(-3px);
+    }
+
+    .teclas-page .instrumento-intro {
+        max-width: 750px;
+        margin: 65px auto 40px;
+        text-align: center;
+    }
+
+    .teclas-page .instrumento-subtitle {
+        color: #c026ff;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+
+    .teclas-page .instrumento-intro h2 {
+        font-size: 30px;
+        margin: 12px 0;
+    }
+
+    .teclas-page .instrumento-intro p {
+        color: #aaa;
+        line-height: 1.8;
+    }
+
+    .teclas-page .instrumento-detalhes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 35px;
+    }
+
+    .teclas-page .detalhe-card {
+        padding: 30px;
+        background: #111;
+        border: 1px solid #30203d;
+        border-radius: 16px;
+        transition: .3s;
+    }
+
+    .teclas-page .detalhe-card:hover {
+        border-color: #a855f7;
+        transform: translateY(-5px);
+    }
+
+    .teclas-page .detalhe-card span {
+        color: #c026ff;
+        font-size: 13px;
+        font-weight: 800;
+    }
+
+    .teclas-page .detalhe-card h3 {
+        margin: 15px 0 10px;
+        font-size: 20px;
+    }
+
+    .teclas-page .detalhe-card p {
+        color: #aaa;
+        line-height: 1.7;
+    }
+
+    .teclas-page .instrumento-highlight {
+        margin-top: 55px;
+        padding: 45px 25px;
+        text-align: center;
+        border-radius: 18px;
+        background: linear-gradient(120deg, #20183d, #39216b);
+        border: 1px solid #6544a5;
+    }
+
+    .teclas-page .instrumento-highlight h2 {
+        margin: 12px 0;
+        font-size: 27px;
+    }
+
+    .teclas-page .instrumento-highlight p {
+        color: #d0c2d8;
+    }
+
+    @@media (max-width: 800px) {
+        .teclas-page .instrumento-detalhes {
+            grid-template-columns: 1fr;
+        }
+
+        .teclas-page .instrumento-hero {
+            padding: 35px 25px;
+        }
+    }
+
+    @@media (max-width: 500px) {
+        .teclas-page {
+            padding: 20px 15px 40px;
+        }
+    }
+</style>

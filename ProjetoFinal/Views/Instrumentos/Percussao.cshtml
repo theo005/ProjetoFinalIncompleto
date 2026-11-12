@@ -1,5 +1,328 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Instrumentos de Percussão";
 }
+
+<div class="percussao-page">
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="percussao-hero">
+        <div class="percussao-hero-content">
+            <span class="percussao-tag">EAGLE IM • CATEGORIA</span>
+
+            <h1>Instrumentos de Percussão</h1>
+
+            <p>
+                Ritmo, energia e expressão.
+                Descubra instrumentos que dão vida e movimento à música.
+            </p>
+
+            <a href="#instrumentos-percussao" class="percussao-btn">
+                Explorar instrumentos
+                <span>→</span>
+            </a>
+        </div>
+
+        <div class="percussao-hero-decoration">♫</div>
+    </section>
+
+    <!-- INTRODUÇÃO -->
+    <section class="percussao-intro" id="instrumentos-percussao">
+        <span class="percussao-subtitle">NOSSA COLEÇÃO</span>
+        <h2>Sinta o ritmo da música</h2>
+        <p>
+            Dos ritmos mais suaves às batidas mais intensas,
+            encontre os instrumentos ideais para sua música.
+        </p>
+    </section>
+
+    <!-- CARDS -->
+    <section class="percussao-grid">
+
+    <a asp-controller="Instrumentos" asp-action="Baterias" class="percussao-card">
+        <div class="percussao-icon">🥁</div>
+        <span class="percussao-type">PERCUSSÃO</span>
+        <h3>Baterias</h3>
+        <p>Conjuntos completos para criar ritmos e acompanhar diferentes estilos.</p>
+        <span class="percussao-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Xilofones" class="percussao-card">
+        <div class="percussao-icon">🎵</div>
+        <span class="percussao-type">PERCUSSÃO</span>
+        <h3>Xilofones</h3>
+        <p>Sonoridade marcante e melódica para diferentes estilos e apresentações.</p>
+        <span class="percussao-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Pratos" class="percussao-card">
+        <div class="percussao-icon">🎵</div>
+        <span class="percussao-type">PERCUSSÃO</span>
+        <h3>Pratos</h3>
+        <p>Brilho e variedade de timbres para complementar sua bateria.</p>
+        <span class="percussao-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Pandeiros" class="percussao-card">
+        <div class="percussao-icon">🎶</div>
+        <span class="percussao-type">PERCUSSÃO</span>
+        <h3>Pandeiros</h3>
+        <p>Tradição e versatilidade em ritmos brasileiros e populares.</p>
+        <span class="percussao-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Tambores" class="percussao-card">
+        <div class="percussao-icon">🥁</div>
+        <span class="percussao-type">PERCUSSÃO</span>
+        <h3>Tambores</h3>
+        <p>Sonoridade marcante para diferentes culturas e estilos musicais.</p>
+        <span class="percussao-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="Cajons" class="percussao-card">
+        <div class="percussao-icon">🎼</div>
+        <span class="percussao-type">PERCUSSÃO</span>
+        <h3>Cajóns</h3>
+        <p>Praticidade e ritmo em um instrumento compacto e versátil.</p>
+        <span class="percussao-link">Explorar categoria →</span>
+    </a>
+
+</section>
+
+    <!-- DESTAQUE -->
+    <section class="percussao-highlight">
+        <div>
+            <span class="percussao-subtitle">EAGLE IM</span>
+            <h2>Todo grande som começa com um ritmo.</h2>
+            <p>
+                Escolha seus instrumentos e dê o próximo passo
+                na sua jornada musical.
+            </p>
+        </div>
+
+        <span class="percussao-highlight-icon">♫</span>
+    </section>
+
+</div>
+
+<style>
+    .percussao-page {
+        width: 100%;
+        color: #fff;
+        padding: 25px 0 55px;
+    }
+
+    .percussao-hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 330px;
+        display: flex;
+        align-items: center;
+        padding: 55px 7%;
+        border-radius: 20px;
+        background: linear-gradient(115deg, #10091a, #29113e 60%, #542080);
+        border: 1px solid rgba(168, 85, 247, .25);
+    }
+
+    .percussao-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+    }
+
+    .percussao-tag,
+    .percussao-subtitle {
+        color: #c084fc;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .percussao-hero h1 {
+        margin: 18px 0;
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    .percussao-hero p {
+        max-width: 550px;
+        color: #d2c7dc;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    .percussao-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        padding: 13px 22px;
+        color: #fff !important;
+        text-decoration: none !important;
+        font-weight: 700;
+        border-radius: 9px;
+        background: linear-gradient(90deg, #8b2be2, #a855f7);
+        transition: .3s;
+    }
+
+        .percussao-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, .35);
+        }
+
+    .percussao-hero-decoration {
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 210px;
+        color: rgba(255, 255, 255, .07);
+        pointer-events: none;
+    }
+
+    .percussao-intro {
+        text-align: center;
+        margin: 65px 0 35px;
+    }
+
+        .percussao-intro h2 {
+            font-size: 30px;
+            font-weight: 800;
+            margin: 12px 0;
+        }
+
+        .percussao-intro p {
+            color: #aaa1b5;
+            font-size: 15px;
+        }
+
+    .percussao-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .percussao-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 245px;
+        padding: 27px;
+        color: #fff !important;
+        text-decoration: none !important;
+        background: #111;
+        border: 1px solid #29202f;
+        border-radius: 15px;
+        transition: .3s ease;
+    }
+
+        .percussao-card:hover {
+            transform: translateY(-7px);
+            border-color: #963be0;
+            box-shadow: 0 10px 30px rgba(139, 43, 226, .16);
+            background: #17101f;
+        }
+
+    .percussao-icon {
+        font-size: 35px;
+        margin-bottom: 17px;
+    }
+
+    .percussao-type {
+        color: #b46af0;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+    }
+
+    .percussao-card h3 {
+        margin: 8px 0;
+        font-size: 21px;
+        font-weight: 750;
+    }
+
+    .percussao-card p {
+        color: #aaa1b5;
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .percussao-link {
+        margin-top: auto;
+        color: #c084fc;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .percussao-highlight {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        margin-top: 65px;
+        padding: 35px 40px;
+        border-radius: 16px;
+        background: linear-gradient(100deg, #1a1025, #29133c);
+        border: 1px solid rgba(168, 85, 247, .2);
+    }
+
+        .percussao-highlight h2 {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        .percussao-highlight p {
+            color: #aaa1b5;
+            font-size: 14px;
+            margin: 0;
+        }
+
+    .percussao-highlight-icon {
+        color: rgba(192, 132, 252, .5);
+        font-size: 75px;
+    }
+
+    @@media (max-width: 900px) {
+        .percussao-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .percussao-hero-decoration {
+            right: 3%;
+            font-size: 150px;
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .percussao-page {
+            padding-top: 15px;
+        }
+
+        .percussao-hero {
+            min-height: 300px;
+            padding: 35px 25px;
+        }
+
+        .percussao-hero-decoration {
+            right: -15px;
+            font-size: 110px;
+        }
+
+        .percussao-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .percussao-intro h2 {
+            font-size: 25px;
+        }
+
+        .percussao-highlight {
+            padding: 25px;
+        }
+
+        .percussao-highlight-icon {
+            display: none;
+        }
+    }
+</style>

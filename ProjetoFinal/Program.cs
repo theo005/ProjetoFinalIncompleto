@@ -63,8 +63,9 @@ using (var scope = app.Services.CreateScope())
         }
     }
 
-    // Recuperar e-mail do administrador
+    // Recuperar configurações do administrador
     var adminEmail = app.Configuration["AdminUser:Email"];
+    var adminPassword = app.Configuration["AdminUser:Password"];
 
     if (string.IsNullOrWhiteSpace(adminEmail))
     {
@@ -72,13 +73,39 @@ using (var scope = app.Services.CreateScope())
             "E-mail do administrador não configurado no User Secrets.");
     }
 
-    // Procurar conta existente
+    // Procurar conta administrativa
     var adminUser = await userManager.FindByEmailAsync(adminEmail);
 
+    // Criar administrador caso não exista
     if (adminUser == null)
     {
-        throw new Exception(
-            "Conta administrativa não encontrada: " + adminEmail);
+        if (string.IsNullOrWhiteSpace(adminPassword))
+        {
+            throw new Exception(
+                "Senha do administrador não configurada no User Secrets.");
+        }
+
+        adminUser = new IdentityUser
+        {
+            UserName = adminEmail,
+            Email = adminEmail,
+            EmailConfirmed = true
+        };
+
+        var createResult = await userManager.CreateAsync(
+            adminUser, adminPassword);
+
+        if (!createResult.Succeeded)
+        {
+            var errors = string.Join("; ",
+                createResult.Errors.Select(e => e.Description));
+
+            throw new Exception(
+                "Erro ao criar administrador: " + errors);
+        }
+
+        app.Logger.LogInformation(
+            "Conta administrativa criada com sucesso.");
     }
 
     // Atribuir função Admin

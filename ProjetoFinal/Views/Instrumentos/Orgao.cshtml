@@ -1,1 +1,305 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Órgãos";
+}
+
+<div class="orgao-page">
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="orgao-hero">
+        <div class="orgao-hero-content">
+            <span class="orgao-tag">EAGLE IM • CATEGORIA</span>
+
+            <h1>Órgãos</h1>
+
+            <p>
+                Tradição, grandiosidade e riqueza sonora.
+                Explore instrumentos que transformam cada apresentação
+                em uma experiência musical única.
+            </p>
+
+            <a href="#instrumentos-orgao" class="orgao-btn">
+                Explorar instrumentos
+                <span>→</span>
+            </a>
+        </div>
+
+        <div class="orgao-hero-decoration">♫</div>
+    </section>
+
+    <!-- INTRODUÇÃO -->
+    <section class="orgao-intro" id="instrumentos-orgao">
+        <span class="orgao-subtitle">NOSSA COLEÇÃO</span>
+        <h2>Descubra a potência dos órgãos</h2>
+        <p>
+            Dos modelos tradicionais às tecnologias digitais,
+            encontre o instrumento ideal para sua expressão musical.
+        </p>
+    </section>
+
+    <!-- CARDS -->
+    <section class="orgao-grid">
+
+    <a asp-controller="Instrumentos" asp-action="OrgaosEletronicos" class="orgao-card">
+        <div class="orgao-icon">🎹</div>
+        <span class="orgao-type">TECLAS</span>
+        <h3>Órgãos Eletrônicos</h3>
+        <p>Versatilidade de sons e recursos para diferentes estilos musicais.</p>
+        <span class="orgao-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="OrgaosDigitais" class="orgao-card">
+        <div class="orgao-icon">🎼</div>
+        <span class="orgao-type">TECLAS</span>
+        <h3>Órgãos Digitais</h3>
+        <p>Tecnologia e variedade sonora em instrumentos modernos.</p>
+        <span class="orgao-link">Explorar categoria →</span>
+    </a>
+
+    <a asp-controller="Instrumentos" asp-action="OrgaosDeIgreja" class="orgao-card">
+        <div class="orgao-icon">🎵</div>
+        <span class="orgao-type">TRADICIONAL</span>
+        <h3>Órgãos de Igreja</h3>
+        <p>Sonoridade grandiosa e tradicional, presente em celebrações e grandes espaços.</p>
+        <span class="orgao-link">Explorar categoria →</span>
+    </a>
+
+</section>
+
+    <!-- DESTAQUE -->
+    <section class="orgao-highlight">
+        <div>
+            <span class="orgao-subtitle">EAGLE IM</span>
+            <h2>Uma sonoridade que atravessa gerações.</h2>
+            <p>
+                Encontre instrumentos que unem tradição,
+                tecnologia e paixão pela música.
+            </p>
+        </div>
+
+        <span class="orgao-highlight-icon">♫</span>
+    </section>
+
+</div>
+
+<style>
+    .orgao-page {
+        width: 100%;
+        color: #fff;
+        padding: 25px 0 55px;
+    }
+
+    .orgao-hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 330px;
+        display: flex;
+        align-items: center;
+        padding: 55px 7%;
+        border-radius: 20px;
+        background: linear-gradient(115deg, #10091a, #29113e 60%, #542080);
+        border: 1px solid rgba(168, 85, 247, .25);
+    }
+
+    .orgao-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+    }
+
+    .orgao-tag,
+    .orgao-subtitle {
+        color: #c084fc;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .orgao-hero h1 {
+        margin: 18px 0;
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    .orgao-hero p {
+        max-width: 550px;
+        color: #d2c7dc;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    .orgao-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        padding: 13px 22px;
+        color: #fff !important;
+        text-decoration: none !important;
+        font-weight: 700;
+        border-radius: 9px;
+        background: linear-gradient(90deg, #8b2be2, #a855f7);
+        transition: .3s;
+    }
+
+        .orgao-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(168, 85, 247, .35);
+        }
+
+    .orgao-hero-decoration {
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 210px;
+        color: rgba(255, 255, 255, .07);
+        pointer-events: none;
+    }
+
+    .orgao-intro {
+        text-align: center;
+        margin: 65px 0 35px;
+    }
+
+        .orgao-intro h2 {
+            font-size: 30px;
+            font-weight: 800;
+            margin: 12px 0;
+        }
+
+        .orgao-intro p {
+            color: #aaa1b5;
+            font-size: 15px;
+        }
+
+    .orgao-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .orgao-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 245px;
+        padding: 27px;
+        color: #fff !important;
+        text-decoration: none !important;
+        background: #111;
+        border: 1px solid #29202f;
+        border-radius: 15px;
+        transition: .3s ease;
+    }
+
+        .orgao-card:hover {
+            transform: translateY(-7px);
+            border-color: #963be0;
+            box-shadow: 0 10px 30px rgba(139, 43, 226, .16);
+            background: #17101f;
+        }
+
+    .orgao-icon {
+        font-size: 35px;
+        margin-bottom: 17px;
+    }
+
+    .orgao-type {
+        color: #b46af0;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+    }
+
+    .orgao-card h3 {
+        margin: 8px 0;
+        font-size: 21px;
+        font-weight: 750;
+    }
+
+    .orgao-card p {
+        color: #aaa1b5;
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .orgao-link {
+        margin-top: auto;
+        color: #c084fc;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .orgao-highlight {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        margin-top: 65px;
+        padding: 35px 40px;
+        border-radius: 16px;
+        background: linear-gradient(100deg, #1a1025, #29133c);
+        border: 1px solid rgba(168, 85, 247, .2);
+    }
+
+        .orgao-highlight h2 {
+            font-size: 25px;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        .orgao-highlight p {
+            color: #aaa1b5;
+            font-size: 14px;
+            margin: 0;
+        }
+
+    .orgao-highlight-icon {
+        color: rgba(192, 132, 252, .5);
+        font-size: 75px;
+    }
+
+    @@media (max-width: 900px) {
+        .orgao-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .orgao-hero-decoration {
+            right: 3%;
+            font-size: 150px;
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .orgao-page {
+            padding-top: 15px;
+        }
+
+        .orgao-hero {
+            min-height: 300px;
+            padding: 35px 25px;
+        }
+
+        .orgao-hero-decoration {
+            right: -15px;
+            font-size: 110px;
+        }
+
+        .orgao-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .orgao-intro h2 {
+            font-size: 25px;
+        }
+
+        .orgao-highlight {
+            padding: 25px;
+        }
+
+        .orgao-highlight-icon {
+            display: none;
+        }
+    }
+</style>

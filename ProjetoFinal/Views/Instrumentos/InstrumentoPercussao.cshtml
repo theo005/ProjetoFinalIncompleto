@@ -1,0 +1,226 @@
+﻿
+@{
+    ViewData["Title"] = ViewData["NomeInstrumento"] ?? "Instrumento de Percussão";
+}
+
+<div class="instrumento-page percussao-page">
+
+    <a asp-controller="Instrumentos" asp-action="Percussao" class="voltar-categoria">
+        ← Voltar para Percussão
+    </a>
+
+    <section class="instrumento-hero">
+        <div class="instrumento-hero-content">
+            <span class="instrumento-tag">EAGLE IM • PERCUSSÃO</span>
+            <h1>@ViewData["NomeInstrumento"]</h1>
+            <p>@ViewData["DescricaoInstrumento"]</p>
+
+            <a href="#detalhes" class="instrumento-btn">
+                Conheça os instrumentos
+            </a>
+        </div>
+    </section>
+
+    <section class="instrumento-intro" id="detalhes">
+        <span class="instrumento-subtitle">RITMO E EXPRESSÃO</span>
+        <h2>Descubra o universo da percussão</h2>
+        <p>
+            Os instrumentos de percussão são responsáveis por criar ritmos,
+            marcar o tempo e dar personalidade às músicas. Eles estão presentes
+            em diversos gêneros e culturas musicais.
+        </p>
+    </section>
+
+    <section class="instrumento-detalhes">
+        <div class="detalhe-card">
+            <span>01</span>
+            <h3>Características</h3>
+            <p>@ViewData["Detalhe1"]</p>
+        </div>
+
+        <div class="detalhe-card">
+            <span>02</span>
+            <h3>Sonoridade</h3>
+            <p>@ViewData["Detalhe2"]</p>
+        </div>
+
+        <div class="detalhe-card">
+            <span>03</span>
+            <h3>Utilização</h3>
+            <p>@ViewData["Detalhe3"]</p>
+        </div>
+    </section>
+
+    <section class="instrumento-highlight">
+        <span>EAGLE IM</span>
+        <h2>Todo grande som começa com um ritmo.</h2>
+        <p>Explore instrumentos que dão vida e movimento à música.</p>
+    </section>
+
+</div>
+
+<style>
+    .percussao-page {
+        color: #fff;
+        padding: 25px 35px 60px;
+    }
+
+    .percussao-page .voltar-categoria {
+        display: inline-block;
+        color: #c026ff;
+        text-decoration: none;
+        font-weight: 600;
+        margin-bottom: 25px;
+        transition: .3s;
+    }
+
+    .percussao-page .voltar-categoria:hover {
+        color: #fff;
+        transform: translateX(-4px);
+    }
+
+    .percussao-page .instrumento-hero {
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        padding: 55px;
+        border-radius: 22px;
+        background: linear-gradient(120deg, #24100d, #6b2b35, #1e1018);
+        border: 1px solid #a54565;
+        box-shadow: 0 0 30px #8b2be225;
+    }
+
+    .percussao-page .instrumento-hero-content {
+        max-width: 650px;
+    }
+
+    .percussao-page .instrumento-tag,
+    .percussao-page .instrumento-highlight span {
+        color: #e69bb5;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+
+    .percussao-page .instrumento-hero h1 {
+        font-size: clamp(38px, 6vw, 65px);
+        font-weight: 900;
+        margin: 15px 0;
+    }
+
+    .percussao-page .instrumento-hero p {
+        color: #e0cbd0;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .percussao-page .instrumento-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 13px 25px;
+        border-radius: 9px;
+        background: #a855f7;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        transition: .3s;
+    }
+
+    .percussao-page .instrumento-btn:hover {
+        background: #c026ff;
+        transform: translateY(-3px);
+    }
+
+    .percussao-page .instrumento-intro {
+        max-width: 750px;
+        margin: 65px auto 40px;
+        text-align: center;
+    }
+
+    .percussao-page .instrumento-subtitle {
+        color: #d46b9c;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+
+    .percussao-page .instrumento-intro h2 {
+        font-size: 30px;
+        margin: 12px 0;
+    }
+
+    .percussao-page .instrumento-intro p {
+        color: #aaa;
+        line-height: 1.8;
+    }
+
+    .percussao-page .instrumento-detalhes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 35px;
+    }
+
+    .percussao-page .detalhe-card {
+        padding: 30px;
+        background: #111;
+        border: 1px solid #3d252d;
+        border-radius: 16px;
+        transition: .3s;
+    }
+
+    .percussao-page .detalhe-card:hover {
+        border-color: #c05a88;
+        transform: translateY(-5px);
+    }
+
+    .percussao-page .detalhe-card span {
+        color: #d46b9c;
+        font-size: 13px;
+        font-weight: 800;
+    }
+
+    .percussao-page .detalhe-card h3 {
+        margin: 15px 0 10px;
+        font-size: 20px;
+    }
+
+    .percussao-page .detalhe-card p {
+        color: #aaa;
+        line-height: 1.7;
+    }
+
+    .percussao-page .instrumento-highlight {
+        margin-top: 55px;
+        padding: 45px 25px;
+        text-align: center;
+        border-radius: 18px;
+        background: linear-gradient(120deg, #351722, #642b43);
+        border: 1px solid #86415d;
+    }
+
+    .percussao-page .instrumento-highlight h2 {
+        margin: 12px 0;
+        font-size: 27px;
+    }
+
+    .percussao-page .instrumento-highlight p {
+        color: #e0cbd0;
+    }
+
+    @@media (max-width: 800px) {
+        .percussao-page .instrumento-detalhes {
+            grid-template-columns: 1fr;
+        }
+
+        .percussao-page .instrumento-hero {
+            padding: 35px 25px;
+        }
+    }
+
+    @@media (max-width: 500px) {
+        .percussao-page {
+            padding: 20px 15px 40px;
+        }
+    }
+</style>

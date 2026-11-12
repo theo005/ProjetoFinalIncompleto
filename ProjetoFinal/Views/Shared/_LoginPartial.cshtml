@@ -3,29 +3,96 @@
 @inject UserManager<IdentityUser> UserManager
 
 <ul class="navbar-nav">
+
     @if (SignInManager.IsSignedIn(User))
     {
-        <div id="identity-right-block">
-        
-            <span class="user-welcome-text">
-                Hello @User.Identity?.Name!
-            </span>
-        
-            <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post" class="m-0 d-inline-block">
-                <button type="submit" class="btn-logout-neon">
-                    Logout
-                </button>
-            </form>
-        
-        </div>
+        <li class="nav-item dropdown profile-dropdown">
+
+            <!-- ÍCONE DO PERFIL -->
+            <button class="profile-dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    aria-label="Abrir menu do perfil">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="25"
+                     height="25"
+                     fill="currentColor"
+                     viewBox="0 0 16 16">
+
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+
+                    <path d="M14 14s-1-4-6-4-6 4-6 4v1h12v-1Z" />
+
+                </svg>
+
+            </button>
+
+            <!-- MENU SUSPENSO -->
+            <ul class="dropdown-menu dropdown-menu-end profile-menu">
+
+                <li class="profile-user">
+                    <span class="profile-user-label">
+                        Conectado como
+                    </span>
+
+                    <strong>
+                        @User.Identity?.Name
+                    </strong>
+                </li>
+
+                <li>
+                    <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                    <a class="dropdown-item profile-account"
+                       asp-area="Identity"
+                       asp-page="/Account/Manage/Index">
+
+                        <span>Minha conta</span>
+                    </a>
+                </li>
+
+                <li>
+                    <form asp-area="Identity"
+                          asp-page="/Account/Logout"
+                          asp-route-returnUrl="@Url.Page("/", new { area = "" })"
+                          method="post">
+
+                        <button type="submit"
+                                class="dropdown-item profile-logout">
+
+                            <span>↪</span>
+                            Sair da conta
+
+                        </button>
+
+                    </form>
+                </li>
+
+            </ul>
+
+        </li>
     }
-else
-{
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
-}
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Identity"
+               asp-page="/Account/Register">
+                Registrar
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link"
+               asp-area="Identity"
+               asp-page="/Account/Login">
+                Entrar
+            </a>
+        </li>
+    }
+
 </ul>
